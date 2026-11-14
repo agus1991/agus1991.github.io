@@ -1,0 +1,73 @@
+{
+  "brand": "MAS-AGUS",
+  "name": "Agus Sifaunajah",
+  "headline": "Academic, Researcher & Information Systems Practitioner",
+  "hero": {
+    "headline": "Ideas, Research & Technology.",
+    "subheadline": "Exploring Information Systems, Digital Transformation, Research, and Technology Innovation.",
+    "ctaText": "Jelajahi Artikel",
+    "ctaLink": "/blog",
+    "secondaryCtaText": "Tentang Saya",
+    "secondaryCtaLink": "/about"
+  },
+  "avatar": "/images/profile/agus-sifaunajah.svg",
+  "location": "Indonesia",
+  "shortBio": "Seorang akademisi, peneliti, dan praktisi sistem informasi yang berfokus pada integrasi teknologi informasi, arsitektur sistem digital, transformasi proses bisnis, serta rekayasa perangkat lunak modern.",
+  "fullBio": [
+    "Agus Sifaunajah (dikenal sebagai MAS-AGUS) adalah seorang profesional di bidang Sistem Informasi dan Teknologi. Menggabungkan perspektif akademis dengan implementasi rekayasa perangkat lunak praktis, ia mendedikasikan dedikasinya untuk memajukan literasi teknologi dan riset terapan.",
+    "Melalui platform MAS-AGUS, ia berbagi wawasan mendalam mengenai arsitektur sistem, strategi transformasi digital pada skala institusi dan UMKM, serta metodologi penelitian terapan di bidang komputasi.",
+    "Di luar aktivitas mengajar dan meneliti, ia aktif dalam pengembangan arsitektur web modern, penerbitan digital ilmiah, dan eksplorasi teknologi mutakhir untuk memecahkan tantangan operasional di era komputasi awan."
+  ],
+  "expertise": [
+    {
+      "title": "Sistem Informasi & Arsitektur Enterprise",
+      "description": "Perancangan arsitektur sistem informasi terintegrasi, analisis kebutuhan bisnis, dan pemodelan alur kerja sistem enterprise."
+    },
+    {
+      "title": "Transformasi Digital",
+      "description": "Strategi migrasi sistem manual ke ekosistem digital, tata kelola TI, dan audit kesiapan digital organisasi."
+    },
+    {
+      "title": "Rekayasa Perangkat Lunak Modern",
+      "description": "Pengembangan web statis dan dinamis berbasis SSG/Jamstack, TypeScript, arsitektur REST/API, serta otomatisasi CI/CD."
+    },
+    {
+      "title": "Metodologi Riset & Publikasi Ilmiah",
+      "description": "Riset kuantitatif dan kualitatif di bidang komputasi terapan, penulisan artikel ilmiah, dan tata kelola jurnal elektronik."
+    }
+  ],
+  "academicBackground": [
+    {
+      "degree": "Magister Komputer (M.Kom) / Sistem Informasi",
+      "institution": "Program Pascasarjana Sistem Informasi",
+      "period": "Pascasarjana",
+      "focus": "Fokus pada Tata Kelola Sistem Informasi, Manajemen Pengetahuan, dan Optimasi Proses Bisnis Digital."
+    },
+    {
+      "degree": "Sarjana Komputer (S.Kom) / Teknik Informatika",
+      "institution": "Program Studi Informatika / Sistem Informasi",
+      "period": "Sarjana",
+      "focus": "Fokus pada Rekayasa Perangkat Lunak, Basis Data Relasional, dan Jaringan Komputer."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Dosen & Akademisi Sistem Informasi",
+      "institution": "Institusi Pendidikan Tinggi",
+      "period": "2018 — Sekarang",
+      "description": "Mengampu mata kuliah Sistem Informasi, Rekayasa Perangkat Lunak, dan Basis Data. Membimbing penelitian mahasiswa serta mempublikasikan riset di jurnal terindeks."
+    },
+    {
+      "role": "Lead Architect & Systems Engineer",
+      "institution": "Inisiatif Mandiri & Konsultasi Digital",
+      "period": "2016 — Sekarang",
+      "description": "Merancang dan membangun solusi web modern, otomatisasi alur kerja publikasi ilmiah, dan infrastruktur sistem informasi terdistribusi."
+    },
+    {
+      "role": "Peneliti & Editor Jurnal Ilmiah",
+      "institution": "Publikasi Akademik AskaPubliser",
+      "period": "2020 — Sekarang",
+      "description": "Mengelola manajemen alur penerbitan naskah ilmiah berbasis Open Journal Systems (OJS) dan memastikan standar sitasi serta tata kelola metadata akademik."
+    }
+  ]
+}

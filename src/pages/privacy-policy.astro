@@ -1,0 +1,91 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import siteData from '../data/site.json';
+import profileData from '../data/profile.json';
+import socialData from '../data/social.json';
+
+const pageUrl = `${siteData.siteUrl}/privacy-policy`;
+
+const breadcrumbs = [
+  { name: 'Beranda', url: '/' },
+  { name: 'Kebijakan Privasi', url: '/privacy-policy' }
+];
+---
+
+<PageLayout
+  title={`Kebijakan Privasi — ${siteData.name}`}
+  description="Kebijakan privasi situs MAS-AGUS mengenai pengumpulan informasi, penggunaan cookies, layanan pihak ketiga, dan Google AdSense."
+  headline="Kebijakan Privasi (Privacy Policy)"
+  subheadline="Transparansi mengenai pengelolaan data, privasi pengunjung, dan penggunaan teknologi penelusuran pada situs MAS-AGUS."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+>
+  <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto leading-relaxed">
+    <p class="text-sm italic text-ink-secondary-light dark:text-ink-secondary-dark">
+      Terakhir diperbarui: 14 November 2026
+    </p>
+
+    <p>
+      Di situs <strong>MAS-AGUS</strong> (dapat diakses melalui <a href="https://mas.askapubliser.biz.id">https://mas.askapubliser.biz.id</a>), privasi pengunjung adalah salah satu prioritas utama kami. Dokumen Kebijakan Privasi ini menguraikan jenis informasi yang dicatat dan dikumpulkan oleh MAS-AGUS serta bagaimana kami menggunakannya.
+    </p>
+
+    <h2>1. Berkas Log (Log Files)</h2>
+    <p>
+      MAS-AGUS mengikuti prosedur standar dalam penggunaan berkas log. Berkas ini mencatat pengunjung saat mereka mengunjungi situs web. Informasi yang dikumpulkan oleh berkas log meliputi:
+    </p>
+    <ul>
+      <li>Alamat Protokol Internet (IP address)</li>
+      <li>Jenis peramban (browser type) dan versi</li>
+      <li>Penyedia Layanan Internet (ISP)</li>
+      <li>Tanggal dan cap waktu kunjungan (date/time stamp)</li>
+      <li>Halaman perujuk / keluar (referring/exit pages)</li>
+      <li>Jumlah klik pengunjung untuk keperluan analisis tren lalu lintas</li>
+    </ul>
+    <p>
+      Informasi ini tidak dikaitkan dengan informasi pribadi apa pun yang dapat diidentifikasi secara langsung. Tujuannya semata-mata untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di situs, dan mengumpulkan informasi demografis.
+    </p>
+
+    <h2>2. Cookies dan Web Beacons</h2>
+    <p>
+      Seperti kebanyakan situs web modern, MAS-AGUS menggunakan 'cookies'. Cookies digunakan untuk menyimpan informasi termasuk preferensi pengunjung (seperti preferensi tema tampilan gelap/terang) dan halaman-halaman di situs web yang diakses atau dikunjungi pengguna. Informasi tersebut digunakan untuk mengoptimalkan pengalaman pengguna dengan menyesuaikan konten halaman web kami berdasarkan jenis browser pengunjung dan/atau informasi lainnya.
+    </p>
+
+    <h2>3. Mitra Periklanan dan Google AdSense</h2>
+    <p>
+      Situs web ini dipersiapkan dan dapat menayangkan iklan yang disediakan oleh mitra periklanan pihak ketiga, termasuk <strong>Google AdSense</strong>.
+    </p>
+    <p>
+      Google adalah salah satu vendor pihak ketiga di situs kami. Google menggunakan cookies, yang dikenal sebagai <em>DoubleClick DART Cookies</em>, untuk menayangkan iklan kepada pengunjung situs kami berdasarkan kunjungan mereka ke situs ini dan situs web lain di internet:
+    </p>
+    <ul>
+      <li>Vendor pihak ketiga, termasuk Google, menggunakan cookies untuk menayangkan iklan berdasarkan kunjungan pengguna sebelumnya ke situs web ini atau situs web lain.</li>
+      <li>Penggunaan cookies iklan oleh Google memungkinkan Google dan mitranya untuk menayangkan iklan kepada pengguna berdasarkan kunjungan mereka ke situs kami dan/atau situs lain di internet.</li>
+      <li>Pengguna dapat memilih untuk menonaktifkan periklanan yang dipersonalisasi dengan mengunjungi <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Setelan Iklan Google</a> atau melalui <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>.</li>
+    </ul>
+
+    <h2>4. Kebijakan Privasi Pihak Ketiga</h2>
+    <p>
+      Kebijakan Privasi MAS-AGUS tidak berlaku untuk pengiklan atau situs web lain. Oleh karena itu, kami menyarankan Anda untuk berkonsultasi dengan masing-masing Kebijakan Privasi dari vendor iklan pihak ketiga ini untuk informasi yang lebih rinci mengenai praktik mereka serta instruksi tentang cara menyisih dari opsi tertentu.
+    </p>
+
+    <h2>5. Hak Privasi dan Pilihan Pengguna</h2>
+    <p>
+      Anda dapat memilih untuk menonaktifkan cookies melalui opsi peramban web individu Anda. Informasi lebih rinci tentang pengelolaan cookies dengan peramban web tertentu dapat ditemukan di situs web resmi masing-masing peramban (Chrome, Firefox, Safari, Edge).
+    </p>
+
+    <h2>6. Perlindungan Privasi Anak-anak</h2>
+    <p>
+      Bagian lain dari prioritas kami adalah menambahkan perlindungan bagi anak-anak saat menggunakan internet. Kami mendorong orang tua dan wali untuk mengamati, berpartisipasi dalam, dan/atau memantau serta membimbing aktivitas daring mereka. MAS-AGUS tidak secara sadar mengumpulkan Informasi Identitas Pribadi apa pun dari anak-anak di bawah usia 13 tahun.
+    </p>
+
+    <h2>7. Persetujuan</h2>
+    <p>
+      Dengan menggunakan situs web kami, Anda dengan ini menyetujui Kebijakan Privasi kami dan menyetujui syarat-syaratnya.
+    </p>
+
+    <h2>8. Pertanyaan dan Kontak</h2>
+    <p>
+      Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan Privasi kami, jangan ragu untuk menghubungi kami melalui surel di <a href={`mailto:${socialData.email}`}>{socialData.email}</a> atau mengunjungi halaman <a href="/contact">Kontak</a>.
+    </p>
+  </div>
+</PageLayout>

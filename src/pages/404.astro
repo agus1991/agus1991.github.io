@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../data/site.json';
+---
+
+<BaseLayout
+  title={`Halaman Tidak Ditemukan (404) — ${siteData.name}`}
+  description="Halaman yang Anda cari tidak ditemukan atau telah dipindahkan."
+>
+  <div class="max-w-2xl mx-auto px-4 py-24 sm:py-32 text-center space-y-6">
+    <span class="text-xs uppercase tracking-widest font-bold text-accent-light dark:text-accent-dark">
+      Kesalahan 404
+    </span>
+    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-ink-primary-light dark:text-ink-primary-dark">
+      Halaman Tidak Ditemukan
+    </h1>
+    <p class="text-base text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+      Mohon maaf, naskah atau halaman yang Anda akses tidak tersedia, mungkin telah dipindahkan atau tautan yang Anda tuju sudah tidak aktif.
+    </p>
+    <div class="pt-6 flex flex-wrap justify-center gap-4">
+      <a
+        href="/"
+        class="px-6 py-2.5 rounded-md bg-accent-light text-white font-medium hover:bg-accent-hover dark:bg-accent-dark dark:text-canvas-dark transition-all text-xs"
+      >
+        Kembali ke Beranda
+      </a>
+      <a
+        href="/blog"
+        class="px-6 py-2.5 rounded-md border border-borderline-light dark:border-borderline-dark text-ink-primary-light dark:text-ink-primary-dark hover:border-accent-light dark:hover:border-accent-dark transition-all text-xs font-medium"
+      >
+        Jelajahi Artikel Blog
+      </a>
+    </div>
+  </div>
+</BaseLayout>

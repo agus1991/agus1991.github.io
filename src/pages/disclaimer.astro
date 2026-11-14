@@ -1,0 +1,62 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import siteData from '../data/site.json';
+import profileData from '../data/profile.json';
+
+const pageUrl = `${siteData.siteUrl}/disclaimer`;
+
+const breadcrumbs = [
+  { name: 'Beranda', url: '/' },
+  { name: 'Penafian (Disclaimer)', url: '/disclaimer' }
+];
+---
+
+<PageLayout
+  title={`Penafian (Disclaimer) — ${siteData.name}`}
+  description="Pernyataan penafian resmi mengenai konten informasi, riset, dan panduan teknis pada situs web MAS-AGUS."
+  headline="Penafian (Disclaimer)"
+  subheadline="Batasan tanggung jawab dan konteks penggunaan informasi yang disajikan di MAS-AGUS."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+>
+  <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto leading-relaxed">
+    <p class="text-sm italic text-ink-secondary-light dark:text-ink-secondary-dark">
+      Terakhir diperbarui: 14 November 2026
+    </p>
+
+    <p>
+      Jika Anda memerlukan informasi lebih lanjut atau memiliki pertanyaan tentang sanggahan situs kami, jangan ragu untuk menghubungi kami melalui halaman <a href="/contact">Kontak</a>.
+    </p>
+
+    <h2>1. Penafian Informasi Umum dan Akademik</h2>
+    <p>
+      Semua informasi di situs web ini — <a href="https://mas.askapubliser.biz.id">https://mas.askapubliser.biz.id</a> — dipublikasikan dengan itikad baik dan semata-mata untuk tujuan informasi umum, edukasi, literasi teknologi, dan diseminasi riset akademis.
+    </p>
+    <p>
+      <strong>MAS-AGUS</strong> dan pemilik situs tidak memberikan jaminan apa pun mengenai kelengkapan, keandalan, dan keakuratan informasi ini. Setiap tindakan yang Anda ambil atas informasi yang Anda temukan di situs web ini sepenuhnya merupakan risiko Anda sendiri. MAS-AGUS tidak bertanggung jawab atas kerugian dan/atau kerusakan sehubungan dengan penggunaan situs web kami.
+    </p>
+
+    <h2>2. Bukan Nasihat Hukum atau Audit Formal</h2>
+    <p>
+      Artikel, analisis arsitektur sistem, dan kajian transformasi digital yang disajikan di situs ini mencerminkan pandangan akademis dan pengalaman profesional penulis. Konten ini tidak dimaksudkan sebagai pengganti konsultasi resmi atau audit kepatuhan hukum TI tertentu yang mengikat secara yuridis.
+    </p>
+
+    <h2>3. Tautan Eksternal (External Links)</h2>
+    <p>
+      Dari situs web kami, Anda dapat mengunjungi situs web lain dengan mengikuti hyperlink ke situs eksternal tersebut. Meskipun kami berusaha keras untuk hanya menyediakan tautan berkualitas ke situs web yang bermanfaat dan etis, kami tidak memiliki kendali atas konten dan sifat situs-situs tersebut.
+    </p>
+    <p>
+      Tautan ke situs web lain ini tidak menyiratkan rekomendasi untuk semua konten yang ditemukan di situs-situs tersebut. Pemilik situs dan konten dapat berubah tanpa pemberitahuan dan dapat terjadi sebelum kami memiliki kesempatan untuk menghapus tautan yang mungkin telah rusak atau tidak relevan lagi.
+    </p>
+
+    <h2>4. Penafian Demonstrasi Konten</h2>
+    <p>
+      Beberapa konten awal atau sampel naskah di blog ini disajikan sebagai materi percontohan rancang bangun platform static site dan harus dibedakan dari publikasi ilmiah formal yang telah terindeks secara independen di jurnal terakreditasi.
+    </p>
+
+    <h2>5. Persetujuan</h2>
+    <p>
+      Dengan menggunakan situs web kami, Anda dengan ini menyetujui penafian kami dan menyetujui ketentuan-ketentuannya.
+    </p>
+  </div>
+</PageLayout>

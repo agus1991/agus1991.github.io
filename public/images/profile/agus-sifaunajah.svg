@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#E8E5DF" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A58B62" />
+      <stop offset="100%" stop-color="#8C744F" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="16" fill="url(#bgGrad)" />
+  <rect x="12" y="12" width="376" height="376" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <!-- Subtle decorative grid -->
+  <path d="M40 80 H360 M40 160 H360 M40 240 H360 M40 320 H360" stroke="#F1EFEA" stroke-width="1" />
+  <path d="M80 40 V360 M160 40 V360 M240 40 V360 M320 40 V360" stroke="#F1EFEA" stroke-width="1" />
+  
+  <!-- Silhouette / Avatar Graphic -->
+  <circle cx="200" cy="155" r="58" fill="#E8E5DF" stroke="#A58B62" stroke-width="3" />
+  <path d="M110 320 C110 245 150 230 200 230 C250 230 290 245 290 320 Z" fill="#E8E5DF" />
+  
+  <!-- Monogram & Badge -->
+  <circle cx="200" cy="155" r="38" fill="#FFFFFF" />
+  <text x="200" y="165" font-family="Lora, Georgia, serif" font-size="34" font-weight="700" fill="#252525" text-anchor="middle">AS</text>
+  
+  <!-- Identity pill -->
+  <rect x="110" y="325" width="180" height="32" rx="16" fill="url(#accentGrad)" />
+  <text x="200" y="346" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">AGUS SIFAUNAJAHS</text>
+</svg>

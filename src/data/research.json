@@ -1,0 +1,74 @@
+{
+  "interests": [
+    {
+      "title": "Arsitektur Enterprise & Ekosistem Sistem Informasi",
+      "description": "Investigasi penyelarasan arsitektur bisnis dengan infrastruktur teknologi informasi, interoperabilitas sistem terdistribusi, dan tata kelola data terpadu.",
+      "tags": ["Enterprise Architecture", "TOGAF", "System Interoperability", "Data Governance"]
+    },
+    {
+      "title": "Evaluasi & Model Kesiapan Transformasi Digital",
+      "description": "Pengembangan instrumen pengukuran kematangan digital (digital maturity models) untuk institusi pendidikan tinggi dan usaha mikro, kecil, dan menengah (UMKM).",
+      "tags": ["Digital Maturity", "Process Optimization", "Digital Strategy", "Evaluation Framework"]
+    },
+    {
+      "title": "Sistem Web Kinerja Tinggi & Static Site Generation (SSG)",
+      "description": "Eksplorasi efisiensi komputasi, optimasi Core Web Vitals, dan ketahanan arsitektur web modern tanpa ketergantungan basis data dinamis konvensional.",
+      "tags": ["Jamstack", "SSG", "Astro", "Web Performance", "Cloud Edge"]
+    },
+    {
+      "title": "Sistem Informasi Manajemen Publikasi Ilmiah",
+      "description": "Studi alur kerja penelaahan sejawat (peer review), integritas metadata akademik, standarisasi indeksasi jurnal, dan manajemen repositori terbuka.",
+      "tags": ["OJS", "Scientific Publishing", "Metadata Standards", "Academic Indexing"]
+    }
+  ],
+  "ongoing": [
+    {
+      "title": "Model Pengukuran Kematangan Digital untuk Ekosistem Akademik Berbasis Cloud",
+      "status": "Sedang Berjalan (Tahap Pengumpulan Data)",
+      "period": "2026 — 2027",
+      "description": "Meneliti indeks kesiapan fakultas dan program studi dalam mengadopsi platform terintegrasi serta hambatan sosio-teknikal yang dialami para pemangku kepentingan.",
+      "methodology": "Mixed-Methods (Kuantitatif SEM-PLS & Wawancara Mendalam)"
+    },
+    {
+      "title": "Optimasi Latensi dan Efisiensi Karbon pada Situs Pengetahuan Statis Terdistribusi",
+      "status": "Sedang Berjalan (Tahap Pengujian Arsitektur)",
+      "period": "2026",
+      "description": "Eksperimen komparatif antara arsitektur Monolithic CMS versus Content-Driven Static Generation dalam konsumsi sumber daya komputasi dan transfer data.",
+      "methodology": "Eksperimen Benchmarking & Audit Sintetik Core Web Vitals"
+    }
+  ],
+  "methodologies": [
+    {
+      "name": "Design Science Research Methodology (DSRM)",
+      "description": "Pembangunan artefak teknologi informasi terapan yang memberikan solusi praktis atas permasalahan industri dan akademik yang teridentifikasi."
+    },
+    {
+      "name": "Structural Equation Modeling (SEM-PLS)",
+      "description": "Analisis multivariat untuk menguji hubungan struktural hipotesis dalam adopsi teknologi informasi (TAM, UTAUT)."
+    },
+    {
+      "name": "Empirical Benchmarking & Performance Profiling",
+      "description": "Pengujian kuantitatif performa sistem komputasi web menggunakan metrik standar industri seperti TTFB, LCP, CLS, dan INP."
+    }
+  ],
+  "roadmap": [
+    {
+      "phase": "Fase 1 (2025)",
+      "title": "Standardisasi Tata Kelola Data & Metadata Publikasi Ilmiah",
+      "status": "Selesai",
+      "summary": "Perumusan panduan metadata interoperabel dan integrasi DOI untuk platform jurnal mandiri."
+    },
+    {
+      "phase": "Fase 2 (2026)",
+      "title": "Validasi Kerangka Kerja Kematangan Digital Organisasi",
+      "status": "Aktif",
+      "summary": "Penyusunan instrumen ukur digital maturity dan pengujian reliabilitas instrumen di 5 institusi mitra."
+    },
+    {
+      "phase": "Fase 3 (2027)",
+      "title": "Penerapan Arsitektur Jamstack pada Ekosistem Publikasi Skala Besar",
+      "status": "Direncanakan",
+      "summary": "Pengembangan modul distribusi konten akademik berbasis static generation terdistribusi global."
+    }
+  ]
+}

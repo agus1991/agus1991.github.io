@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return sortedPosts.map((post, index) => {
+    const prevPost = index < sortedPosts.length - 1 ? {
+      title: sortedPosts[index + 1].data.title,
+      slug: sortedPosts[index + 1].slug
+    } : null;
+
+    const nextPost = index > 0 ? {
+      title: sortedPosts[index - 1].data.title,
+      slug: sortedPosts[index - 1].slug
+    } : null;
+
+    // Find related posts by category or shared tags
+    const relatedPosts = sortedPosts
+      .filter((p) => p.slug !== post.slug && (p.data.category === post.data.category || p.data.tags.some((t) => post.data.tags.includes(t))))
+      .slice(0, 2)
+      .map((p) => ({
+        title: p.data.title,
+        slug: p.slug,
+        category: p.data.category,
+        pubDate: p.data.pubDate
+      }));
+
+    return {
+      params: { slug: post.slug },
+      props: { post, prevPost, nextPost, relatedPosts }
+    };
+  });
+}
+
+const { post, prevPost, nextPost, relatedPosts } = Astro.props;
+const { Content, headings } = await post.render();
+---
+
+<ArticleLayout
+  title={post.data.title}
+  description={post.data.description}
+  pubDate={post.data.pubDate}
+  updatedDate={post.data.updatedDate}
+  category={post.data.category}
+  tags={post.data.tags}
+  cover={post.data.cover}
+  coverAlt={post.data.coverAlt}
+  headings={headings}
+  slug={post.slug}
+  rawContent={post.body}
+  prevPost={prevPost}
+  nextPost={nextPost}
+  relatedPosts={relatedPosts}
+>
+  <Content />
+</ArticleLayout>

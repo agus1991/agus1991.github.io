@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#ECEAE4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <text x="100" y="160" font-family="Lora, Georgia, serif" font-size="28" font-weight="600" fill="#A58B62" letter-spacing="2">MAS-AGUS KNOWLEDGE HUB</text>
+  <text x="100" y="270" font-family="Lora, Georgia, serif" font-size="56" font-weight="700" fill="#252525">Ideas, Research &amp; Technology</text>
+  <text x="100" y="340" font-family="Inter, sans-serif" font-size="24" fill="#777777">Agus Sifaunajah — Academic, Researcher &amp; Systems Practitioner</text>
+  
+  <line x1="100" y1="420" x2="1100" y2="420" stroke="#E8E5DF" stroke-width="2" />
+  <text x="100" y="480" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#A58B62">mas.askapubliser.biz.id</text>
+</svg>

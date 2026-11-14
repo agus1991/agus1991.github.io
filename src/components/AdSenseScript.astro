@@ -1,0 +1,16 @@
+---
+import siteData from '../data/site.json';
+
+// Support both site.json and environment variables
+const isEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true' || siteData.adsense.enabled;
+const adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT || siteData.adsense.client;
+---
+
+{isEnabled && adClient && (
+  <script
+    is:inline
+    async
+    src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`}
+    crossorigin="anonymous"
+  />
+)}

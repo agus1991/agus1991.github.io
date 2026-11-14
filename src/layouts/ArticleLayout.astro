@@ -1,0 +1,273 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import SocialShare from '../components/SocialShare.astro';
+import ArticleAd from '../components/ArticleAd.astro';
+import SidebarAd from '../components/SidebarAd.astro';
+import { formatDate } from '../utils/formatDate';
+import { calculateReadingTime } from '../utils/readingTime';
+import { generateBlogPostingSchema } from '../utils/seo';
+import profileData from '../data/profile.json';
+import siteData from '../data/site.json';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface ArticleNav {
+  title: string;
+  slug: string;
+}
+
+interface RelatedPost {
+  title: string;
+  slug: string;
+  category: string;
+  pubDate: Date;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date | string;
+  updatedDate?: Date | string;
+  category: string;
+  tags?: string[];
+  cover?: string;
+  coverAlt?: string;
+  headings?: Heading[];
+  slug: string;
+  rawContent?: string;
+  prevPost?: ArticleNav | null;
+  nextPost?: ArticleNav | null;
+  relatedPosts?: RelatedPost[];
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  category,
+  tags = [],
+  cover,
+  coverAlt = title,
+  headings = [],
+  slug,
+  rawContent = '',
+  prevPost = null,
+  nextPost = null,
+  relatedPosts = []
+} = Astro.props;
+
+const canonicalUrl = `${siteData.siteUrl}/blog/${slug}`;
+const readingTime = calculateReadingTime(rawContent || description);
+const formattedPubDate = formatDate(pubDate);
+const formattedUpDate = updatedDate ? formatDate(updatedDate) : null;
+
+const breadcrumbs = [
+  { name: 'Beranda', url: '/' },
+  { name: 'Blog', url: '/blog' },
+  { name: category, url: `/blog?category=${encodeURIComponent(category)}` },
+  { name: title, url: `/blog/${slug}` }
+];
+
+const blogPostingSchema = generateBlogPostingSchema({
+  title,
+  description,
+  url: canonicalUrl,
+  pubDate,
+  updatedDate,
+  cover,
+  category,
+  tags
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={cover}
+  article={true}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
+  canonicalUrl={canonicalUrl}
+  schemas={[blogPostingSchema]}
+>
+  <ReadingProgress />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <div class="mb-6">
+      <Breadcrumb items={breadcrumbs} />
+    </div>
+
+    <!-- Article Header -->
+    <header class="mb-10 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs text-ink-secondary-light dark:text-ink-secondary-dark mb-4">
+        <a
+          href={`/blog?category=${encodeURIComponent(category)}`}
+          class="font-semibold text-accent-light dark:text-accent-dark uppercase tracking-wider text-[11px] px-2.5 py-0.5 rounded-full bg-accent-muted"
+        >
+          {category}
+        </a>
+        <span>•</span>
+        <time datetime={new Date(pubDate).toISOString()}>{formattedPubDate}</time>
+        {formattedUpDate && formattedUpDate !== formattedPubDate && (
+          <>
+            <span>•</span>
+            <span class="italic text-[11px]">(Diperbarui: {formattedUpDate})</span>
+          </>
+        )}
+        <span>•</span>
+        <span>{readingTime}</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark leading-[1.2] mb-6">
+        {title}
+      </h1>
+
+      <p class="text-lg sm:text-xl text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed font-normal">
+        {description}
+      </p>
+
+      <!-- Author Bar -->
+      <div class="mt-8 pt-6 border-t border-borderline-light dark:border-borderline-dark flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img
+            src={profileData.avatar}
+            alt={profileData.name}
+            class="w-11 h-11 rounded-full border border-borderline-light dark:border-borderline-dark object-cover"
+          />
+          <div>
+            <a href="/about" class="text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">
+              {profileData.name}
+            </a>
+            <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+              {profileData.headline}
+            </p>
+          </div>
+        </div>
+
+        <a href="/about" class="text-xs text-accent-light dark:text-accent-dark hover:underline font-medium hidden sm:inline-block">
+          Profil Penulis &rarr;
+        </a>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {cover && (
+      <figure class="mb-10 rounded-lg overflow-hidden border border-borderline-light dark:border-borderline-dark aspect-[16/9] bg-canvas-light dark:bg-canvas-dark">
+        <img
+          src={cover}
+          alt={coverAlt}
+          class="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        {coverAlt && coverAlt !== title && (
+          <figcaption class="p-3 text-center text-xs text-ink-secondary-light dark:text-ink-secondary-dark bg-surface-light dark:bg-surface-dark border-t border-borderline-light dark:border-borderline-dark">
+            {coverAlt}
+          </figcaption>
+        )}
+      </figure>
+    )}
+
+    <!-- AdSense Slot: Top of Article -->
+    <ArticleAd position="top" />
+
+    <!-- Table of Contents -->
+    {headings && headings.length > 0 && (
+      <TableOfContents headings={headings} />
+    )}
+
+    <!-- Main Content Body -->
+    <div class="prose prose-lg dark:prose-invert max-w-none my-10 leading-relaxed">
+      <slot />
+    </div>
+
+    <!-- AdSense Slot: Middle/Bottom of Article -->
+    <ArticleAd position="bottom" />
+
+    <!-- Tags List -->
+    {tags.length > 0 && (
+      <div class="my-8 pt-6 border-t border-borderline-light dark:border-borderline-dark">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-secondary-light dark:text-ink-secondary-dark mb-3">
+          Topik Terkait:
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <a
+              href={`/blog?tag=${encodeURIComponent(tag)}`}
+              class="text-xs px-3 py-1 rounded bg-surface-light dark:bg-surface-dark border border-borderline-light dark:border-borderline-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Social Share -->
+    <SocialShare title={title} url={canonicalUrl} />
+
+    <!-- Previous and Next Post Navigation -->
+    <nav class="my-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {prevPost ? (
+        <a
+          href={`/blog/${prevPost.slug}`}
+          class="p-4 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark transition-all group"
+        >
+          <span class="block text-xs uppercase tracking-wider text-ink-secondary-light dark:text-ink-secondary-dark mb-1">
+            &larr; Artikel Sebelumnya
+          </span>
+          <span class="font-serif text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark line-clamp-2">
+            {prevPost.title}
+          </span>
+        </a>
+      ) : <div />}
+
+      {nextPost ? (
+        <a
+          href={`/blog/${nextPost.slug}`}
+          class="p-4 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark transition-all text-right group"
+        >
+          <span class="block text-xs uppercase tracking-wider text-ink-secondary-light dark:text-ink-secondary-dark mb-1">
+            Artikel Selanjutnya &rarr;
+          </span>
+          <span class="font-serif text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark line-clamp-2">
+            {nextPost.title}
+          </span>
+        </a>
+      ) : <div />}
+    </nav>
+
+    <!-- Related Articles -->
+    {relatedPosts.length > 0 && (
+      <section class="mt-14 pt-10 border-t border-borderline-light dark:border-borderline-dark">
+        <h3 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark mb-6">
+          Artikel Pilihan Terkait
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {relatedPosts.map((post) => (
+            <a
+              href={`/blog/${post.slug}`}
+              class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark transition-all group"
+            >
+              <span class="text-[11px] font-semibold text-accent-light dark:text-accent-dark uppercase tracking-wider block mb-1">
+                {post.category}
+              </span>
+              <h4 class="font-serif text-base font-semibold text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark line-clamp-2">
+                {post.title}
+              </h4>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

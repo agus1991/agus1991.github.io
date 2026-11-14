@@ -1,0 +1,92 @@
+---
+import { formatDate } from '../utils/formatDate';
+import { calculateReadingTime } from '../utils/readingTime';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  pubDate: Date | string;
+  category: string;
+  tags?: string[];
+  cover?: string;
+  coverAlt?: string;
+  body?: string;
+}
+
+const {
+  title,
+  description,
+  slug,
+  pubDate,
+  category,
+  tags = [],
+  cover,
+  coverAlt = title,
+  body = ''
+} = Astro.props;
+
+const readingTime = calculateReadingTime(body || description);
+const formattedDate = formatDate(pubDate);
+const href = `/blog/${slug}`;
+---
+
+<article class="group relative bg-surface-light dark:bg-surface-dark border border-borderline-light dark:border-borderline-dark rounded-lg overflow-hidden transition-all hover:border-accent-light dark:hover:border-accent-dark">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-6 sm:p-8 lg:p-10">
+    <!-- Image Column -->
+    {cover && (
+      <div class="lg:col-span-7 overflow-hidden rounded bg-canvas-light dark:bg-canvas-dark aspect-[16/9] relative">
+        <a href={href} class="block w-full h-full">
+          <img
+            src={cover}
+            alt={coverAlt}
+            loading="eager"
+            decoding="async"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </a>
+      </div>
+    )}
+
+    <!-- Content Column -->
+    <div class={`${cover ? 'lg:col-span-5' : 'lg:col-span-12'} flex flex-col justify-center space-y-4`}>
+      <div class="flex items-center space-x-3 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+        <span class="px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider text-[10px] bg-accent-muted text-accent-light dark:text-accent-dark">
+          Pilihan Utama
+        </span>
+        <a
+          href={`/blog?category=${encodeURIComponent(category)}`}
+          class="font-semibold text-accent-light dark:text-accent-dark hover:underline uppercase tracking-wider text-[11px]"
+        >
+          {category}
+        </a>
+      </div>
+
+      <h2 class="font-serif text-2xl sm:text-3xl lg:text-3xl font-bold leading-tight text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
+        <a href={href}>
+          {title}
+        </a>
+      </h2>
+
+      <p class="text-sm sm:text-base leading-relaxed text-ink-secondary-light dark:text-ink-secondary-dark line-clamp-3">
+        {description}
+      </p>
+
+      <div class="pt-2 flex items-center space-x-3 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+        <time datetime={new Date(pubDate).toISOString()}>{formattedDate}</time>
+        <span>•</span>
+        <span>{readingTime}</span>
+      </div>
+
+      <div class="pt-2">
+        <a
+          href={href}
+          class="inline-flex items-center space-x-2 text-sm font-semibold text-accent-light dark:text-accent-dark hover:text-accent-hover transition-colors"
+        >
+          <span>Baca Pembahasan Lengkap</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,137 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import profileData from '../data/profile.json';
+import socialData from '../data/social.json';
+import siteData from '../data/site.json';
+
+const pageUrl = `${siteData.siteUrl}/contact`;
+
+const breadcrumbs = [
+  { name: 'Beranda', url: '/' },
+  { name: 'Kontak', url: '/contact' }
+];
+
+const contactChannels = [
+  {
+    name: 'Surel Akademik & Profesional',
+    value: socialData.email,
+    href: `mailto:${socialData.email}`,
+    desc: 'Saluran resmi untuk korespondensi riset, undangan seminar, dan konsultasi teknis.'
+  },
+  {
+    name: 'GitHub Repository',
+    value: socialData.github,
+    href: socialData.github,
+    desc: 'Kode sumber terbuka, eksperimen perangkat lunak, dan kontribusi repositori.'
+  },
+  {
+    name: 'LinkedIn Professional Network',
+    value: 'linkedin.com/in/agus-sifaunajah',
+    href: socialData.linkedin,
+    desc: 'Jejaring karir profesional, rekam jejak konsultasi, dan hubungan industri.'
+  },
+  {
+    name: 'Google Scholar Profile',
+    value: 'Kutipan & Indeks Publikasi',
+    href: socialData.googleScholar,
+    desc: 'Daftar naskah ilmiah terverifikasi, jumlah sitasi, dan metrik indeks h.'
+  },
+  {
+    name: 'ORCID Identifier',
+    value: '0009-0000-0000-0000',
+    href: socialData.orcid,
+    desc: 'Pengenal persisten unik internasional untuk peneliti dan karya ilmiah.'
+  },
+  {
+    name: 'AskaPubliser Main Portal',
+    value: socialData.mainDomain,
+    href: socialData.mainDomain,
+    desc: 'Portal utama penerbitan ilmiah independen dan ekosistem jurnal.'
+  }
+];
+---
+
+<PageLayout
+  title={`Kontak & Hubungi — ${siteData.name}`}
+  description="Hubungi Agus Sifaunajah untuk keperluan kolaborasi penelitian, pembicara seminar, konsultasi sistem informasi, atau korespondensi profesional."
+  headline="Hubungi &amp; Kolaborasi"
+  subheadline="Pintu terbuka untuk dialog akademis, kolaborasi riset komputasi terapan, maupun konsultasi arsitektur sistem informasi."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- Channel Cards -->
+    <div class="lg:col-span-8 space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {contactChannels.map((channel) => (
+          <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-lg font-bold text-ink-primary-light dark:text-ink-primary-dark">
+                {channel.name}
+              </h3>
+              <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark mt-1 leading-relaxed">
+                {channel.desc}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-borderline-light/50 dark:border-borderline-dark/50">
+              <a
+                href={channel.href}
+                target={channel.href.startsWith('mailto:') ? '_self' : '_blank'}
+                rel="noopener noreferrer"
+                class="text-xs font-semibold text-accent-light dark:text-accent-dark hover:underline truncate block"
+              >
+                {channel.value} &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Guidelines Note -->
+      <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-canvas-light dark:bg-canvas-dark text-xs text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed space-y-2">
+        <h4 class="font-semibold text-ink-primary-light dark:text-ink-primary-dark uppercase tracking-wider text-[11px]">
+          Catatan Etika Korespondensi
+        </h4>
+        <p>
+          Untuk keperluan telaah naskah (*peer review*) atau undangan akademis, mohon sertakan informasi konteks institusi dan batas waktu yang relevan pada baris subjek surel.
+        </p>
+      </div>
+    </div>
+
+    <!-- Profile Summary Sidebar -->
+    <div class="lg:col-span-4 space-y-6">
+      <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-4">
+        <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border border-accent-light dark:border-accent-dark p-0.5 bg-canvas-light dark:bg-canvas-dark">
+          <img
+            src={profileData.avatar}
+            alt={profileData.name}
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-lg font-bold text-ink-primary-light dark:text-ink-primary-dark">
+            {profileData.name}
+          </h3>
+          <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark mt-0.5">
+            {profileData.brand}
+          </p>
+          <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark mt-2 leading-relaxed">
+            {profileData.headline}
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+        <h4 class="font-semibold text-ink-primary-light dark:text-ink-primary-dark uppercase tracking-wider text-[11px]">
+          Alamat Situs Resmi
+        </h4>
+        <p class="font-mono text-ink-primary-light dark:text-ink-primary-dark bg-canvas-light dark:bg-canvas-dark p-2 rounded border border-borderline-light dark:border-borderline-dark">
+          https://mas.askapubliser.biz.id
+        </p>
+        <p class="leading-relaxed">
+          Disajikan langsung melalui GitHub Pages dengan custom subdomain mandiri.
+        </p>
+      </div>
+    </div>
+  </div>
+</PageLayout>

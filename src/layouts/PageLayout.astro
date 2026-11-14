@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import type { BreadcrumbItem } from '../utils/seo';
+
+interface Props {
+  title: string;
+  description?: string;
+  headline?: string;
+  subheadline?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  schemas?: Array<Record<string, any>>;
+  canonicalUrl?: string;
+}
+
+const {
+  title,
+  description,
+  headline,
+  subheadline,
+  breadcrumbs = [],
+  schemas = [],
+  canonicalUrl
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemas={schemas}
+  canonicalUrl={canonicalUrl}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    {breadcrumbs.length > 0 && (
+      <div class="mb-6">
+        <Breadcrumb items={breadcrumbs} />
+      </div>
+    )}
+
+    {headline && (
+      <header class="mb-12 pb-8 border-b border-borderline-light dark:border-borderline-dark">
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+          {headline}
+        </h1>
+        {subheadline && (
+          <p class="mt-4 text-base sm:text-lg text-ink-secondary-light dark:text-ink-secondary-dark max-w-3xl leading-relaxed">
+            {subheadline}
+          </p>
+        )}
+      </header>
+    )}
+
+    <slot />
+  </div>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import siteData from '../data/site.json';
+
+interface Props {
+  slotId?: string;
+  format?: 'auto' | 'fluid' | 'rectangle' | 'horizontal';
+  responsive?: boolean;
+  className?: string;
+}
+
+const {
+  slotId = '',
+  format = 'auto',
+  responsive = true,
+  className = ''
+} = Astro.props;
+
+const isEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true' || siteData.adsense.enabled;
+const adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT || siteData.adsense.client;
+const shouldRender = isEnabled && Boolean(adClient) && Boolean(slotId);
+---
+
+{shouldRender ? (
+  <div class={`ad-container my-8 text-center overflow-hidden min-h-[100px] border border-borderline/40 rounded-sm bg-surface-light dark:bg-surface-dark p-2 ${className}`}>
+    <span class="block text-[10px] tracking-wider uppercase text-ink-secondary/70 mb-1">Iklan</span>
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={adClient}
+      data-ad-slot={slotId}
+      data-ad-format={format}
+      data-full-width-responsive={responsive ? 'true' : 'false'}
+    />
+    <script is:inline>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+) : null}

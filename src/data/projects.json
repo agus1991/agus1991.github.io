@@ -1,0 +1,48 @@
+[
+  {
+    "id": "proj-mas-agus",
+    "title": "MAS-AGUS Knowledge Hub Platform",
+    "description": "Platform personal knowledge hub berkinerja tinggi yang dirancang dengan arsitektur Static Site Generation (SSG), mengintegrasikan sistem manajemen konten terpusat berbasis Markdown/MDX dan automasi CI/CD.",
+    "objectives": [
+      "Menyediakan ruang publikasi mandiri yang bebas dari dependensi database dinamis.",
+      "Mengoptimalkan Core Web Vitals dengan 0ms server compute time pada edge CDN.",
+      "Membangun arsitektur siap-monetisasi dengan integrasi standar Google AdSense."
+    ],
+    "techStack": ["Astro", "TypeScript", "Tailwind CSS", "MDX", "GitHub Actions", "GitHub Pages"],
+    "image": "/images/projects/project-knowledge-hub.svg",
+    "url": "https://mas.askapubliser.biz.id",
+    "github": "https://github.com/agus1991/agus1991.github.io",
+    "status": "Production",
+    "featured": true
+  },
+  {
+    "id": "proj-askapubliser-portal",
+    "title": "AskaPubliser Academic Ecosystem",
+    "description": "Infrastruktur manajemen publikasi ilmiah independen yang menghubungkan alur kerja editorial, standarisasi indeksasi jurnal, dan distribusi metadata penelitian.",
+    "objectives": [
+      "Meningkatkan aksesibilitas dan sitasi karya ilmiah open-access.",
+      "Otomatisasi pengindeksan metadata naskah ke mesin pencari akademik.",
+      "Standardisasi alur peer-review dengan tingkat kepatuhan etika publikasi yang ketat."
+    ],
+    "techStack": ["OJS 3", "PHP", "MySQL", "OAI-PMH", "Nginx", "Linux Server"],
+    "image": "/images/projects/project-askapubliser.svg",
+    "url": "https://askapubliser.biz.id",
+    "status": "Active / Maintained",
+    "featured": true
+  },
+  {
+    "id": "proj-digital-audit-toolkit",
+    "title": "Digital Transformation Assessment Kit",
+    "description": "Perangkat instrumen asesmen kesiapan transformasi digital berbasis web interaktif untuk mengukur pilar kapabilitas digital organisasi.",
+    "objectives": [
+      "Menghasilkan skor komprehensif tingkat kesiapan digital institusi.",
+      "Memberikan rekomendasi roadmap perbaikan alur kerja dan teknologi.",
+      "Menyajikan visualisasi radar chart interaktif atas kapabilitas 6 dimensi organisasi."
+    ],
+    "techStack": ["TypeScript", "Vue / Astro", "Tailwind CSS", "Chart.js"],
+    "image": "/images/projects/project-audit-kit.svg",
+    "url": "https://mas.askapubliser.biz.id/projects",
+    "status": "In Development",
+    "featured": true
+  }
+]

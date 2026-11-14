@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#F8F7F4" />
+  <rect x="24" y="24" width="752" height="452" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <rect x="50" y="50" width="700" height="48" rx="8" fill="#F8F7F4" stroke="#E8E5DF" />
+  <circle cx="75" cy="74" r="6" fill="#A58B62" />
+  <circle cx="95" cy="74" r="6" fill="#E8E5DF" />
+  <circle cx="115" cy="74" r="6" fill="#E8E5DF" />
+  <rect x="150" y="62" width="300" height="24" rx="4" fill="#FFFFFF" stroke="#E8E5DF" />
+  <text x="160" y="78" font-family="Inter, sans-serif" font-size="11" fill="#777777">https://askapubliser.biz.id</text>
+  
+  <text x="60" y="160" font-family="Lora, Georgia, serif" font-size="32" font-weight="700" fill="#252525">AskaPubliser Academic Ecosystem</text>
+  <text x="60" y="200" font-family="Inter, sans-serif" font-size="16" fill="#777777">Open Journal Publishing • OAI-PMH Protocols • Metadata Indexing</text>
+  
+  <g transform="translate(60, 240)">
+    <rect x="0" y="0" width="320" height="120" rx="8" fill="#F8F7F4" stroke="#E8E5DF" />
+    <text x="20" y="40" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#A58B62">PEER REVIEW FLOW</text>
+    <text x="20" y="70" font-family="Inter, sans-serif" font-size="14" fill="#252525">Double-blind peer review</text>
+    <text x="20" y="95" font-family="Inter, sans-serif" font-size="12" fill="#777777">Automated reviewer matching</text>
+    
+    <rect x="340" y="0" width="320" height="120" rx="8" fill="#F8F7F4" stroke="#E8E5DF" />
+    <text x="360" y="40" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#A58B62">METADATA STANDARDS</text>
+    <text x="360" y="70" font-family="Inter, sans-serif" font-size="14" fill="#252525">Dublin Core &amp; CrossRef DOI</text>
+    <text x="360" y="95" font-family="Inter, sans-serif" font-size="12" fill="#777777">Google Scholar harvesting ready</text>
+  </g>
+</svg>

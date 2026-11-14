@@ -1,0 +1,25 @@
+{
+  "main": [
+    { "name": "Beranda", "href": "/" },
+    { "name": "Tentang", "href": "/about" },
+    { "name": "Blog", "href": "/blog" },
+    { "name": "Riset", "href": "/research" },
+    { "name": "Publikasi", "href": "/publications" },
+    { "name": "Proyek", "href": "/projects" },
+    { "name": "Kontak", "href": "/contact" }
+  ],
+  "legal": [
+    { "name": "Kebijakan Privasi", "href": "/privacy-policy" },
+    { "name": "Penafian (Disclaimer)", "href": "/disclaimer" },
+    { "name": "Syarat & Ketentuan", "href": "/terms-and-conditions" }
+  ],
+  "categories": [
+    { "name": "Information Systems", "slug": "information-systems" },
+    { "name": "Digital Transformation", "slug": "digital-transformation" },
+    { "name": "Research", "slug": "research" },
+    { "name": "Technology", "slug": "technology" },
+    { "name": "Software Development", "slug": "software-development" },
+    { "name": "Education", "slug": "education" },
+    { "name": "Tutorials", "slug": "tutorials" }
+  ]
+}

@@ -1,0 +1,95 @@
+---
+import navigation from '../data/navigation.json';
+import siteData from '../data/site.json';
+import ThemeToggle from './ThemeToggle.astro';
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  if (href === '/') {
+    return currentPath === '/' || currentPath === '';
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="sticky top-0 z-40 w-full backdrop-blur-md bg-canvas-light/90 dark:bg-canvas-dark/90 border-b border-borderline-light dark:border-borderline-dark transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Brand Logo -->
+      <a href="/" class="group flex items-center space-x-2.5">
+        <span class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
+          MAS-AGUS
+        </span>
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-light dark:bg-accent-dark"></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+        {navigation.main.map((item) => {
+          const active = isActive(item.href);
+          return (
+            <a
+              href={item.href}
+              class={`px-3 py-1.5 text-sm font-medium transition-colors rounded-sm ${
+                active
+                  ? 'text-accent-light dark:text-accent-dark font-semibold border-b-2 border-accent-light dark:border-accent-dark'
+                  : 'text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark'
+              }`}
+            >
+              {item.name}
+            </a>
+          );
+        })}
+      </nav>
+
+      <!-- Right Controls: Theme Toggle & Mobile Menu Button -->
+      <div class="flex items-center space-x-2">
+        <ThemeToggle />
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="md:hidden p-2 rounded-md text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark focus:outline-none"
+          aria-label="Buka menu navigasi"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-b border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark px-4 pt-3 pb-5 space-y-1">
+    {navigation.main.map((item) => {
+      const active = isActive(item.href);
+      return (
+        <a
+          href={item.href}
+          class={`block px-3 py-2 text-base font-medium rounded-md ${
+            active
+              ? 'text-accent-light dark:text-accent-dark bg-canvas-light dark:bg-canvas-dark font-semibold'
+              : 'text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark'
+          }`}
+        >
+          {item.name}
+        </a>
+      );
+    })}
+  </div>
+</header>
+
+<script is:inline>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

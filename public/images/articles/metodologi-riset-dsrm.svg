@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgMR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#E8E5DF" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgMR)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <rect x="100" y="90" width="140" height="36" rx="18" fill="#F1EDE4" stroke="#A58B62" stroke-width="1.5" />
+  <text x="170" y="114" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A58B62" text-anchor="middle" letter-spacing="1">RESEARCH</text>
+  
+  <text x="100" y="210" font-family="Lora, Georgia, serif" font-size="48" font-weight="700" fill="#252525">Metodologi Riset Terapan</text>
+  <text x="100" y="275" font-family="Lora, Georgia, serif" font-size="42" font-weight="600" fill="#777777">dalam Sistem Informasi</text>
+  <text x="100" y="345" font-family="Inter, sans-serif" font-size="22" fill="#777777">Panduan Praktis Kerangka Kerja Design Science Research (DSRM)</text>
+  
+  <!-- Visual 6 steps graphic -->
+  <g transform="translate(750, 160)">
+    <rect x="0" y="0" width="280" height="42" rx="6" fill="#F8F7F4" stroke="#E8E5DF" />
+    <text x="140" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#252525" text-anchor="middle">1. Identifikasi Masalah</text>
+    <rect x="0" y="55" width="280" height="42" rx="6" fill="#F8F7F4" stroke="#E8E5DF" />
+    <text x="140" y="81" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#252525" text-anchor="middle">2. Desain Solusi &amp; Artefak</text>
+    <rect x="0" y="110" width="280" height="42" rx="6" fill="#F1EDE4" stroke="#A58B62" />
+    <text x="140" y="136" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#A58B62" text-anchor="middle">3. Evaluasi &amp; Validasi</text>
+  </g>
+  
+  <line x1="100" y1="460" x2="1100" y2="460" stroke="#E8E5DF" stroke-width="2" />
+  <text x="100" y="515" font-family="Inter, sans-serif" font-size="18" fill="#777777">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+</svg>

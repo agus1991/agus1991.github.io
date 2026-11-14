@@ -1,0 +1,37 @@
+---
+import { generateBreadcrumbSchema, type BreadcrumbItem } from '../utils/seo';
+import JsonLd from './JsonLd.astro';
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+const schema = generateBreadcrumbSchema(items);
+---
+
+<nav aria-label="Breadcrumb" class="py-3 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+  <ol class="flex flex-wrap items-center space-x-2">
+    {items.map((item, index) => {
+      const isLast = index === items.length - 1;
+      return (
+        <li class="flex items-center space-x-2">
+          {index > 0 && <span class="text-borderline-dark dark:text-borderline-light select-none">/</span>}
+          {isLast ? (
+            <span class="text-ink-primary-light dark:text-ink-primary-dark font-medium truncate max-w-[240px] sm:max-w-md" aria-current="page">
+              {item.name}
+            </span>
+          ) : (
+            <a
+              href={item.url}
+              class="hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+            >
+              {item.name}
+            </a>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+  <JsonLd schema={schema} />
+</nav>

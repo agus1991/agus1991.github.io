@@ -1,0 +1,23 @@
+---
+import AdSlot from './AdSlot.astro';
+import siteData from '../data/site.json';
+
+interface Props {
+  position?: 'top' | 'middle' | 'bottom';
+  className?: string;
+}
+
+const { position = 'middle', className = '' } = Astro.props;
+
+let slotId = siteData.adsense.slotArticleTop;
+if (position === 'bottom') {
+  slotId = siteData.adsense.slotArticleBottom;
+}
+---
+
+<AdSlot
+  slotId={slotId}
+  format="auto"
+  responsive={true}
+  className={`my-8 max-w-2xl mx-auto ${className}`}
+/>

@@ -1,0 +1,58 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { generatePersonSchema, generateWebSiteSchema } from '../utils/seo';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+  pubDate?: Date | string;
+  updatedDate?: Date | string;
+  canonicalUrl?: string;
+  schemas?: Array<Record<string, any>>;
+}
+
+const {
+  title,
+  description,
+  image,
+  article = false,
+  pubDate,
+  updatedDate,
+  canonicalUrl,
+  schemas = []
+} = Astro.props;
+
+// Default structured data: Person and WebSite
+const defaultSchemas = [generatePersonSchema(), generateWebSiteSchema(), ...schemas];
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      image={image}
+      article={article}
+      pubDate={pubDate}
+      updatedDate={updatedDate}
+      canonicalUrl={canonicalUrl}
+    />
+    {defaultSchemas.map((schema) => (
+      <JsonLd schema={schema} />
+    ))}
+    <slot name="head" />
+  </head>
+  <body class="bg-canvas-light dark:bg-canvas-dark text-ink-primary-light dark:text-ink-primary-dark transition-colors duration-200">
+    <Header />
+    <main id="main-content" class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

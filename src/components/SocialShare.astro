@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+const encodedTitle = encodeURIComponent(title);
+const encodedUrl = encodeURIComponent(url);
+
+const shareLinks = [
+  {
+    name: 'LinkedIn',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`
+  },
+  {
+    name: 'Twitter (X)',
+    href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`
+  },
+  {
+    name: 'WhatsApp',
+    href: `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`
+  }
+];
+---
+
+<div class="social-share py-6 border-y border-borderline-light dark:border-borderline-dark flex flex-wrap items-center justify-between gap-4">
+  <div class="flex items-center space-x-2">
+    <span class="text-xs uppercase tracking-wider font-semibold text-ink-secondary-light dark:text-ink-secondary-dark">
+      Bagikan Artikel:
+    </span>
+  </div>
+
+  <div class="flex items-center space-x-3 text-xs font-medium">
+    {shareLinks.map((link) => (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-3 py-1.5 rounded border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+      >
+        {link.name}
+      </a>
+    ))}
+
+    <button
+      id="copy-link-btn"
+      type="button"
+      data-url={url}
+      class="px-3 py-1.5 rounded border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors cursor-pointer"
+    >
+      Salin Tautan
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  const copyBtn = document.getElementById('copy-link-btn');
+  copyBtn?.addEventListener('click', async () => {
+    const url = copyBtn.getAttribute('data-url') || window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = 'Tersalin!';
+      copyBtn.classList.add('text-accent-light', 'font-semibold');
+      setTimeout(() => {
+        copyBtn.textContent = originalText;
+        copyBtn.classList.remove('text-accent-light', 'font-semibold');
+      }, 2000);
+    } catch (e) {
+      console.error('Gagal menyalin tautan:', e);
+    }
+  });
+</script>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgPW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#E8E5DF" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgPW)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <rect x="100" y="90" width="160" height="36" rx="18" fill="#F1EDE4" stroke="#A58B62" stroke-width="1.5" />
+  <text x="180" y="114" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A58B62" text-anchor="middle" letter-spacing="1">TECHNOLOGY</text>
+  
+  <text x="100" y="210" font-family="Lora, Georgia, serif" font-size="50" font-weight="700" fill="#252525">Optimasi Performa Web</text>
+  <text x="100" y="275" font-family="Lora, Georgia, serif" font-size="44" font-weight="600" fill="#777777">dengan Jamstack &amp; Astro</text>
+  <text x="100" y="345" font-family="Inter, sans-serif" font-size="22" fill="#777777">Mencapai Core Web Vitals 100 dengan Zero-JS Island Architecture</text>
+  
+  <!-- Metric badging illustration -->
+  <g transform="translate(800, 150)">
+    <circle cx="100" cy="100" r="75" fill="#F8F7F4" stroke="#A58B62" stroke-width="6" />
+    <text x="100" y="95" font-family="Lora, Georgia, serif" font-size="52" font-weight="700" fill="#252525" text-anchor="middle">100</text>
+    <text x="100" y="130" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A58B62" text-anchor="middle">LIGHTHOUSE</text>
+  </g>
+  
+  <line x1="100" y1="460" x2="1100" y2="460" stroke="#E8E5DF" stroke-width="2" />
+  <text x="100" y="515" font-family="Inter, sans-serif" font-size="18" fill="#777777">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+</svg>

@@ -1,0 +1,67 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import siteData from '../data/site.json';
+import profileData from '../data/profile.json';
+
+const pageUrl = `${siteData.siteUrl}/terms-and-conditions`;
+
+const breadcrumbs = [
+  { name: 'Beranda', url: '/' },
+  { name: 'Syarat & Ketentuan', url: '/terms-and-conditions' }
+];
+---
+
+<PageLayout
+  title={`Syarat & Ketentuan Penggunaan — ${siteData.name}`}
+  description="Ketentuan resmi penggunaan, hak cipta materi, sitasi karya, dan tata kelola situs web MAS-AGUS."
+  headline="Syarat &amp; Ketentuan Penggunaan"
+  subheadline="Pedoman penggunaan konten, hak kekayaan intelektual, dan etika atribusi materi pada MAS-AGUS."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+>
+  <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto leading-relaxed">
+    <p class="text-sm italic text-ink-secondary-light dark:text-ink-secondary-dark">
+      Terakhir diperbarui: 14 November 2026
+    </p>
+
+    <p>
+      Selamat datang di <strong>MAS-AGUS</strong>. Syarat dan ketentuan ini menguraikan aturan dan regulasi penggunaan situs web MAS-AGUS yang beralamat di <a href="https://mas.askapubliser.biz.id">https://mas.askapubliser.biz.id</a>.
+    </p>
+
+    <h2>1. Hak Cipta dan Kekayaan Intelektual</h2>
+    <p>
+      Kecuali dinyatakan lain, Agus Sifaunajah (MAS-AGUS) memiliki hak kekayaan intelektual atas semua materi di situs web ini. Semua hak kekayaan intelektual dilindungi undang-undang. Anda dapat mengakses materi ini dari MAS-AGUS untuk penggunaan pribadi Anda sendiri dengan batasan yang diatur dalam syarat dan ketentuan ini.
+    </p>
+    <p>Anda tidak diperkenankan untuk:</p>
+    <ul>
+      <li>Mempublikasikan ulang materi dari MAS-AGUS secara utuh tanpa atribusi atau izin tertulis.</li>
+      <li>Menjual, menyewakan, atau mensublisensikan materi dari MAS-AGUS untuk keuntungan komersial sepihak.</li>
+      <li>Mereproduksi, menggandakan, atau menyalin materi artikel tanpa menyertakan tautan balik aktif (backlink) ke artikel sumber.</li>
+    </ul>
+
+    <h2>2. Kebijakan Sitasi Akademik</h2>
+    <p>
+      Pengutipan gagasan, data, atau sintesis kajian dari blog dan publikasi MAS-AGUS untuk keperluan riset, skripsi, tesis, atau karya ilmiah sangat didorong, dengan kewajiban mencantumkan sitasi yang tepat sesuai format baku (APA, IEEE, atau Harvard), menyertakan nama penulis <em>Agus Sifaunajah</em> dan URL naskah rujukan.
+    </p>
+
+    <h2>3. Kode Sumber dan Contoh Implementasi</h2>
+    <p>
+      Potongan kode program (*code snippets*) dan diagram arsitektur yang disediakan di dalam artikel tutorial atau proyek sumber terbuka dilisensikan di bawah lisensi terbuka (MIT License), kecuali disebutkan secara khusus dalam repositori terkait.
+    </p>
+
+    <h2>4. Pembatasan Tanggung Jawab</h2>
+    <p>
+      MAS-AGUS tidak bertanggung jawab atas kerugian langsung, tidak langsung, konsekuensial, atau bentuk kerugian lainnya yang timbul dari ketidakmampuan menggunakan situs web atau ketergantungan pada materi yang disajikan.
+    </p>
+
+    <h2>5. Perubahan Ketentuan</h2>
+    <p>
+      Kami berhak merevisi syarat dan ketentuan ini sewaktu-waktu sesuai dengan perkembangan teknologi dan regulasi yang berlaku. Perubahan akan berlaku seketika setelah diterbitkan di halaman ini.
+    </p>
+
+    <h2>6. Hukum yang Mengatur</h2>
+    <p>
+      Syarat dan ketentuan ini diatur dan ditafsirkan sesuai dengan hukum yang berlaku di Negara Kesatuan Republik Indonesia, khususnya peraturan perundang-undangan terkait Informasi dan Transaksi Elektronik (UU ITE).
+    </p>
+  </div>
+</PageLayout>

@@ -1,0 +1,301 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import FeaturedArticle from '../../components/FeaturedArticle.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import navigation from '../../data/navigation.json';
+import siteData from '../../data/site.json';
+import { generateBlogSchema } from '../../utils/seo';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featuredPost = sortedPosts.find((p) => p.data.featured) || sortedPosts[0];
+const standardPosts = sortedPosts.filter((p) => p.slug !== featuredPost?.slug);
+
+const pageUrl = `${siteData.siteUrl}/blog`;
+const blogSchema = generateBlogSchema(pageUrl);
+
+const breadcrumbs = [
+  { name: 'Beranda', url: '/' },
+  { name: 'Blog', url: '/blog' }
+];
+
+// All distinct tags
+const allTags = Array.from(new Set(allPosts.flatMap((p) => p.data.tags || [])));
+---
+
+<BaseLayout
+  title={`Blog & Publikasi Pengetahuan — ${siteData.name}`}
+  description="Kumpulan artikel mendalam seputar sistem informasi, arsitektur enterprise, riset akademis, transformasi digital, dan rekayasa web modern."
+  schemas={[blogSchema]}
+  canonicalUrl={pageUrl}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <div class="mb-6">
+      <Breadcrumb items={breadcrumbs} />
+    </div>
+
+    <!-- Header Section -->
+    <header class="mb-10 pb-8 border-b border-borderline-light dark:border-borderline-dark">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+        Blog &amp; Knowledge Hub
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-ink-secondary-light dark:text-ink-secondary-dark max-w-3xl leading-relaxed">
+        Kajian mendalam, analisis komparatif, dan panduan praktis seputar Sistem Informasi, metodologi riset ilmiah, dan inovasi teknologi digital.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-borderline-light/50 dark:border-borderline-dark/50">
+        <a
+          href="/blog"
+          class="category-filter-btn px-3 py-1 rounded text-xs font-semibold bg-accent-light text-white dark:bg-accent-dark dark:text-canvas-dark"
+          data-category="all"
+        >
+          Semua Kategori
+        </a>
+        {navigation.categories.map((cat) => (
+          <button
+            type="button"
+            class="category-filter-btn px-3 py-1 rounded text-xs font-medium border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+            data-category={cat.name}
+          >
+            {cat.name}
+          </button>
+        ))}
+      </div>
+
+      <!-- Search Input -->
+      <div class="mt-6 max-w-md relative">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Cari artikel berdasarkan judul, topik, atau kata kunci..."
+          class="w-full pl-10 pr-4 py-2.5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark text-sm text-ink-primary-light dark:text-ink-primary-dark placeholder:text-ink-secondary-light dark:placeholder:text-ink-secondary-dark focus:outline-none focus:ring-1 focus:ring-accent"
+        />
+        <svg
+          class="w-4 h-4 absolute left-3.5 top-3.5 text-ink-secondary-light dark:text-ink-secondary-dark"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+    </header>
+
+    <!-- Featured Post -->
+    {featuredPost && (
+      <section id="featured-article-container" class="mb-14">
+        <FeaturedArticle
+          title={featuredPost.data.title}
+          description={featuredPost.data.description}
+          slug={featuredPost.slug}
+          pubDate={featuredPost.data.pubDate}
+          category={featuredPost.data.category}
+          tags={featuredPost.data.tags}
+          cover={featuredPost.data.cover}
+          coverAlt={featuredPost.data.coverAlt}
+          body={featuredPost.body}
+        />
+      </section>
+    )}
+
+    <!-- Standard Posts Grid -->
+    <section>
+      <div class="flex items-center justify-between mb-8 pb-3 border-b border-borderline-light dark:border-borderline-dark">
+        <h2 id="posts-heading" class="font-serif text-xl sm:text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark">
+          Daftar Artikel ({sortedPosts.length})
+        </h2>
+        <span id="active-filter-label" class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+          Menampilkan Semua Artikel
+        </span>
+      </div>
+
+      <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {sortedPosts.map((post) => (
+          <div
+            class="article-item"
+            data-title={post.data.title.toLowerCase()}
+            data-description={post.data.description.toLowerCase()}
+            data-category={post.data.category}
+            data-tags={(post.data.tags || []).join(' ').toLowerCase()}
+          >
+            <ArticleCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug}
+              pubDate={post.data.pubDate}
+              category={post.data.category}
+              tags={post.data.tags}
+              cover={post.data.cover}
+              coverAlt={post.data.coverAlt}
+              body={post.body}
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center py-16 border border-dashed border-borderline-light dark:border-borderline-dark rounded-lg p-8 my-8">
+        <h3 class="font-serif text-xl font-bold text-ink-primary-light dark:text-ink-primary-dark mb-2">
+          Tidak Ada Artikel Ditemukan
+        </h3>
+        <p class="text-sm text-ink-secondary-light dark:text-ink-secondary-dark mb-4">
+          Tidak ada artikel yang cocok dengan filter atau kata kunci pencarian Anda.
+        </p>
+        <button
+          id="reset-search-btn"
+          type="button"
+          class="px-4 py-2 text-xs font-semibold rounded bg-accent-light text-white dark:bg-accent-dark dark:text-canvas-dark hover:bg-accent-hover"
+        >
+          Reset Filter &amp; Pencarian
+        </button>
+      </div>
+    </section>
+
+    <!-- Popular Tags Section -->
+    {allTags.length > 0 && (
+      <section class="mt-16 pt-8 border-t border-borderline-light dark:border-borderline-dark">
+        <h3 class="font-serif text-sm font-semibold uppercase tracking-wider text-ink-primary-light dark:text-ink-primary-dark mb-4">
+          Jelajahi Berdasarkan Tag
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {allTags.map((tag) => (
+            <button
+              type="button"
+              class="tag-filter-btn text-xs px-3 py-1 rounded bg-surface-light dark:bg-surface-dark border border-borderline-light dark:border-borderline-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+              data-tag={tag.toLowerCase()}
+            >
+              #{tag}
+            </button>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  const searchInput = document.getElementById('search-input');
+  const postItems = document.querySelectorAll('.article-item');
+  const noResults = document.getElementById('no-results');
+  const resetBtn = document.getElementById('reset-search-btn');
+  const categoryBtns = document.querySelectorAll('.category-filter-btn');
+  const tagBtns = document.querySelectorAll('.tag-filter-btn');
+  const activeFilterLabel = document.getElementById('active-filter-label');
+  const featuredContainer = document.getElementById('featured-article-container');
+
+  let currentCategory = 'all';
+  let currentSearch = '';
+  let currentTag = '';
+
+  // Check URL query params on load
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramCategory = urlParams.get('category');
+  const paramTag = urlParams.get('tag');
+
+  if (paramCategory) {
+    currentCategory = paramCategory;
+  }
+  if (paramTag) {
+    currentTag = paramTag.toLowerCase();
+  }
+
+  function filterPosts() {
+    let visibleCount = 0;
+
+    postItems.forEach((item) => {
+      const title = item.getAttribute('data-title') || '';
+      const desc = item.getAttribute('data-description') || '';
+      const cat = item.getAttribute('data-category') || '';
+      const tags = item.getAttribute('data-tags') || '';
+
+      const matchCategory = currentCategory === 'all' || cat.toLowerCase() === currentCategory.toLowerCase();
+      const matchSearch = !currentSearch || title.includes(currentSearch) || desc.includes(currentSearch) || tags.includes(currentSearch);
+      const matchTag = !currentTag || tags.includes(currentTag);
+
+      if (matchCategory && matchSearch && matchTag) {
+        item.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults?.classList.remove('hidden');
+    } else {
+      noResults?.classList.add('hidden');
+    }
+
+    // Hide featured post if user is filtering
+    if (featuredContainer) {
+      if (currentCategory !== 'all' || currentSearch || currentTag) {
+        featuredContainer.classList.add('hidden');
+      } else {
+        featuredContainer.classList.remove('hidden');
+      }
+    }
+
+    // Update active filter label
+    if (activeFilterLabel) {
+      if (currentSearch) {
+        activeFilterLabel.textContent = `Hasil pencarian: "${currentSearch}" (${visibleCount})`;
+      } else if (currentCategory !== 'all') {
+        activeFilterLabel.textContent = `Kategori: ${currentCategory} (${visibleCount})`;
+      } else if (currentTag) {
+        activeFilterLabel.textContent = `Tag: #${currentTag} (${visibleCount})`;
+      } else {
+        activeFilterLabel.textContent = `Menampilkan Semua Artikel (${visibleCount})`;
+      }
+    }
+
+    // Update button styles
+    categoryBtns.forEach((btn) => {
+      const cat = btn.getAttribute('data-category');
+      if (cat?.toLowerCase() === currentCategory.toLowerCase()) {
+        btn.classList.add('bg-accent-light', 'text-white');
+        btn.classList.remove('border', 'text-ink-secondary-light');
+      } else {
+        btn.classList.remove('bg-accent-light', 'text-white');
+        btn.classList.add('border', 'text-ink-secondary-light');
+      }
+    });
+  }
+
+  // Event Listeners
+  searchInput?.addEventListener('input', (e) => {
+    currentSearch = e.target.value.toLowerCase().trim();
+    filterPosts();
+  });
+
+  categoryBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentCategory = btn.getAttribute('data-category') || 'all';
+      currentTag = '';
+      filterPosts();
+    });
+  });
+
+  tagBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentTag = btn.getAttribute('data-tag') || '';
+      currentCategory = 'all';
+      filterPosts();
+    });
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    currentCategory = 'all';
+    currentSearch = '';
+    currentTag = '';
+    if (searchInput) searchInput.value = '';
+    filterPosts();
+  });
+
+  // Initial filter run
+  filterPosts();
+</script>

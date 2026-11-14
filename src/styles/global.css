@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-canvas: #F8F7F4;
+    --bg-surface: #FFFFFF;
+    --text-primary: #252525;
+    --text-secondary: #777777;
+    --accent: #A58B62;
+    --accent-hover: #8C744F;
+    --accent-muted: rgba(165, 139, 98, 0.12);
+    --border-color: #E8E5DF;
+  }
+
+  .dark {
+    --bg-canvas: #141311;
+    --bg-surface: #1C1B18;
+    --text-primary: #F2EFE9;
+    --text-secondary: #9C978D;
+    --accent: #C5AB80;
+    --accent-hover: #D8C29C;
+    --accent-muted: rgba(197, 171, 128, 0.15);
+    --border-color: #2D2B26;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom editorial selection styling */
+::selection {
+  background-color: #A58B62;
+  color: #FFFFFF;
+}
+
+/* Reading Progress Bar */
+#reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #A58B62;
+  z-index: 100;
+  transition: width 0.1s ease;
+  width: 0%;
+}
+
+/* Card hover animation */
+.editorial-card {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editorial-card:hover {
+  transform: translateY(-2px);
+  border-color: #A58B62;
+}
