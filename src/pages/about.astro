@@ -58,6 +58,50 @@ const breadcrumbs = [
         </div>
       </section>
 
+      <!-- Certifications & Professional Credentials -->
+      {profileData.certifications && (
+        <section class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-borderline-light dark:border-borderline-dark gap-2">
+            <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark">
+              Sertifikasi &amp; Lisensi Profesional
+            </h2>
+            <span class="inline-flex items-center text-[11px] font-medium text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 px-2.5 py-0.5 rounded-full w-fit">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5 animate-pulse"></span>
+              Dalam Proses Pembaruan
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            {profileData.certifications.map((cert) => (
+              <div class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                  <div class="flex items-center gap-2.5">
+                    <span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wider rounded bg-accent-muted text-accent-light dark:text-accent-dark border border-accent-light/20 dark:border-accent-dark/20">
+                      {cert.code}
+                    </span>
+                    <h3 class="font-serif text-base sm:text-lg font-bold text-ink-primary-light dark:text-ink-primary-dark">
+                      {cert.name}
+                    </h3>
+                  </div>
+                  <span class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark font-medium sm:text-right shrink-0">
+                    Penerbit: <strong class="text-ink-primary-light dark:text-ink-primary-dark">{cert.issuer}</strong>
+                  </span>
+                </div>
+
+                <div class="inline-flex items-center gap-1.5 text-xs text-amber-700 dark:text-amber-400 bg-amber-50/70 dark:bg-amber-950/30 px-3 py-1 rounded border border-amber-200/60 dark:border-amber-900/40">
+                  <span class="font-semibold">Keterangan:</span>
+                  <span>{cert.note}</span>
+                </div>
+
+                <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+                  {cert.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <!-- Academic Background -->
       <section class="space-y-6">
         <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark pb-3 border-b border-borderline-light dark:border-borderline-dark">
@@ -207,6 +251,34 @@ const breadcrumbs = [
           </li>
         </ul>
       </div>
+
+      <!-- Professional Certifications Quick Card -->
+      {profileData.certifications && (
+        <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-base font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+              Sertifikasi Jaringan
+            </h3>
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse" title="Proses Pembaruan"></span>
+          </div>
+          <div class="space-y-2.5">
+            {profileData.certifications.map((cert) => (
+              <div class="p-3 rounded-md bg-canvas-light dark:bg-canvas-dark border border-borderline-light dark:border-borderline-dark space-y-1">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-mono font-bold text-accent-light dark:text-accent-dark">{cert.code}</span>
+                  <span class="text-[10px] text-amber-700 dark:text-amber-400 font-medium">Pembaruan</span>
+                </div>
+                <p class="text-xs text-ink-primary-light dark:text-ink-primary-dark font-medium line-clamp-1">
+                  {cert.name}
+                </p>
+                <p class="text-[10px] text-ink-secondary-light dark:text-ink-secondary-dark">
+                  Penerbit: {cert.issuer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </div>
 </PageLayout>

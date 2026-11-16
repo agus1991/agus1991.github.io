@@ -18,6 +18,46 @@ export function generatePersonSchema() {
     url: siteData.siteUrl,
     image: `${siteData.siteUrl}${profileData.avatar}`,
     jobTitle: profileData.headline,
+    knowsAbout: [
+      'Sistem Informasi',
+      'Jaringan Komputer',
+      'Computer Networking',
+      'MikroTik RouterOS',
+      'Routing & Switching',
+      'IPv6 Implementation',
+      'Arsitektur Enterprise',
+      'Transformasi Digital',
+      'Rekayasa Perangkat Lunak'
+    ],
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'MikroTik Certified Network Associate (MTCNA)',
+        credentialCategory: 'Professional Certification',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'MikroTik'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'MikroTik Certified Routing Engineer (MTCRE)',
+        credentialCategory: 'Professional Certification',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'MikroTik'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'MikroTik Certified IPv6 Engineer (MTCIPv6)',
+        credentialCategory: 'Professional Certification',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'MikroTik'
+        }
+      }
+    ],
     sameAs: [
       socialData.github,
       socialData.linkedin,

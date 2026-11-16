@@ -12,13 +12,17 @@
   },
   "avatar": "/images/profile/agus-sifaunajah.svg",
   "location": "Indonesia",
-  "shortBio": "Seorang akademisi, peneliti, dan praktisi sistem informasi yang berfokus pada integrasi teknologi informasi, arsitektur sistem digital, transformasi proses bisnis, serta rekayasa perangkat lunak modern.",
+  "shortBio": "Seorang akademisi, peneliti, dan praktisi sistem informasi yang berfokus pada integrasi teknologi informasi, infrastruktur jaringan komputer, arsitektur sistem digital, transformasi proses bisnis, serta rekayasa perangkat lunak modern.",
   "fullBio": [
-    "Agus Sifaunajah (dikenal sebagai MAS-AGUS) adalah seorang profesional di bidang Sistem Informasi dan Teknologi. Menggabungkan perspektif akademis dengan implementasi rekayasa perangkat lunak praktis, ia mendedikasikan dedikasinya untuk memajukan literasi teknologi dan riset terapan.",
-    "Melalui platform MAS-AGUS, ia berbagi wawasan mendalam mengenai arsitektur sistem, strategi transformasi digital pada skala institusi dan UMKM, serta metodologi penelitian terapan di bidang komputasi.",
-    "Di luar aktivitas mengajar dan meneliti, ia aktif dalam pengembangan arsitektur web modern, penerbitan digital ilmiah, dan eksplorasi teknologi mutakhir untuk memecahkan tantangan operasional di era komputasi awan."
+    "Agus Sifaunajah (dikenal sebagai MAS-AGUS) adalah seorang profesional di bidang Sistem Informasi, Teknologi Komputasi, dan Infrastruktur Jaringan. Menggabungkan perspektif akademis dengan implementasi rekayasa perangkat lunak dan jaringan praktis, ia mendedikasikan dedikasinya untuk memajukan literasi teknologi dan riset terapan.",
+    "Melalui platform MAS-AGUS, ia berbagi wawasan mendalam mengenai arsitektur sistem, infrastruktur jaringan komputer, strategi transformasi digital pada skala institusi dan UMKM, serta metodologi penelitian terapan di bidang komputasi.",
+    "Di samping aktivitas mengajar dan meneliti, ia memiliki kompetensi teknis di bidang jaringan komputer (khususnya konfigurasi dan routing MikroTik) serta aktif dalam pengembangan arsitektur web modern, penerbitan digital ilmiah, dan eksplorasi teknologi mutakhir untuk memecahkan tantangan operasional di era komputasi awan."
   ],
   "expertise": [
+    {
+      "title": "Jaringan Komputer & Infrastruktur",
+      "description": "Perancangan topologi jaringan, routing dinamis dan statis, manajemen bandwidth & QoS, implementasi protokol IPv6, keamanan jaringan, serta konfigurasi RouterOS MikroTik."
+    },
     {
       "title": "Sistem Informasi & Arsitektur Enterprise",
       "description": "Perancangan arsitektur sistem informasi terintegrasi, analisis kebutuhan bisnis, dan pemodelan alur kerja sistem enterprise."
@@ -34,6 +38,35 @@
     {
       "title": "Metodologi Riset & Publikasi Ilmiah",
       "description": "Riset kuantitatif dan kualitatif di bidang komputasi terapan, penulisan artikel ilmiah, dan tata kelola jurnal elektronik."
+    }
+  ],
+  "certifications": [
+    {
+      "code": "MTCNA",
+      "name": "MikroTik Certified Network Associate",
+      "issuer": "MikroTik",
+      "status": "Sedang Proses Pembaruan",
+      "statusBadge": "Renewal in Progress",
+      "note": "Pernah memiliki dan sedang dalam proses pembaruan (resertifikasi)",
+      "description": "Fondasi jaringan komputer, arsitektur MikroTik RouterOS, manajemen bandwidth (Simple Queues & Queue Tree), firewall filter & NAT, wireless, VPN tunnel, dan troubleshooting jaringan."
+    },
+    {
+      "code": "MTCRE",
+      "name": "MikroTik Certified Routing Engineer",
+      "issuer": "MikroTik",
+      "status": "Sedang Proses Pembaruan",
+      "statusBadge": "Renewal in Progress",
+      "note": "Pernah memiliki dan sedang dalam proses pembaruan (resertifikasi)",
+      "description": "Routing statis tingkat lanjut, implementasi protokol routing dinamis OSPF, tunneling point-to-point (IPIP, EoIP, GRE), implementasi VLAN, dan manajemen multi-gateway routing."
+    },
+    {
+      "code": "MTCIPv6",
+      "name": "MikroTik Certified IPv6 Engineer",
+      "issuer": "MikroTik",
+      "status": "Sedang Proses Pembaruan",
+      "statusBadge": "Renewal in Progress",
+      "note": "Pernah memiliki dan sedang dalam proses pembaruan (resertifikasi)",
+      "description": "Arsitektur paket protokol IPv6, pengalamatan dan subnetting IPv6, konfigurasi otomatis (SLAAC & DHCPv6), keamanan jaringan IPv6, serta mekanisme transisi dan tunneling IPv6."
     }
   ],
   "academicBackground": [
@@ -55,7 +88,7 @@
       "role": "Dosen & Akademisi Sistem Informasi",
       "institution": "Institusi Pendidikan Tinggi",
       "period": "2018 — Sekarang",
-      "description": "Mengampu mata kuliah Sistem Informasi, Rekayasa Perangkat Lunak, dan Basis Data. Membimbing penelitian mahasiswa serta mempublikasikan riset di jurnal terindeks."
+      "description": "Mengampu mata kuliah Sistem Informasi, Rekayasa Perangkat Lunak, Jaringan Komputer, dan Basis Data. Membimbing penelitian mahasiswa serta mempublikasikan riset di jurnal terindeks."
     },
     {
       "role": "Lead Architect & Systems Engineer",

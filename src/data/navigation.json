@@ -15,6 +15,7 @@
   ],
   "categories": [
     { "name": "Information Systems", "slug": "information-systems" },
+    { "name": "Computer Networks", "slug": "computer-networks" },
     { "name": "Digital Transformation", "slug": "digital-transformation" },
     { "name": "Research", "slug": "research" },
     { "name": "Technology", "slug": "technology" },
