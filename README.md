@@ -148,3 +148,4 @@ Untuk mempermudah pengelolaan harian, silakan pelajari panduan terpisah berikut:
 
 Hak Cipta &copy; 2026 **Agus Sifaunajah (MAS-AGUS)**. Seluruh hak dilindungi undang-undang.
 Kode sumber arsitektur web dilisensikan di bawah [MIT License](https://opensource.org/licenses/MIT).
+# web_profil
