@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgMT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#E8E5DF" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgMT)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <rect x="100" y="90" width="220" height="36" rx="18" fill="#F1EDE4" stroke="#A58B62" stroke-width="1.5" />
+  <text x="210" y="114" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#A58B62" text-anchor="middle" letter-spacing="1">COMPUTER NETWORKS</text>
+  
+  <text x="100" y="210" font-family="Lora, Georgia, serif" font-size="48" font-weight="700" fill="#252525">Perkembangan MikroTik</text>
+  <text x="100" y="270" font-family="Lora, Georgia, serif" font-size="38" font-weight="600" fill="#777777">Solusi Routing hingga Ekosistem Terpadu</text>
+  <text x="100" y="335" font-family="Inter, sans-serif" font-size="20" fill="#777777">Evolusi RouterOS v3–v7, RouterBOARD, dan Portofolio Jaringan (1996–2026)</text>
+  
+  <!-- Network illustration badge -->
+  <g transform="translate(820, 150)">
+    <circle cx="90" cy="90" r="75" fill="#F8F7F4" stroke="#A58B62" stroke-width="4" stroke-dasharray="8,4" />
+    <circle cx="90" cy="90" r="55" fill="#FFFFFF" stroke="#252525" stroke-width="2" />
+    <text x="90" y="85" font-family="Lora, Georgia, serif" font-size="22" font-weight="700" fill="#252525" text-anchor="middle">RouterOS</text>
+    <text x="90" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#A58B62" text-anchor="middle">v3 — v7</text>
+  </g>
+  
+  <line x1="100" y1="460" x2="1100" y2="460" stroke="#E8E5DF" stroke-width="2" />
+  <text x="100" y="515" font-family="Inter, sans-serif" font-size="18" fill="#777777">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="515" font-family="Inter, sans-serif" font-size="16" fill="#A58B62" text-anchor="end">agus1991.github.io</text>
+</svg>
