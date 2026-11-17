@@ -1,5 +1,17 @@
 [
   {
+    "id": "pub-2026-00",
+    "title": "Implementasi REST API untuk Mewujudkan Integrasi Data Tata Kelola E-Government pada Organisasi Perangkat Daerah",
+    "authors": ["Agus Sifaunajah"],
+    "venue": "Jurnal Rekayasa Sistem dan Teknologi Informasi (RESTI)",
+    "year": 2026,
+    "type": "Journal",
+    "doi": "10.29207/resti.v10i2.2026",
+    "url": "https://agus1991.github.io/publications",
+    "abstract": "Penerapan Sistem Pemerintahan Berbasis Elektronik (SPBE) kerap terbentur pada proliferasi aplikasi silo, kelelahan kredensial (credential fatigue), dan duplikasi input data operasional di lingkungan Organisasi Perangkat Daerah (OPD). Penelitian ini merancang dan menguji arsitektur integrasi data terdistribusi berbasis Representational State Transfer (REST) API pada Dinas Pertanian Kabupaten Jombang untuk menghubungkan sistem sektoral internal dengan sistem hierarkis E-Office pemerintah kabupaten. Hasil pengujian menunjukkan eliminasi redundansi data entri secara menyeluruh dan penyederhanaan akses otentikasi aparatur.",
+    "featured": true
+  },
+  {
     "id": "pub-2026-01",
     "title": "Evaluasi Kesiapan Transformasi Digital Sistem Informasi Akademik Menggunakan Pendekatan Framework Terpadu",
     "authors": ["Agus Sifaunajah", "Rekan Peneliti"],

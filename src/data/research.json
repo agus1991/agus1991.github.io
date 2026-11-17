@@ -7,8 +7,13 @@
     },
     {
       "title": "Evaluasi & Model Kesiapan Transformasi Digital",
-      "description": "Pengembangan instrumen pengukuran kematangan digital (digital maturity models) untuk institusi pendidikan tinggi dan usaha mikro, kecil, dan menengah (UMKM).",
+      "description": "Pengembangan instrumen pengukuran kematangan digital (digital maturity models) untuk institusi pendidikan tinggi dan organisasi perangkat daerah (OPD).",
       "tags": ["Digital Maturity", "Process Optimization", "Digital Strategy", "Evaluation Framework"]
+    },
+    {
+      "title": "Infrastruktur Jaringan & Interoperabilitas SPBE",
+      "description": "Perancangan gateway integrasi data heterogen berbasis REST API, mitigasi sistem silo, dan implementasi routing terdistribusi pada instansi pemerintah daerah.",
+      "tags": ["SPBE", "REST API", "Data Integration", "Computer Networks", "Distributed Systems"]
     },
     {
       "title": "Sistem Web Kinerja Tinggi & Static Site Generation (SSG)",
@@ -22,6 +27,13 @@
     }
   ],
   "ongoing": [
+    {
+      "title": "Arsitektur Integrasi REST API untuk Mitigasi Silo Data dan Credential Fatigue pada OPD Pemerintah Daerah",
+      "status": "Sedang Berjalan (Tahap Evaluasi & Diseminasi)",
+      "period": "2026",
+      "description": "Pengembangan dan pengujian gateway pertukaran data terdistribusi berbasis REST API dan otentikasi token guna mengeliminasi duplikasi entri data dan beban otentikasi ganda pada aparatur dinas.",
+      "methodology": "Design Science Research Methodology (DSRM) & Black-Box Testing"
+    },
     {
       "title": "Model Pengukuran Kematangan Digital untuk Ekosistem Akademik Berbasis Cloud",
       "status": "Sedang Berjalan (Tahap Pengumpulan Data)",
@@ -60,9 +72,9 @@
     },
     {
       "phase": "Fase 2 (2026)",
-      "title": "Validasi Kerangka Kerja Kematangan Digital Organisasi",
+      "title": "Validasi Kerangka Kerja Kematangan Digital Organisasi & Integrasi SPBE",
       "status": "Aktif",
-      "summary": "Penyusunan instrumen ukur digital maturity dan pengujian reliabilitas instrumen di 5 institusi mitra."
+      "summary": "Penyusunan instrumen ukur digital maturity, implementasi gateway REST API OPD, dan pengujian reliabilitas instrumen di institusi mitra."
     },
     {
       "phase": "Fase 3 (2027)",
