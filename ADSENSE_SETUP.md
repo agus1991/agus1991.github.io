@@ -10,7 +10,7 @@ Secara default, **seluruh fungsi periklanan dinonaktifkan (disabled)** sampai pe
 ## 1. PERSYARATAN KELAYAKAN SEBELUM MENDAFTAR ADSENSE
 
 Pastikan situs Anda telah memenuhi standar Google Publisher Policy:
-1. **Domain Aktif**: Subdomain `https://mas.askapubliser.biz.id` dapat diakses secara publik dengan HTTPS yang valid.
+1. **Domain Aktif**: URL `https://agus1991.github.io` dapat diakses secara publik dengan HTTPS yang valid.
 2. **Konten Orisinal**: Memiliki minimal 10-15 artikel informatif dan bermanfaat (bukan salinan / plagiarisme).
 3. **Halaman Wajib**: Tersedia halaman statis Kebijakan Privasi (`/privacy-policy`), Penafian (`/disclaimer`), Syarat Ketentuan (`/terms-and-conditions`), dan Kontak (`/contact`).
 4. **Navigasi Jelas**: Tidak ada tautan rusak (*broken link*) dan tata letak responsif di ponsel.
@@ -21,7 +21,7 @@ Pastikan situs Anda telah memenuhi standar Google Publisher Policy:
 
 1. Kunjungi [Google AdSense](https://www.google.com/adsense/start/) dan masuk dengan akun Google Anda.
 2. Klik **Tambahkan Situs (Add Site)**.
-3. Masukkan URL situs Anda: `https://mas.askapubliser.biz.id`.
+3. Masukkan URL situs Anda: `https://agus1991.github.io`.
 4. Anda akan diberikan **Publisher ID** (format: `pub-XXXXXXXXXXXXXXXX` atau `ca-pub-XXXXXXXXXXXXXXXX`).
 
 ---
@@ -64,7 +64,7 @@ Google mewajibkan berkas `ads.txt` di root domain untuk mencegah kecurangan inve
    ```
    *(Ganti `pub-XXXXXXXXXXXXXXXX` dengan 16 digit ID penayang Anda).*
 3. Simpan dan commit perubahan ke GitHub.
-4. Periksa melalui peramban: `https://mas.askapubliser.biz.id/ads.txt`. Pastikan berkas terbaca dalam teks polos.
+4. Periksa melalui peramban: `https://agus1991.github.io/ads.txt`. Pastikan berkas terbaca dalam teks polos.
 
 ---
 

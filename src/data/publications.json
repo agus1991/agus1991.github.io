@@ -7,7 +7,7 @@
     "year": 2026,
     "type": "Journal",
     "doi": "10.31294/jsiit.v8i1.2026",
-    "url": "https://mas.askapubliser.biz.id/publications",
+    "url": "https://agus1991.github.io/publications",
     "abstract": "Penelitian ini menganalisis tingkat kematangan dan kesiapan adopsi sistem informasi akademik terintegrasi pada institusi perguruan tinggi swasta. Menggunakan kerangka evaluasi multidimensi yang mencakup aspek tata kelola, sumber daya manusia, infrastruktur cloud, dan keamanan data, studi ini mengidentifikasi faktor-faktor kunci keberhasilan migrasi digital.",
     "featured": true
   },
@@ -19,7 +19,7 @@
     "year": 2025,
     "type": "Conference",
     "doi": "10.29207/snareksi.2025.118",
-    "url": "https://mas.askapubliser.biz.id/publications",
+    "url": "https://agus1991.github.io/publications",
     "abstract": "Studi empiris ini membandingkan kinerja waktu muat (load time), efisiensi throughput, konsumsi sumber daya server, dan skor Core Web Vitals antara situs yang dihasilkan dengan Static Site Generator (Astro) melawan Content Management System monolitik (WordPress). Hasil pengujian menunjukkan penurunan Time to First Byte (TTFB) hingga 78% dan stabilitas visual yang signifikan.",
     "featured": true
   },
@@ -31,7 +31,7 @@
     "year": 2025,
     "type": "Journal",
     "doi": "10.33022/jtirk.v7i2.2025",
-    "url": "https://mas.askapubliser.biz.id/publications",
+    "url": "https://agus1991.github.io/publications",
     "abstract": "Artikel ini memaparkan desain arsitektur dan implementasi protokol Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) pada sistem manajemen naskah publikasi ilmiah mandiri untuk meningkatkan interoperabilitas dan sitasi global.",
     "featured": false
   },
@@ -43,7 +43,7 @@
     "year": 2024,
     "type": "Journal",
     "doi": "10.30865/jurikom.v11i3.2024",
-    "url": "https://mas.askapubliser.biz.id/publications",
+    "url": "https://agus1991.github.io/publications",
     "abstract": "Pengembangan sistem manajemen arsip akreditasi program studi dengan kerangka kerja Scrum. Iterasi berkala memungkinkan penyesuaian dinamis terhadap standar borang akreditasi nasional dan memangkas waktu pengumpulan bukti kinerja hingga 40%.",
     "featured": false
   }

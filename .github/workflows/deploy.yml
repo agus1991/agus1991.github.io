@@ -37,15 +37,6 @@ jobs:
       - name: Build Static Site with Astro
         run: npm run build
 
-      - name: Verify CNAME Output
-        run: |
-          if [ -f "dist/CNAME" ]; then
-            echo "CNAME found in dist output: $(cat dist/CNAME)"
-          else
-            echo "Error: dist/CNAME is missing!"
-            exit 1
-          fi
-
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,4 +1,4 @@
-# ads.txt file for mas.askapubliser.biz.id
+# ads.txt file for agus1991.github.io
 # MAS-AGUS — Personal Website & Professional Knowledge Hub
 #
 # INSTRUCTIONS:

@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://mas.askapubliser.biz.id',
+  site: 'https://agus1991.github.io',
   trailingSlash: 'never',
   build: {
     format: 'directory'

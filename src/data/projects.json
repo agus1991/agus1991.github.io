@@ -10,7 +10,7 @@
     ],
     "techStack": ["Astro", "TypeScript", "Tailwind CSS", "MDX", "GitHub Actions", "GitHub Pages"],
     "image": "/images/projects/project-knowledge-hub.svg",
-    "url": "https://mas.askapubliser.biz.id",
+    "url": "https://agus1991.github.io",
     "github": "https://github.com/agus1991/agus1991.github.io",
     "status": "Production",
     "featured": true
@@ -41,7 +41,7 @@
     ],
     "techStack": ["TypeScript", "Vue / Astro", "Tailwind CSS", "Chart.js"],
     "image": "/images/projects/project-audit-kit.svg",
-    "url": "https://mas.askapubliser.biz.id/projects",
+    "url": "https://agus1991.github.io/projects",
     "status": "In Development",
     "featured": true
   }

@@ -2,10 +2,10 @@
 
 Situs web personal profesional dan pusat pengetahuan mandiri untuk **Agus Sifaunajah (MAS-AGUS)**, yang memadukan keahlian akademis, riset ilmiah, arsitektur sistem informasi, dan rekayasa perangkat lunak modern.
 
-- **URL Produksi**: [https://mas.askapubliser.biz.id](https://mas.askapubliser.biz.id)
+- **URL Produksi**: [https://agus1991.github.io](https://agus1991.github.io)
 - **Domain Utama**: [https://askapubliser.biz.id](https://askapubliser.biz.id)
 - **Repositori GitHub**: [https://github.com/agus1991/agus1991.github.io](https://github.com/agus1991/agus1991.github.io)
-- **Hosting**: GitHub Pages via GitHub Actions (Direct Subdomain CNAME)
+- **Hosting**: GitHub Pages via GitHub Actions (Native GitHub Pages: agus1991.github.io)
 
 ---
 
@@ -37,7 +37,6 @@ web_profil/
 │   │   ├── profile/                # Foto profil avatar SVG
 │   │   └── projects/               # Sampul portofolio proyek
 │   ├── ads.txt                     # Berkas verifikasi Google AdSense
-│   ├── CNAME                       # Konfigurasi subdomain mas.askapubliser.biz.id
 │   ├── favicon.svg                 # Ikon situs monogram editorial
 │   └── robots.txt                  # Direktif crawler mesin pencari
 ├── src/
@@ -126,7 +125,7 @@ Akses pratinjau di browser: `http://localhost:4321`.
 ```bash
 npm run build
 ```
-Hasil kompilasi statis akan berada di dalam direktori `dist/` beserta berkas `dist/CNAME` siap saji.
+Hasil kompilasi statis akan berada di dalam direktori `dist/` siap saji untuk GitHub Pages.
 
 ### Pratinjau Hasil Kompilasi:
 ```bash

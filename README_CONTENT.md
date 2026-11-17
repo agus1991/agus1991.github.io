@@ -56,7 +56,7 @@ Pemilik situs dapat memperbarui konten kapan saja langsung dari browser (laptop 
      "year": 2026,
      "type": "Journal",
      "doi": "10.xxxx/xxxxxx",
-     "url": "https://mas.askapubliser.biz.id/publications",
+     "url": "https://agus1991.github.io/publications",
      "abstract": "Ringkasan abstrak artikel...",
      "featured": true
    }
@@ -95,7 +95,7 @@ Pemilik situs dapat memperbarui konten kapan saja langsung dari browser (laptop 
    Tuliskan isi artikel Anda di sini menggunakan format Markdown standar.
    Gunakan heading tingkat 2 (##) dan heading tingkat 3 (###) untuk sub-pembahasan.
    ```
-5. Klik **Commit changes**. GitHub Actions akan langsung memvalidasi schema dan mempublikasikan artikel ke `https://mas.askapubliser.biz.id/blog/tata-kelola-teknologi-informasi-modern`.
+5. Klik **Commit changes**. GitHub Actions akan langsung memvalidasi schema dan mempublikasikan artikel ke `https://agus1991.github.io/blog/tata-kelola-teknologi-informasi-modern`.
 
 ---
 
