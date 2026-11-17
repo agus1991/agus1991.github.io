@@ -10,6 +10,7 @@
   "language": "id",
   "locale": "id_ID",
   "defaultCover": "/images/articles/default-cover.svg",
+  "googleSiteVerification": "",
   "postsPerPage": 6,
   "adsense": {
     "enabled": false,

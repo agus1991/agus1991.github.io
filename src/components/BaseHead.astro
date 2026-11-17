@@ -40,6 +40,10 @@ const formattedTitle = title === siteData.name || title.includes(siteData.name)
 <!-- Canonical URL -->
 <link rel="canonical" href={resolvedCanonical} />
 
+{siteData.googleSiteVerification && (
+  <meta name="google-site-verification" content={siteData.googleSiteVerification} />
+)}
+
 <!-- Primary Meta Tags -->
 <title>{formattedTitle}</title>
 <meta name="title" content={formattedTitle} />
