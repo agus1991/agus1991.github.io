@@ -72,15 +72,15 @@
   "academicBackground": [
     {
       "degree": "Magister Komputer (M.Kom) / Sistem Informasi",
-      "institution": "Program Pascasarjana Sistem Informasi",
-      "period": "Pascasarjana",
-      "focus": "Fokus pada Tata Kelola Sistem Informasi, Manajemen Pengetahuan, dan Optimasi Proses Bisnis Digital."
+      "institution": "Universitas Diponegoro (UNDIP)",
+      "period": "Pascasarjana (Lulus 2015)",
+      "focus": "Penelitian Tesis: Implementasi Jaringan Syaraf Tiruan Propagasi Balik dalam Sistem Informasi Sasaran Kerja Pegawai (SKP)."
     },
     {
       "degree": "Sarjana Komputer (S.Kom) / Teknik Informatika",
       "institution": "Program Studi Informatika / Sistem Informasi",
       "period": "Sarjana",
-      "focus": "Fokus pada Rekayasa Perangkat Lunak, Basis Data Relasional, dan Jaringan Komputer."
+      "focus": "Fokus pada Rekayasa Perangkat Lunak, Basis Data Relasional, dan Infrastruktur Jaringan Komputer."
     }
   ],
   "experience": [

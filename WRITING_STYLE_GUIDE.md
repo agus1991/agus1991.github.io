@@ -133,4 +133,58 @@ Tulis artikel/kajian berikut menggunakan "MAS-AGUS Finger Writing Style Guide":
    - Tahap 4: Masalah nyata di tingkat mikro lapangan (silo sistem, duplikasi kerja, beban operator).
    - Tahap 5: Solusi arsitektur rekayasa konkret dan kontribusi praktis yang terukur.
 3. Nada & Diksi: Akademis formal, analitis, padat rujukan sitasi [n], lugas tanpa istilah sensasional.
+4. Integritas Sitasi: Wajib mematuhi "Zero Hallucination Policy" — seluruh sitasi dan referensi harus nyata, valid, terindeks di Google Scholar/Scopus/SINTA, dan dapat diverifikasi. Dilarang mengarang sitasi atau DOI fiktif.
 ```
+
+---
+
+## 6. ATURAN INTEGRITAS DAN KETERTELUSURAN SITASI (ZERO HALLUCINATION & CITATION TRACEABILITY POLICY)
+
+Kredibilitas platform **MAS-AGUS Knowledge Hub** bertumpu pada integritas akademis. Oleh karena itu, aturan ketertelusuran sitasi di bawah ini bersifat **mutlak (*non-negotiable*)** bagi seluruh agen AI, penulis, dan kontributor:
+
+### A. Prinsip Nol Halusinasi (*Zero Hallucination Policy*)
+1. **Dilarang Keras Mengarang Data Sitasi**: Tidak diperbolehkan menciptakan nama penulis fiktif, judul artikel karangan, nama jurnal buatan, volume/nomor karangan, ataupun *Digital Object Identifier* (DOI) palsu.
+2. **Kewajiban Verifikasi Dua Arah**: Setiap sitasi angka, persentase, definisi teoritis, atau temuan studi empiris wajib berasal dari literatur yang benar-benar telah diterbitkan (*peer-reviewed* atau laporan resmi pemerintah/lembaga internasional).
+3. **Ketertelusuran Publik (*Public Traceability*)**: Setiap naskah rujukan harus dapat ditemukan dan diverifikasi melalui salah satu kanal berikut:
+   - **DOI resmi** (misal: `https://doi.org/10.1109/...` atau `https://doi.org/10.29207/...`).
+   - **Google Scholar** (profil resmi terverifikasi).
+   - **Scopus / ScienceDirect / IEEE Xplore / ACM Digital Library / SpringerLink / Taylor & Francis**.
+   - **SINTA Kemdiktisaintek** (portal akreditasi jurnal ilmiah nasional).
+   - **Jaringan Dokumentasi dan Informasi Hukum (JDIH)** BPK / Setneg untuk regulasi UU/Perpres/Inpres.
+   - **Standar Teknis Resmi**: IETF RFC, ISO/IEC, NIST, atau dokumentasi resmi vendor (seperti MikroTik Documentation).
+
+### B. Kaidah Sitasi Korpus Riset Penulis (*Author's Own Corpus Rule*)
+Ketika artikel membahas studi kasus terapan di tingkat daerah, pemodelan integrasi data Organisasi Perangkat Daerah (OPD), evaluasi SPBE, implementasi REST API di Dinas Pertanian Kabupaten Jombang, sistem informasi mutu perguruan tinggi, klasifikasi data, atau virtualisasi jaringan, **wajib menggunakan rujukan otentik dari karya ilmiah Agus Sifaunajah yang terindeks di Google Scholar / Scopus**:
+
+| Topik Kajian Lapangan | Naskah Rujukan Otentik Penulis | Forum Publikasi & Identitas |
+| :--- | :--- | :--- |
+| **Integrasi REST API Pertanian Jombang** | A. Sifaunajah et al., *"RESTful Web Service Architecture for Secure and Efficient Agricultural Data Integration in Jombang Regency"* | IEEE ICIMCIS 2024, pp. 856–863. |
+| **Model API Integrasi Data E-Government** | A. Sifaunajah et al., *"Model Implementation of Application Programming Interface for E-Goverment Data Integration"* | IEEE ICIC 2022, pp. 1–6. |
+| **Sistem Layanan Penyuluhan Pertanian** | A. Sifaunajah et al., *"Improving Agricultural Extension Services Through Dashboard Agricultural Land Data"* | Publikasi Riset Pertanian 2022. |
+| **Adopsi & Determinan SPBE** | A. Sifaunajah, M. Z. Arifin, & N. Yaqin, *"Contextual Determinants of Theoretical Effectiveness in E-Government Adoption: A Systematic Review"* | Multidiscipline Int. Conf. 2025, vol. 3, no. 1, pp. 232–247. |
+| **Sistem Penjaminan Mutu Perguruan Tinggi** | N. Fauziyah & A. Sifaunajah, *"Design and Development of an Interactive Audit Analytics Dashboard for Higher Education Quality Assurance"* | SAINTEKBU 2026, vol. 18, no. 1, pp. 21–31. |
+| **Audit Mutu: Audit Trail & Aktivitas** | Y. N. Aditya & A. Sifaunajah, *"Pengembangan Fitur Audit Trail untuk Pelacakan Aktivitas Pengguna pada Sistem Informasi Audit Mutu"* | JUARA (Jurnal Rekayasa Piranti Lunak) 2026, vol. 1, no. 1, pp. 15–25. |
+| **Audit Mutu: Notifikasi & Reminder** | A. N. R. Rasyid & A. Sifaunajah, *"Pengembangan Modul Notifikasi dan Pengingat Pada Sistem Informasi Manajemen Audit Mutu"* | JUARA 2026, vol. 1, no. 1, pp. 26–36. |
+| **Virtualisasi Proxmox & Monitoring** | F. T. Setiawan & A. Sifaunajah, *"Implementasi Virtualisasi Server Berbasis Proxmox VE: Monitoring Resource Zabbix dan Notifikasi WhatsApp Gateway"* | JUSAKI 2026, vol. 1, no. 1. |
+| **ERP Terintegrasi & Multi-Modul** | R. S. Nugroho, M. A. A. Widya, & A. Sifaunajah, *"Integrasi Multi-Modul Berbasis Enterprise Resource Planning di UD. Karya Sejati Jombang"* | Jurnal Manajemen dan Teknologi Informasi 2026, vol. 6, no. 2, pp. 16–27. |
+| **Pariwisata Digital & Persuasi** | M. Fahimah, A. Sifaunajah, S. N. Qomariyah, & W. Rafdinal, *"From stories to visits: an integrated digital persuasion model of visit intention in Indonesian heritage tourism destinations"* | International Journal of Tourism Cities (Taylor & Francis / Emerald) 2026. |
+| **Optimasi Kueri Basis Data Alumni** | A. Sifaunajah & R. T. Khusna, *"Application of Index for Optimization Query Data in Graduate Information Systems"* | IJAIT (Int. J. Applied Information Technology) 2021, pp. 90–98. |
+| **Clustering Data Alumni (K-Means)** | A. Sifaunajah, M. Z. Arifin, & H. Q. Tabiin, *"Implementation of The K-Mean Algorithm for Data Clustering in Alumni Data Information Systems"* | NEWTON 2022, vol. 2, no. 2, pp. 89–98. |
+| **Keamanan Informasi Dokumen (Rijndael)**| A. Sifaunajah, *"Implementasi Algoritma Rijndael pada Dokumen Elektronik untuk Keamanan Informasi"* | EPiC 2020, vol. 2, no. 2, pp. 255–258. |
+| **Sistem Informasi Sasaran Kerja Pegawai**| A. Sifaunajah & K. Adi, *"Design Information System of Employees Target with Neural Network Backpropagation"* | JARES 2017, vol. 2, no. 1, p. 5 (Tesis Magister UNDIP 2015). |
+
+### C. Standar Penulisan Daftar Referensi IEEE
+Setiap artikel wajib menutup pembahasannya dengan daftar referensi bernomor urut sesuai kemunculan sitasi dalam teks `[1]`, `[2]`, `[3]`, dengan format IEEE standar berikut:
+
+```markdown
+[1] A. Sifaunajah, R. D. Amalia, D. A. Lestari, M. Z. Arifin, N. Khafidhoh, and N. Yaqin, "RESTful Web Service Architecture for Secure and Efficient Agricultural Data Integration in Jombang Regency," in 2024 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS), IEEE, 2024, pp. 856–863.
+[2] R. Heeks, "Most eGovernment-for-development projects fail: How can risks be reduced?," iGovernment Working Paper Series, no. 14, Institute for Development Policy and Management, University of Manchester, 2003.
+[3] Republik Indonesia, Peraturan Presiden Republik Indonesia Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik. Jakarta: Kementerian Sekretariat Negara RI, 2018.
+```
+
+### D. Daftar Periksa Verifikasi Pra-Publikasi (*Pre-Publication Verification Checklist*)
+Sebelum naskah artikel diterbitkan atau dikompilasi ke dalam repositori, wajib memenuhi 4 parameter verifikasi:
+- [ ] **Klaim vs Bukti**: Apakah seluruh klaim kuantitatif atau temuan empiris diiringi nomor sitasi `[n]`?
+- [ ] **Validitas Sumber**: Apakah seluruh entri di daftar referensi benar-benar ada dan dapat dicari di Google Scholar / repositori resmi?
+- [ ] **Ketepatan Kasus Empiris**: Jika membahas kasus Dinas Pertanian Jombang, apakah mengutip publikasi IEEE ICIMCIS 2024 atau IEEE ICIC 2022 milik Agus Sifaunajah et al.?
+- [ ] **Konsistensi DOI / URL**: Apakah tautan atau identifikasi dokumen yang dicantumkan berfungsi dan tidak rusak?

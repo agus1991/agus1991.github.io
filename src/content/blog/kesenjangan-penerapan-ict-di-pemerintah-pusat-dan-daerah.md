@@ -126,7 +126,7 @@ ARSITEKTUR INTEROPERABILITAS DATA TERPADU:
 ```
 
 ### A. Pembangunan Regional API Gateway & Middleware Berbasis REST API
-Pemerintah kabupaten/kota wajib membangun pintu gerbang antarmuka (*API Gateway*) terpusat di Diskominfo daerah [12][13]. Setiap kali operator dinas teknis memasukkan data ke aplikasi lokal, sistem secara otomatis mengeksekusi panggilan API (*RESTful Web Services*) secara asinkron ke server kabupaten dan kementerian pusat. Mekanisme ini menghapus praktik entri data berulang secara permanen dan merealisasikan prinsip *Single Source of Truth* [13].
+Pemerintah kabupaten/kota wajib membangun pintu gerbang antarmuka (*API Gateway*) terpusat di Diskominfo daerah [12][13]. Setiap kali operator dinas teknis memasukkan data ke aplikasi lokal, sistem secara otomatis mengeksekusi panggilan API (*RESTful Web Services*) secara asinkron ke server kabupaten dan kementerian pusat. Mekanisme ini menghapus praktik entri data berulang secara permanen dan merealisasikan prinsip *Single Source of Truth* [13], sebagaimana dibuktikan secara empiris dalam arsitektur integrasi data pada Organisasi Perangkat Daerah di Kabupaten Jombang [15].
 
 ### B. Otentikasi Terpadu: Single Sign-On (SSO) Berbasis Protokol OAuth2/JWT
 Mengintegrasikan seluruh sistem informasi di lingkungan pemerintah daerah ke dalam satu direktori otentikasi terpusat. Aparatur dinas hanya memerlukan satu identitas kredensial tunggal untuk mengakses seluruh ekosistem layanan, secara instan mengeliminasi *credential fatigue* dan meminimalisasi risiko kebocoran kata sandi.
@@ -167,4 +167,5 @@ Hanya dengan menyatukan kejelasan regulasi tata kelola, keterbukaan arsitektur p
 [11] B. Kurniawan, "Tantangan dan hambatan implementasi sistem pemerintahan berbasis elektronik pada pemerintah daerah," *Jurnal Borneo Administrator*, vol. 16, no. 2, pp. 215–234, 2020.  
 [12] R. T. Fielding, "Architectural Styles and the Design of Network-based Software Architectures," Ph.D. dissertation, Dept. Inf. Comput. Sci., Univ. California, Irvine, CA, 2000.  
 [13] C. Pautasso, O. Zimmermann, and F. Leymann, "RESTful web services vs. big'web services: making the right architectural decision," in *Proc. 17th Int. Conf. World Wide Web (WWW '08)*, Beijing, China, 2008, pp. 805–814.  
-[14] MikroTik, "RouterOS v7 General Documentation: Policy Routing, Multi-WAN Failover, and WireGuard Tunneling Architectures," *MikroTik Documentation*, 2026. [Online]. Tersedia: https://help.mikrotik.com/docs/
+[14] MikroTik, "RouterOS v7 General Documentation: Policy Routing, Multi-WAN Failover, and WireGuard Tunneling Architectures," *MikroTik Documentation*, 2026. [Online]. Tersedia: https://help.mikrotik.com/docs/  
+[15] A. Sifaunajah, R. D. Amalia, D. A. Lestari, M. Z. Arifin, N. Khafidhoh, and N. Yaqin, "RESTful Web Service Architecture for Secure and Efficient Agricultural Data Integration in Jombang Regency," in *2024 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS)*, IEEE, 2024, pp. 856–863, doi: 10.1109/ICIMCIS63365.2024.10842277.

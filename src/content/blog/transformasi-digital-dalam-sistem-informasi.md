@@ -103,7 +103,7 @@ Kondisi tersebut membuktikan bahwa banyaknya aplikasi tanpa integrasi data justr
 
 Guna menyelesaikan persoalan fragmentasi data dan beban kerja ganda di tingkat OPD, perancangan arsitektur antarmuka pemrograman aplikasi berbasis **Representational State Transfer (REST) Application Programming Interface (API)** menjadi solusi rekayasa yang paling tepat, modular, dan teruji [13][14].
 
-REST API memungkinkan sistem-sistem yang dibangun di atas platform, bahasa pemrograman, dan basis data yang heterogen untuk saling bertukar data secara terstandarisasi melalui protokol jaringan HTTP/HTTPS [15][16][17]. Implementasi REST API mampu menyederhanakan fungsionalitas dan tata kelola data antar-pengembang sistem informasi [18][19][20], menjadikannya fondasi utama dalam perancangan arsitektur sistem terdistribusi modern [21].
+REST API memungkinkan sistem-sistem yang dibangun di atas platform, bahasa pemrograman, dan basis data yang heterogen untuk saling bertukar data secara terstandarisasi melalui protokol jaringan HTTP/HTTPS [15][16][17]. Implementasi REST API mampu menyederhanakan fungsionalitas dan tata kelola data antar-pengembang sistem informasi [18][19][20], menjadikannya fondasi utama dalam perancangan arsitektur sistem terdistribusi modern [21]. Kajian empiris ini mengacu pada kontribusi implementasi dan pengujian arsitektur API terdistribusi pada tata kelola data e-government di lingkungan Dinas Pertanian Kabupaten Jombang yang telah dipublikasikan dan diuji secara peer-reviewed pada IEEE ICIMCIS dan IEEE ICIC [22][23].
 
 ```
 ARSITEKTUR INTEGRASI DATA DENGAN REST API:
@@ -169,4 +169,6 @@ Bagi perumus kebijakan dan praktisi sistem informasi pada instansi pemerintah da
 [18] S. Vinoski, "RESTful Web services," *IEEE Internet Computing*, vol. 11, no. 4, pp. 88–90, 2007.  
 [19] C. Pautasso, O. Zimmermann, and F. Leymann, "RESTful web services vs. big'web services: making the right architectural decision," in *Proc. 17th Int. Conf. World Wide Web (WWW '08)*, Beijing, China, 2008, pp. 805–814.  
 [20] M. Endrei et al., *Patterns: Service-Oriented Architecture and Web Services*. San Jose: IBM Redbooks, 2004.  
-[21] G. Coulouris, J. Dollimore, T. Kindberg, and G. Blair, *Distributed Systems: Concepts and Design*, 5th ed. Boston: Addison-Wesley, 2011.
+[21] G. Coulouris, J. Dollimore, T. Kindberg, and G. Blair, *Distributed Systems: Concepts and Design*, 5th ed. Boston: Addison-Wesley, 2011.  
+[22] A. Sifaunajah, R. D. Amalia, D. A. Lestari, M. Z. Arifin, N. Khafidhoh, and N. Yaqin, "RESTful Web Service Architecture for Secure and Efficient Agricultural Data Integration in Jombang Regency," in *2024 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS)*, IEEE, 2024, pp. 856–863, doi: 10.1109/ICIMCIS63365.2024.10842277.  
+[23] A. Sifaunajah, T. Hariono, M. A. A. Widya, P. Airlangga, and S. Sufaidah, "Model Implementation of Application Programming Interface for E-Goverment Data Integration," in *2022 Seventh International Conference on Informatics and Computing (ICIC)*, IEEE, 2022, pp. 1–6, doi: 10.1109/ICIC56845.2022.10006935.

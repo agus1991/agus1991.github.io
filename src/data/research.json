@@ -29,24 +29,24 @@
   "ongoing": [
     {
       "title": "Arsitektur Integrasi REST API untuk Mitigasi Silo Data dan Credential Fatigue pada OPD Pemerintah Daerah",
-      "status": "Sedang Berjalan (Tahap Evaluasi & Diseminasi)",
-      "period": "2026",
-      "description": "Pengembangan dan pengujian gateway pertukaran data terdistribusi berbasis REST API dan otentikasi token guna mengeliminasi duplikasi entri data dan beban otentikasi ganda pada aparatur dinas.",
-      "methodology": "Design Science Research Methodology (DSRM) & Black-Box Testing"
+      "status": "Aktif & Diseminasi (IEEE ICIMCIS / ICIC)",
+      "period": "2024 — 2026",
+      "description": "Pengembangan dan pengujian gateway pertukaran data terdistribusi berbasis REST API dan otentikasi token guna mengeliminasi duplikasi entri data dan beban otentikasi ganda pada aparatur dinas (studi kasus Dinas Pertanian Jombang).",
+      "methodology": "Design Science Research Methodology (DSRM) & Integration Testing"
     },
     {
-      "title": "Model Pengukuran Kematangan Digital untuk Ekosistem Akademik Berbasis Cloud",
-      "status": "Sedang Berjalan (Tahap Pengumpulan Data)",
-      "period": "2026 — 2027",
-      "description": "Meneliti indeks kesiapan fakultas dan program studi dalam mengadopsi platform terintegrasi serta hambatan sosio-teknikal yang dialami para pemangku kepentingan.",
-      "methodology": "Mixed-Methods (Kuantitatif SEM-PLS & Wawancara Mendalam)"
+      "title": "Sistem Informasi Manajemen Audit Mutu dan Dasbor Analitik Penjaminan Mutu Perguruan Tinggi",
+      "status": "Aktif & Publikasi (SAINTEKBU / JUARA)",
+      "period": "2025 — 2026",
+      "description": "Pengembangan sistem manajemen audit mutu akademik terintegrasi yang dilengkapi modul notifikasi siklus otomatis, audit trail pelacakan aktivitas pengguna, serta visualisasi dasbor analitik.",
+      "methodology": "Software Engineering Prototyping & User Acceptance Testing (UAT)"
     },
     {
-      "title": "Optimasi Latensi dan Efisiensi Karbon pada Situs Pengetahuan Statis Terdistribusi",
-      "status": "Sedang Berjalan (Tahap Pengujian Arsitektur)",
-      "period": "2026",
-      "description": "Eksperimen komparatif antara arsitektur Monolithic CMS versus Content-Driven Static Generation dalam konsumsi sumber daya komputasi dan transfer data.",
-      "methodology": "Eksperimen Benchmarking & Audit Sintetik Core Web Vitals"
+      "title": "Implementasi Virtualisasi Server Bare-Metal Proxmox VE dan Monitoring Kinerja Jaringan Terdistribusi",
+      "status": "Aktif & Publikasi (JUSAKI)",
+      "period": "2025 — 2026",
+      "description": "Penerapan infrastruktur komputasi virtualisasi server berbasis Proxmox VE yang diintegrasikan dengan metrik pemantauan sumber daya Zabbix dan notifikasi insiden via WhatsApp Gateway.",
+      "methodology": "Empirical Benchmarking & Infrastructure Stress Testing"
     }
   ],
   "methodologies": [
