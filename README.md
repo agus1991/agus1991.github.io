@@ -61,7 +61,7 @@ web_profil/
 │   │   └── blog/                   # Naskah artikel Markdown (.md)
 │   ├── data/                       # Pusat data terpusat (No Hardcoding UI)
 │   │   ├── profile.json            # Biodata, riwayat akademis, keahlian
-│   │   ├── social.json             # Tautan sosial, Google Scholar, ORCID
+│   │   ├── social.json             # Tautan SINTA, Scopus, Scholar, ORCID, GitHub, LinkedIn
 │   │   ├── site.json               # Konfigurasi situs & AdSense
 │   │   ├── navigation.json         # Menu navigasi & kategori blog
 │   │   ├── research.json           # Roadmap riset, ongoing, metodologi

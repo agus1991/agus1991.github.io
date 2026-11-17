@@ -13,7 +13,7 @@ Situs MAS-AGUS mengadopsi arsitektur **Content-Driven Static Site Generation (SS
 | Jenis Konten | Lokasi Berkas | Format | Keterangan |
 | :--- | :--- | :--- | :--- |
 | **Profil Pribadi** | `src/data/profile.json` | JSON | Nama, headline, biografi, keahlian, riwayat pendidikan |
-| **Media Sosial & Kontak** | `src/data/social.json` | JSON | Surel, LinkedIn, GitHub, Google Scholar, ORCID |
+| **Media Sosial & Profil Akademik** | `src/data/social.json` | JSON | SINTA, Scopus, Google Scholar, ORCID, GitHub, LinkedIn, Surel |
 | **Artikel Blog** | `src/content/blog/*.md` | Markdown | Setiap artikel disimpan dalam berkas individual `.md` |
 | **Riset & Metodologi** | `src/data/research.json` | JSON | Minat riset, ongoing research, metodologi, roadmap |
 | **Publikasi Ilmiah** | `src/data/publications.json` | JSON | Jurnal, konferensi, tahun, DOI, abstrak, tautan |

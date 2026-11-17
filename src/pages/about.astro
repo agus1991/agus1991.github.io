@@ -196,24 +196,24 @@ const breadcrumbs = [
         <ul class="space-y-2.5 text-xs">
           <li>
             <a
-              href={socialData.github}
+              href={socialData.sinta}
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-canvas-light dark:hover:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
             >
-              <span>GitHub</span>
-              <span class="text-accent-light dark:text-accent-dark font-mono">@agus1991 &rarr;</span>
+              <span>SINTA (Kemdiktisaintek)</span>
+              <span class="text-accent-light dark:text-accent-dark font-mono">ID: {socialData.sintaId} &rarr;</span>
             </a>
           </li>
           <li>
             <a
-              href={socialData.linkedin}
+              href={socialData.scopus}
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-canvas-light dark:hover:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
             >
-              <span>LinkedIn</span>
-              <span class="text-accent-light dark:text-accent-dark">&rarr;</span>
+              <span>Scopus Author Profile</span>
+              <span class="text-accent-light dark:text-accent-dark font-mono">ID: {socialData.scopusAuthorId} &rarr;</span>
             </a>
           </li>
           <li>
@@ -235,6 +235,28 @@ const breadcrumbs = [
               class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-canvas-light dark:hover:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
             >
               <span>ORCID</span>
+              <span class="text-accent-light dark:text-accent-dark font-mono">{socialData.orcidId} &rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={socialData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-canvas-light dark:hover:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
+            >
+              <span>GitHub</span>
+              <span class="text-accent-light dark:text-accent-dark font-mono">@agus1991 &rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={socialData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-canvas-light dark:hover:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
+            >
+              <span>LinkedIn</span>
               <span class="text-accent-light dark:text-accent-dark">&rarr;</span>
             </a>
           </li>

@@ -277,6 +277,34 @@ const selectedProjects = projectsData.filter((p) => p.featured).slice(0, 3);
           </article>
         ))}
       </div>
+
+      <!-- Academic Indexing Badges Bar -->
+      <div class="mt-6 p-4 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <span class="font-medium text-ink-secondary-light dark:text-ink-secondary-dark">
+          Profil Sitasi &amp; Indeksasi Ilmiah:
+        </span>
+        <div class="flex flex-wrap items-center gap-3 font-semibold text-accent-light dark:text-accent-dark">
+          <a href={socialData.sinta} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
+            <span>SINTA</span>
+            <span>&rarr;</span>
+          </a>
+          <span class="text-borderline-light dark:text-borderline-dark hidden sm:inline">•</span>
+          <a href={socialData.scopus} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
+            <span>Scopus</span>
+            <span>&rarr;</span>
+          </a>
+          <span class="text-borderline-light dark:text-borderline-dark hidden sm:inline">•</span>
+          <a href={socialData.googleScholar} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
+            <span>Google Scholar</span>
+            <span>&rarr;</span>
+          </a>
+          <span class="text-borderline-light dark:text-borderline-dark hidden sm:inline">•</span>
+          <a href={socialData.orcid} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
+            <span>ORCID</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Selected Projects Section -->

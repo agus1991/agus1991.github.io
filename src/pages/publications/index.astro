@@ -77,6 +77,14 @@ const types = Array.from(new Set(publicationsData.map((p) => p.type)));
           Profil Sitasi &amp; Indeksasi:
         </span>
         <div class="flex flex-col space-y-1.5 text-accent-light dark:text-accent-dark font-medium">
+          <a href={socialData.sinta} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
+            <span>SINTA (Kemdiktisaintek)</span>
+            <span>&rarr;</span>
+          </a>
+          <a href={socialData.scopus} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
+            <span>Scopus Author Profile</span>
+            <span>&rarr;</span>
+          </a>
           <a href={socialData.googleScholar} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center space-x-1">
             <span>Google Scholar Profile</span>
             <span>&rarr;</span>

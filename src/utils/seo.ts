@@ -61,6 +61,8 @@ export function generatePersonSchema() {
     sameAs: [
       socialData.github,
       socialData.linkedin,
+      socialData.sinta,
+      socialData.scopus,
       socialData.googleScholar,
       socialData.orcid,
       socialData.researchGate,
