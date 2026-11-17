@@ -95,6 +95,7 @@ web_profil/
 ├── tailwind.config.mjs             # Konfigurasi sistem warna & tipografi
 ├── tsconfig.json                   # Konfigurasi TypeScript path aliases
 ├── README.md                       # Dokumentasi arsitektur utama
+├── WRITING_STYLE_GUIDE.md          # Panduan baku DNA gaya kepenulisan MAS-AGUS
 ├── README_CONTENT.md               # Panduan alur pembaruan konten
 ├── DEPLOYMENT.md                   # Panduan deployment & DNS GitHub Pages
 └── ADSENSE_SETUP.md                # Panduan aktivasi Google AdSense

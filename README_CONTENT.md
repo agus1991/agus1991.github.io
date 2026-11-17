@@ -3,6 +3,9 @@
 
 Situs MAS-AGUS mengadopsi arsitektur **Content-Driven Static Site Generation (SSG)** berbasis Astro. Seluruh konten website (profil, blog, riset, publikasi, proyek, dan tautan sosial) dikelola melalui berkas teks terstruktur (**JSON** dan **Markdown / MDX**) tanpa memerlukan dashboard admin terpisah atau basis data yang rentan.
 
+> [!TIP]
+> Untuk menjaga konsistensi nada penulisan, otoritas ilmiah, dan struktur narasi, seluruh pembuatan artikel baru wajib mengacu pada **[PANDUAN GAYA KEPENULISAN (WRITING_STYLE_GUIDE.md)](./WRITING_STYLE_GUIDE.md)**.
+
 ---
 
 ## 1. STRUKTUR LOKASI KONTEN
