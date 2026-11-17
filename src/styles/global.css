@@ -47,6 +47,33 @@
     font-family: 'Lora', Georgia, serif;
     letter-spacing: -0.015em;
   }
+
+  .prose {
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .prose :where(h1, h2, h3, h4, h5, h6) {
+    text-align: left;
+  }
+
+  .prose p,
+  .prose li,
+  .prose blockquote,
+  .prose figcaption {
+    text-align: justify;
+  }
+
+  .prose ul,
+  .prose ol {
+    padding-left: 1.25rem;
+  }
+
+  .prose li > p {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
 }
 
 /* Custom editorial selection styling */
