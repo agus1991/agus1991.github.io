@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgCyber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#EDE9E1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgCyber)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <!-- Category Badge -->
+  <rect x="80" y="85" width="230" height="34" rx="17" fill="#F4EFE6" stroke="#9A3412" stroke-width="1.5" />
+  <text x="195" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#9A3412" text-anchor="middle" letter-spacing="1">OPINI &amp; KEAMANAN SIBER</text>
+  
+  <!-- Title & Subtitle (bounded to x=80..680) -->
+  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="44" font-weight="700" fill="#1C1917">Menghadapi Badai Siber</text>
+  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="30" font-weight="600" fill="#78350F">Refleksi Kritis Kerentanan Infrastruktur Nasional</text>
+  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Catatan Praktisi Jaringan: Meninjau Ransomware, Budaya Keamanan,</text>
+  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">dan Kesiapan Tata Kelola SPBE dari Lapangan</text>
+  
+  <!-- Cyber Defense Graphic Card (x=780..1080) -->
+  <g transform="translate(780, 110)">
+    <rect width="300" height="310" rx="10" fill="#FAFAF9" stroke="#E7E5E4" stroke-width="1.5" />
+    
+    <!-- Shield Icon -->
+    <path d="M150 40 L220 75 V140 C220 185 185 220 150 235 C115 220 80 185 80 140 V75 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5" />
+    <path d="M150 85 V185" stroke="#B45309" stroke-width="2.5" stroke-dasharray="4,3" />
+    <circle cx="150" cy="135" r="18" fill="#FFFFFF" stroke="#9A3412" stroke-width="2" />
+    <text x="150" y="140" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#9A3412" text-anchor="middle">!</text>
+    
+    <text x="150" y="265" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1C1917" text-anchor="middle">Zero Trust &amp; Defense-in-Depth</text>
+    <text x="150" y="288" font-family="Inter, sans-serif" font-size="11" fill="#78716C" text-anchor="middle">Air-Gapped Backup • Strict VLAN Isolation</text>
+  </g>
+  
+  <!-- Bottom Bar -->
+  <line x1="80" y1="470" x2="1100" y2="470" stroke="#E8E5DF" stroke-width="2" />
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="16" fill="#78716C">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="520" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#9A3412" text-anchor="end">agus1991.github.io</text>
+</svg>
