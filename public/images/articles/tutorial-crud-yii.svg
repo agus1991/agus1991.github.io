@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgYii" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4" />
+      <stop offset="100%" stop-color="#EBE7DE" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgYii)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <!-- Category Badge -->
+  <rect x="80" y="85" width="260" height="34" rx="17" fill="#F4EFE6" stroke="#0284C7" stroke-width="1.5" />
+  <text x="210" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0284C7" text-anchor="middle" letter-spacing="1">TUTORIAL &amp; SOFTWARE DEV</text>
+  
+  <!-- Title & Subtitle (bounded to x=80..680) -->
+  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="42" font-weight="700" fill="#1C1917">Tutorial CRUD Yii 2</text>
+  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="28" font-weight="600" fill="#0369A1">Panduan Praktisi: Dari Skema Basis Data ke Gii</text>
+  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Eksplorasi Arsitektur MVC, Active Record, Validasi Model,</text>
+  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">dan Best Practices Keamanan Bawaan Framework</text>
+  
+  <!-- Illustration Badge Card (x=770..1080) -->
+  <g transform="translate(770, 110)">
+    <rect width="310" height="310" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5" />
+    
+    <!-- MVC Flow Graphic -->
+    <rect x="35" y="40" width="100" height="45" rx="6" fill="#0284C7" />
+    <text x="85" y="68" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">CONTROLLER</text>
+    
+    <path d="M135 62 L175 62 L175 115 L200 115" fill="none" stroke="#0284C7" stroke-width="2" />
+    
+    <rect x="200" y="90" width="85" height="45" rx="6" fill="#0369A1" />
+    <text x="242" y="118" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">MODEL</text>
+    
+    <path d="M85 85 L85 155 L175 155 L175 180" fill="none" stroke="#0284C7" stroke-width="2" />
+    
+    <rect x="135" y="180" width="85" height="45" rx="6" fill="#38BDF8" />
+    <text x="177" y="208" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0C4A6E" text-anchor="middle">VIEW</text>
+    
+    <text x="155" y="260" font-family="Lora, Georgia, serif" font-size="16" font-weight="700" fill="#0C4A6E" text-anchor="middle">Yii 2 Framework</text>
+    <text x="155" y="285" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0284C7" text-anchor="middle">High Performance PHP &amp; Gii Engine</text>
+  </g>
+  
+  <!-- Bottom Bar -->
+  <line x1="80" y1="470" x2="1100" y2="470" stroke="#E8E5DF" stroke-width="2" />
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="16" fill="#78716C">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="520" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#0284C7" text-anchor="end">agus1991.github.io</text>
+</svg>
