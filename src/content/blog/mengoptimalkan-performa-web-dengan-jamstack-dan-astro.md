@@ -63,7 +63,7 @@ Kondisi ini menciptakan paradoks kinerja yang tajam di negara-negara berkembang 
 
 ## 2. Kesenjangan Teoretis: Biaya Hidrasi pada Single Page Applications (SPA)
 
-Akar dari inefisiensi arsitektur modern berhulu pada hegemoni kerangka kerja *Single Page Application* (seperti React, Vue, dan Angular konvensional) yang dipaksakan untuk seluruh jenis situs web, termasuk portal konten dan publikasi pengetahuan yang sejatinya bersifat informasional statis [7].
+Akar dari inefisiensi arsitektur modern berhulu pada hegemoni kerangka kerja *Single Page Application* (seperti React, Vue, dan Angular konvensional) yang dipaksakan untuk seluruh jenis situs web, termasuk portal konten dan publikasi pengetahuan yang sejatinya bersifat informasional statis [7]. Sementara aplikasi bisnis yang membutuhkan transaksi basis data relasional intensif lebih cocok ditangani arsitektur server-side MVC murni (sebagaimana saya ulas dalam [Tutorial CRUD dan Arsitektur Yii 2 Framework](/blog/tutorial-crud-yii-framework-panduan-praktisi)), situs konten justru terbebani oleh komputasi yang tidak esensial.
 
 Dalam arsitektur SPA dinamis, halaman mengalami siklus hidup yang disebut **proses hidrasi (*hydration cost*)** [8]:
 
@@ -164,7 +164,7 @@ Hasil pengujian membuktikan bahwa eliminasi JavaScript pada dokumen tekstual mem
 
 ## 6. Kesimpulan dan Rekomendasi
 
-Transisi dari arsitektur CMS monolitik dinamis menuju paradigma Jamstack berbasis Astro bukan sekadar preferensi alat bantu pemrograman, melainkan keputusan strategis arsitektur sistem informasi yang rasional dan terukur. 
+Transisi dari arsitektur CMS monolitik dinamis menuju paradigma Jamstack berbasis Astro bukan sekadar preferensi alat bantu pemrograman, melainkan keputusan strategis arsitektur sistem informasi yang rasional dan terukur. Secara metodologis, proses perancangan dan audit empiris performa web ini berpijak pada tahapan rekayasa artefak komputasi yang selaras dengan panduan [Design Science Research Methodology (DSRM)](/blog/metodologi-penelitian-terapan-dalam-bidang-sistem-informasi). 
 
 Pendekatan ini berhasil menyelesaikan trilema rekayasa web:
 1. Menghasilkan performa kecepatan tertinggi yang melampaui standar Core Web Vitals.

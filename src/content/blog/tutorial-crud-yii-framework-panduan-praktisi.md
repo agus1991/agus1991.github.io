@@ -33,7 +33,7 @@ Jawaban saya selalu berakar pada pengalaman empiris di lapangan: **Yii 2 adalah 
 
 Singkatan dari namanya sendiri—*Yes, It Is!*—bukan sekadar slogan pemasaran. Ketika Anda bertanya: *"Apakah ia cukup cepat untuk melayani kueri data besar? Apakah ia aman dari serangan injeksi SQL dan CSRF secara bawaan? Apakah ia mempercepat waktu rilis (*time-to-market*) tanpa mengorbankan keterbacaan kode?"* Yii menjawabnya secara tegas pada arsitekturnya.
 
-Salah satu pintu masuk paling fundamental dalam menguasai Yii adalah memahami implementasi operasi **CRUD (Create, Read, Update, Delete)**. Di mata pengembang pemula, CRUD kerap dipandang remeh sebagai rutinitas "asal data bisa masuk dan tersimpan di database". Namun, bagi seorang perekayasa perangkat lunak, CRUD adalah cerminan dari seberapa matang pemahaman kita terhadap siklus hidup Model-View-Controller (MVC), integritas validasi data, abstraksi Active Record, dan efisiensi antarmuka pengguna.
+Salah satu pintu masuk paling fundamental dalam menguasai Yii adalah memahami implementasi operasi **CRUD (Create, Read, Update, Delete)**. Di mata pengembang pemula, CRUD kerap dipandang remeh sebagai rutinitas "asal data bisa masuk dan tersimpan di database". Namun, bagi seorang perekayasa perangkat lunak, CRUD adalah cerminan dari seberapa matang pemahaman kita terhadap siklus hidup Model-View-Controller (MVC), integritas validasi data, abstraksi Active Record, dan efisiensi antarmuka pengguna—fondasi yang sangat krusial ketika membangun sistem enterprise seperti pada kajian [Transformasi Digital SPBE dan Integrasi REST API](/blog/transformasi-digital-dalam-sistem-informasi).
 
 Dalam panduan praktis ini, saya akan memandu Anda membangun modul CRUD yang tangguh menggunakan Yii 2 Basic Project Template, mulai dari konfigurasi dasar, pemanfaatan generator cerdas Gii, hingga catatan kritis pengerasan keamanan yang wajib Anda terapkan sebelum aplikasi dilepas ke server produksi.
 
@@ -55,7 +55,7 @@ Sebelum kita menyentuh baris kode dan terminal, mari kita samakan persepsi menge
     [GridView / Form]        [Model: Active Record] ──> [Basis Data MySQL]
 ```
 
-Ketika permintaan datang, Controller akan mengoordinasikan apakah data perlu ditarik dari Model (Active Record) atau langsung merender View. Keunggulan Yii terletak pada komponen **ActiveDataProvider** dan **SearchModel**, yang memisahkan logika pencarian dan penyaringan data dari model entitas murni.
+Ketika permintaan datang, Controller akan mengoordinasikan apakah data perlu ditarik dari Model (Active Record) atau langsung merender View. Keunggulan Yii terletak pada komponen **ActiveDataProvider** dan **SearchModel**, yang memisahkan logika pencarian dan penyaringan data dari model entitas murni. (Bagi Anda yang merancang situs berfokus pada kecepatan distribusi konten publik tanpa beban kueri database dinamis, Anda juga dapat membandingkannya dengan paradigma [Jamstack dan Island Architecture Astro](/blog/mengoptimalkan-performa-web-dengan-jamstack-dan-astro)).
 
 ---
 
@@ -255,7 +255,7 @@ Untuk menyesuaikan tampilan formulir agar lebih komunikatif, Anda dapat membuka 
 
 ## Catatan Kritis Praktisi: Pengerasan Keamanan dan Performa
 
-Meskipun generator Gii sangat membantu, dalam praktik rekayasa sistem nyata di lapangan, ada beberapa catatan penting yang wajib Anda perhatikan:
+Meskipun generator Gii sangat membantu, dalam praktik rekayasa sistem nyata di lapangan, aspek keamanan aplikasi tidak boleh diabaikan, terlebih di tengah meningkatnya eskalasi ancaman siber nasional sebagaimana saya ulas dalam [Menghadapi Badai Siber: Refleksi Kritis Infrastruktur Digital Indonesia](/blog/menghadapi-badai-siber-refleksi-kritis-infrastruktur-digital-indonesia). Ada beberapa catatan penting yang wajib Anda perhatikan:
 
 ### 1. Jangan Pernah Membiarkan Gii Aktif di Server Produksi
 Salah satu kecerobohan fatal yang masih sering saya jumpai saat melakukan audit sistem adalah modul Gii yang dibiarkan terbuka di server publik. Ini adalah bencana keamanan, karena siapa pun dapat membaca skema basis data Anda dan menimpa kode aplikasi. Pastikan pada berkas konfigurasi `web.php` server produksi, blok pengecekan `YII_ENV_DEV` bernilai `false`.

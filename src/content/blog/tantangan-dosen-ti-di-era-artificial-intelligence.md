@@ -74,14 +74,14 @@ Dahulu, sebagian besar energi dosen terkuras untuk membenarkan kesalahan tanda k
 Tantangan dan panggilan sejati dosen TI hari ini adalah bertransformasi menjadi **mentor arsitektur logika dan pemikiran kritis (*critical architectural thinking*)**:
 
 ### 1. Mengajarkan Dekomposisi Masalah, Bukan Sekadar Menulis Kode
-AI sangat hebat dalam menyelesaikan fungsi spesifik yang terisolasi, tetapi AI sangat buruk dalam memahami konteks manusiawi yang ambigu. Dosen harus melatih mahasiswa cara membongkar persoalan bisnis yang rumit menjadi komponen-komponen logika yang dapat diselesaikan secara modular. Keterampilan merumuskan pertanyaan (*prompt engineering* berbasis abstraksi logika) kini jauh lebih berharga daripada kemampuan mengetik instruksi perulangan.
+AI sangat hebat dalam menyelesaikan fungsi spesifik yang terisolasi, tetapi AI sangat buruk dalam memahami konteks manusiawi yang ambigu. Dosen harus melatih mahasiswa cara membongkar persoalan bisnis yang rumit menjadi komponen-komponen logika yang dapat diselesaikan secara modular. Mahasiswa perlu diajak mendalami bagaimana arsitektur perangkat lunak enterprise bekerja dari dasar—seperti merancang skema relasional dan validasi Active Record sebagaimana saya contohkan dalam [Tutorial CRUD Yii 2 Framework](/blog/tutorial-crud-yii-framework-panduan-praktisi)—bukan sekadar menerima hasil auto-complete mesin. Keterampilan merumuskan pertanyaan (*prompt engineering* berbasis abstraksi logika) kini jauh lebih berharga daripada kemampuan mengetik instruksi perulangan.
 
 ### 2. Membimbing Validasi dan Deteksi Halusinasi
 Model bahasa besar terkenal sering menghasilkan kode yang tampak meyakinkan namun mengandung celah keamanan kritis (*security vulnerabilities*), algoritma usang yang tidak efisien, atau pustaka fiktif yang tidak pernah ada. Mahasiswa harus dididik memiliki insting verifikasi yang tajam: bagaimana mengaudit kode yang dihasilkan AI, mengidentifikasi kebocoran memori, memeriksa kerentanan injeksi SQL, dan menguji efisiensi komputasi waktu dan ruang (Big-O notation).
 
 ### 3. Mengembalikan Pembelajaran ke Realitas Fisik dan Lingkungan Nyata
 Kecerdasan artifisial generatif bekerja di alam teks dan simulasi. Di sinilah letak keunggulan komparatif pengajaran kita di perguruan tinggi. Bawa mahasiswa keluar dari layar kode murni menuju realitas infrastruktur fisik yang nyata:
-- Menghubungkan kabel serat optik dan mengonfigurasi perangkat router fisik MikroTik di rak server.
+- Menghubungkan kabel serat optik dan mengonfigurasi perangkat router fisik MikroTik di rak server, sebuah kompetensi yang ditopang oleh pemahaman mendalam terhadap [Evolusi Arsitektur MikroTik RouterOS](/blog/perkembangan-mikrotik-1996-2026).
 - Menganalisis latensi paket jaringan riil saat terjadi lonjakan trafik (*traffic congestion*).
 - Berinteraksi langsung dengan operator di dinas pemerintah daerah atau UMKM untuk memahami mengapa sistem informasi mereka tidak berjalan lancar akibat faktor manusia dan birokrasi.
 
@@ -111,7 +111,7 @@ Hentikan pemberian nilai yang hanya didasarkan pada berkas program yang dikumpul
 Alih-alih melarang AI, berikan tugas kepada mahasiswa untuk sengaja menggunakan AI dalam menghasilkan kode arsitektur tertentu, kemudian tantang mereka untuk menemukan minimal lima kelemahan logika, celah keamanan, atau inefisiensi kueri dari hasil tersebut. Metode ini melatih mahasiswa menjadi "mandor arsitek" yang memiliki otoritas intelektual di atas mesin, bukan sekadar kuli pengetik perintah.
 
 ### 3. Arahkan Tugas Akhir Menuju Artefak Rekayasa Teruji
-Sebagaimana digariskan dalam regulasi Permendikbudristek Nomor 53 Tahun 2023 yang membuka ruang fleksibilitas tugas akhir dalam bentuk prototipe dan proyek terapan, dosen pembimbing harus mengarahkan mahasiswa membangun karya yang diuji langsung oleh pengguna akhir (*User Acceptance Testing*). Skripsi mahasiswa sistem informasi tidak boleh lagi berhenti pada dokumen laporan seratus halaman yang berdebu di perpustakaan; karya mereka harus berwujud artefak sistem yang benar-benar memecahkan persoalan riil di masyarakat atau instansi mitra.
+Sebagaimana digariskan dalam regulasi Permendikbudristek Nomor 53 Tahun 2023 yang membuka ruang fleksibilitas tugas akhir dalam bentuk prototipe dan proyek terapan, dosen pembimbing harus mengarahkan mahasiswa membangun karya berbasis kerangka kerja ilmiah yang sahih seperti [Design Science Research Methodology (DSRM)](/blog/metodologi-penelitian-terapan-dalam-bidang-sistem-informasi). Skripsi mahasiswa sistem informasi tidak boleh lagi berhenti pada dokumen laporan seratus halaman yang berdebu di perpustakaan; karya mereka harus berwujud artefak sistem yang benar-benar memecahkan persoalan riil di masyarakat atau instansi mitra.
 
 ---
 

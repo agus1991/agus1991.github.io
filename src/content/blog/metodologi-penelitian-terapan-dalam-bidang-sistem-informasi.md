@@ -134,7 +134,7 @@ SIKLUS ENAM TAHAPAN DSRM (PEFFERS ET AL., 2007):
 
 1. **Tahap 1 — Identifikasi Masalah & Urgensi**: Definisikan persoalan spesifik menggunakan data kuantitatif lapangan dan kutip riset terdahulu yang menunjukkan adanya celah (*gap*) yang belum terselesaikan.
 2. **Tahap 2 — Perumusan Tujuan Solusi Terukur**: Tetapkan target spesifik yang dapat diuji secara objektif (misal: mereduksi redundansi input data hingga 50%, atau memangkas latensi TTFB di bawah 1 detik).
-3. **Tahap 3 — Perancangan dan Rekayasa Artefak**: Bangun artefak sistem informasi dengan mendasarkan setiap keputusan desain pada teori komputasi atau arsitektur sistem terdistribusi yang valid.
+3. **Tahap 3 — Perancangan dan Rekayasa Artefak**: Bangun artefak sistem informasi dengan mendasarkan setiap keputusan desain pada teori komputasi atau arsitektur sistem terdistribusi yang valid (contoh konkritnya dapat dicermati pada [Arsitektur Integrasi REST API Tata Kelola SPBE](/blog/transformasi-digital-dalam-sistem-informasi)).
 4. **Tahap 4 — Demonstrasi**: Terapkan artefak pada satu unit lingkungan riil (seperti satu OPD pemerintah atau satu divisi organisasi mitra) untuk membuktikan kelayakan operasionalnya (*proof of concept*).
 5. **Tahap 5 — Evaluasi Empiris Ketat**: Ukur ketercapaian target menggunakan instrumen gabungan kuantitatif (analisis *Structural Equation Modeling / SEM-PLS* untuk penerimaan teknologi) dan audit teknis komparatif.
 6. **Tahap 6 — Komunikasi Akademis**: Dokumentasikan kebaruan artefak ke dalam struktur naskah IMRAD (*Introduction, Method, Results, and Discussion*) untuk dipublikasikan pada forum akademik bereputasi.
@@ -145,7 +145,7 @@ SIKLUS ENAM TAHAPAN DSRM (PEFFERS ET AL., 2007):
 
 Penerapan Design Science Research Methodology (DSRM) secara disiplin merupakan jembatan emas yang menyatukan dunia akademis dengan tuntutan praktis industri. 
 
-Bagi dosen, peneliti mandiri, dan mahasiswa pascasarjana sistem informasi, meneliti bukan sekadar menyelesaikan baris kode pemrograman, melainkan merancang artefak komputasi yang dapat diuji secara transparan, memiliki landasan teoretis yang kuat, serta terbukti secara empiris menyelesaikan permasalahan nyata masyarakat. Kepatuhan terhadap siklus DSRM adalah kunci utama dalam mengamankan penerimaan naskah ilmiah pada jurnal terindeks Scopus dan SINTA peringkat puncak.
+Bagi dosen, peneliti mandiri, dan mahasiswa pascasarjana sistem informasi, meneliti bukan sekadar menyelesaikan baris kode pemrograman, melainkan merancang artefak komputasi yang dapat diuji secara transparan, memiliki landasan teoretis yang kuat, serta terbukti secara empiris menyelesaikan permasalahan nyata masyarakat. Kepatuhan terhadap siklus DSRM adalah kunci utama dalam mengamankan penerimaan naskah ilmiah pada jurnal terindeks Scopus dan SINTA peringkat puncak, sekaligus menjadi kompas dalam mentransformasi bimbingan tugas akhir di era AI sebagaimana saya bahas dalam [Tantangan Dosen TI Menghadapi Disrupsi AI Generatif](/blog/tantangan-dosen-ti-di-era-artificial-intelligence).
 
 ---
 

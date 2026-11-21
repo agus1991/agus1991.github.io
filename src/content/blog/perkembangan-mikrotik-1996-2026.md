@@ -115,7 +115,7 @@ PORTOFOLIO TEKNOLOGI JARINGAN MIKROTIK:
     └─────────────┘└─────────────┘└─────────────┘└─────────────┘
 ```
 
-1. **Routing Skala Enterprise**: Mulai dari router cabang hemat daya (hEX series) hingga lini **Cloud Core Router (CCR)** berprosesor multi-core (Tile dan ARM64) yang mampu menangani puluhan juta paket per detik pada tautan 10G, 25G, 40G, dan 100G [4].
+1. **Routing Skala Enterprise**: Mulai dari router cabang hemat daya (hEX series) hingga lini **Cloud Core Router (CCR)** berprosesor multi-core (Tile dan ARM64) yang mampu menangani puluhan juta paket per detik pada tautan 10G, 25G, 40G, dan 100G [4]. Keandalan perutean ini menjadikannya solusi ideal untuk mengatasi masalah disparitas jaringan dan konektivitas di kantor dinas daerah sebagaimana saya ulas dalam [Kesenjangan Penerapan TIK Pusat dan Daerah](/blog/kesenjangan-penerapan-ict-di-pemerintah-pusat-dan-daerah).
 2. **Switching Distribusi & Akses**: Seri **Cloud Router Switch (CRS)** dengan dukungan *Layer 3 Hardware Offloading*, memungkinkan penerusan paket antar-VLAN pada kecepatan fisik kabel (*wire-speed*) tanpa membebani prosesor utama [4][5].
 3. **Nirkabel Jarak Jauh (*Wireless PTP/PTMP*)**: Lini outdoor (SXT, LHG, DynaDish) yang dirancang untuk transmisi telekomunikasi antar-wilayah terpencil dengan ketahanan cuaca tinggi [4].
 4. **Konektivitas Seluler & IoT**: Seri Chateau dan LtAP yang mengintegrasikan modem LTE/5G ganda dan modul gateway LoRaWAN untuk pemantauan sensor industri dan jaringan bergerak (*fleet connectivity*) [4].
@@ -124,14 +124,14 @@ PORTOFOLIO TEKNOLOGI JARINGAN MIKROTIK:
 
 ## 6. Relevansi MikroTik untuk Pendidikan dan Kurikulum Sistem Informasi
 
-Dalam ranah pendidikan tinggi dan pelatihan vokasi, MikroTik berfungsi sebagai media pembelajaran yang sangat efektif untuk menjembatani teori abstrak arsitektur jaringan dengan praktik rekayasa riil di lapangan [7].
+Dalam ranah pendidikan tinggi dan pelatihan vokasi, MikroTik berfungsi sebagai media pembelajaran yang sangat efektif untuk menjembatani teori abstrak arsitektur jaringan dengan praktik rekayasa riil di lapangan [7]. Di tengah meningkatnya ancaman kebocoran data dan ransomware, penguasaan konfigurasi firewall filter dan isolasi port pada MikroTik merupakan keterampilan pertahanan wajib—sejalan dengan refleksi saya dalam [Menghadapi Badai Siber: Refleksi Kritis Infrastruktur Digital Indonesia](/blog/menghadapi-badai-siber-refleksi-kritis-infrastruktur-digital-indonesia).
 
 Melalui program kemitraan **MikroTik Academy** dan jalur sertifikasi internasional bertingkat [7]:
 1. **MTCNA (MikroTik Certified Network Associate)**: Membekali fondasi pengalamatan IPv4/IPv6, subnetting, DHCP, NAT, manajemen antrean sederhana, dan keamanan dasar [7].
 2. **MTCRE (MikroTik Certified Routing Engineer)**: Mendalami perutean statis lanjutan, multi-gateway failover, tunneling point-to-point (IPIP, EoIP, GRE), implementasi VLAN, dan routing dinamis OSPF multi-area [7].
 3. **MTCIPv6 (MikroTik Certified IPv6 Engineer)**: Mempelajari arsitektur paket IPv6, mekanisme auto-konfigurasi SLAAC/DHCPv6, serta strategi transisi dual-stack pada infrastruktur telekomunikasi modern [7].
 
-Pemanfaatan **Cloud Hosted Router (CHR)** pada emulator jaringan virtual (seperti GNS3 atau EVE-NG) memungkinkan laboratorium perguruan tinggi menyimulasikan topologi jaringan enterprise yang kompleks secara gratis dan hemat sumber daya komputasi [2][5].
+Pemanfaatan **Cloud Hosted Router (CHR)** pada emulator jaringan virtual (seperti GNS3 atau EVE-NG) memungkinkan laboratorium perguruan tinggi menyimulasikan topologi jaringan enterprise yang kompleks secara gratis dan hemat sumber daya komputasi [2][5]. Keterampilan praktis konfigurasi perangkat fisik dan virtual semacam ini merupakan benteng nalar yang tak tergantikan oleh kecerdasan buatan, sebagaimana saya ulas dalam [Tantangan Dosen TI di Era Artificial Intelligence](/blog/tantangan-dosen-ti-di-era-artificial-intelligence).
 
 ---
 

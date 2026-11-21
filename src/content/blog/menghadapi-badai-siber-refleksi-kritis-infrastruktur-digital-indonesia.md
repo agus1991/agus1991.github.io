@@ -54,7 +54,7 @@ Jika sebuah entitas pengelola infrastruktur kritis negara mengabaikan kaidah pen
 
 ## Catatan Lapangan: Mengapa Sektor Daerah Begitu Rentan?
 
-Kerapuhan di tingkat pusat sesungguhnya hanyalah puncak gunung es dari kondisi yang jauh lebih mengkhawatirkan di tingkat daerah. Dalam pengamatan saya saat meninjau infrastruktur jaringan di berbagai Organisasi Perangkat Daerah (OPD) dan instansi kabupaten, terdapat tiga pola kerentanan sistemik yang terus berulang:
+Kerapuhan di tingkat pusat sesungguhnya hanyalah puncak gunung es dari kondisi yang jauh lebih mengkhawatirkan di tingkat daerah. Persoalan disparitas kapasitas komputasi ini sebelumnya telah saya bedah secara komparatif dalam kajian [Kesenjangan Penerapan TIK Antara Pemerintah Pusat dan Daerah](/blog/kesenjangan-penerapan-ict-di-pemerintah-pusat-dan-daerah). Dalam pengamatan saya saat meninjau infrastruktur jaringan di berbagai Organisasi Perangkat Daerah (OPD) dan instansi kabupaten, terdapat tiga pola kerentanan sistemik yang terus berulang:
 
 ```
                   ANATOMI KERENTANAN INFRASTRUKTUR DAERAH
@@ -114,7 +114,7 @@ Kita tidak bisa terus-menerus merespons serangan siber dengan kepanikan seremoni
 Kita harus berhenti mempercayai lalu lintas data hanya karena ia berasal dari "dalam jaringan kantor". Prinsip *Never Trust, Always Verify* yang dirumuskan oleh National Institute of Standards and Technology (NIST SP 800-207) harus diturunkan ke konfigurasi riil:
 - Wajibkan otentikasi multi-faktor (MFA) pada seluruh antarmuka administratif sistem.
 - Terapkan segmentasi jaringan mikro (*micro-segmentation*) menggunakan firewall filter RouterOS atau enterprise switch untuk memblokir lalu lintas antar-VLAN yang tidak diizinkan.
-- Tutup akses publik terhadap port manajemen server; seluruh akses remote wajib melalui terowongan VPN terenkripsi (seperti WireGuard atau IPsec) dengan kunci pertukaran yang dinamis.
+- Tutup akses publik terhadap port manajemen server; seluruh akses remote wajib melalui terowongan VPN terenkripsi (seperti WireGuard atau IPsec) dengan kunci pertukaran yang dinamis, memanfaatkan fitur terowongan modern pada [Evolusi Arsitektur MikroTik RouterOS](/blog/perkembangan-mikrotik-1996-2026).
 
 ### 2. Disiplin *Air-Gapped & Immutable Backup* Tanpa Kompromi
 Setiap dinas teknis dan pengelola pusat data wajib memiliki setidaknya satu salinan data cadangan yang berstatus *cold storage* dan terputus sepenuhnya dari jaringan fisik (*air-gapped*). Ransomware modern dirancang untuk secara otomatis memburu dan mengenkripsi partisi backup yang terhubung ke jaringan (*network shares*). Hanya cadangan data yang tidak dapat diubah (*immutable*) dan berada di media offline-lah yang dapat menjamin kelangsungan layanan (*business continuity*) ketika bencana melanda.
@@ -123,7 +123,7 @@ Setiap dinas teknis dan pengelola pusat data wajib memiliki setidaknya satu sali
 Instansi pemerintah harus mulai berani membuka diri terhadap pengujian ketahanan riil (*Red Teaming*). Mengundang peretas etis independen (*ethical hackers*) atau menggelar program *bug bounty* terkelola jauh lebih efektif dalam menemukan lubang keamanan sebelum dimanfaatkan oleh penjahat siber. Celah keamanan yang ditemukan oleh peneliti lokal adalah berkah perbaikan, bukan aib birokrasi yang harus ditutupi.
 
 ### 4. Alihkan Anggaran Aplikasi untuk Sertifikasi SDM Teknis
-Hentikan pemborosan anggaran untuk membangun ratusan aplikasi baru yang fungsinya saling tumpang tindih. Alihkan minimal 15% dari anggaran pengadaan perangkat lunak untuk meningkatkan kapasitas insinyur jaringan dan analis sistem internal pemerintah. Fasilitasi para pengelola teknis di daerah untuk meraih sertifikasi profesional yang kredibel—baik di bidang rekayasa jaringan (seperti MikroTik MTCNA/MTCRE) maupun sertifikasi keamanan siber praktis. Sistem yang hebat tidak pernah dibangun oleh perangkat keras yang mahal semata, melainkan oleh orang-orang yang memahami bagaimana menjaga pintu gerbangnya.
+Hentikan pemborosan anggaran untuk membangun ratusan aplikasi baru yang fungsinya saling tumpang tindih. Alihkan minimal 15% dari anggaran pengadaan perangkat lunak untuk meningkatkan kapasitas insinyur jaringan dan analis sistem internal pemerintah. Fasilitasi para pengelola teknis di daerah untuk meraih sertifikasi profesional yang kredibel—baik di bidang rekayasa jaringan (seperti MikroTik MTCNA/MTCRE) maupun sertifikasi keamanan siber praktis. Kebutuhan penguatan nalar rekayasa di atas hafalan teknis mekanis ini sejalan dengan pandangan saya mengenai [Tantangan Dosen TI di Era Artificial Intelligence](/blog/tantangan-dosen-ti-di-era-artificial-intelligence). Sistem yang hebat tidak pernah dibangun oleh perangkat keras yang mahal semata, melainkan oleh orang-orang yang memahami bagaimana menjaga pintu gerbangnya.
 
 ---
 

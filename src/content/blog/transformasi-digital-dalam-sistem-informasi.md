@@ -40,7 +40,7 @@ Namun, dalam praktiknya, adopsi SPBE di tingkat daerah kerap memicu fenomena par
 
 Perkembangan *e-government* di Indonesia memperlihatkan kontras yang tajam antara capaian makro di tingkat internasional melawan kenyataan empiris pada unit pelayanan publik terbawah.
 
-Berdasarkan laporan **United Nations E-Government Survey 2022**, Indonesia menempati **peringkat ke-77** dalam capaian kinerja pengembangan dan implementasi sistem pemerintahan berbasis elektronik [6]. Posisi ini mengindikasikan adanya perbaikan tren indeks komposit secara nasional [7]. Kendati demikian, hasil evaluasi penerapan SPBE pada tingkat unit pelayanan publik di lapisan kecamatan dan dinas teknis daerah masih mencatatkan evaluasi yang kurang menggembirakan [5][8].
+Berdasarkan laporan **United Nations E-Government Survey 2022**, Indonesia menempati **peringkat ke-77** dalam capaian kinerja pengembangan dan implementasi sistem pemerintahan berbasis elektronik [6]. Posisi ini mengindikasikan adanya perbaikan tren indeks komposit secara nasional [7]. Kendati demikian, hasil evaluasi penerapan SPBE pada tingkat unit pelayanan publik di lapisan kecamatan dan dinas teknis daerah masih mencatatkan evaluasi yang kurang menggembirakan [5][8]—sebuah paradoks struktural yang dianalisis secara komprehensif dalam artikel [Kesenjangan Penerapan TIK Pusat dan Daerah](/blog/kesenjangan-penerapan-ict-di-pemerintah-pusat-dan-daerah).
 
 ```
                      INDONESIA E-GOVERNMENT DICHOTOMY
@@ -103,7 +103,7 @@ Kondisi tersebut membuktikan bahwa banyaknya aplikasi tanpa integrasi data justr
 
 Guna menyelesaikan persoalan fragmentasi data dan beban kerja ganda di tingkat OPD, perancangan arsitektur antarmuka pemrograman aplikasi berbasis **Representational State Transfer (REST) Application Programming Interface (API)** menjadi solusi rekayasa yang paling tepat, modular, dan teruji [13][14].
 
-REST API memungkinkan sistem-sistem yang dibangun di atas platform, bahasa pemrograman, dan basis data yang heterogen untuk saling bertukar data secara terstandarisasi melalui protokol jaringan HTTP/HTTPS [15][16][17]. Implementasi REST API mampu menyederhanakan fungsionalitas dan tata kelola data antar-pengembang sistem informasi [18][19][20], menjadikannya fondasi utama dalam perancangan arsitektur sistem terdistribusi modern [21]. Kajian empiris ini mengacu pada kontribusi implementasi dan pengujian arsitektur API terdistribusi pada tata kelola data e-government di lingkungan Dinas Pertanian Kabupaten Jombang yang telah dipublikasikan dan diuji secara peer-reviewed pada IEEE ICIMCIS dan IEEE ICIC [22][23].
+REST API memungkinkan sistem-sistem yang dibangun di atas platform, bahasa pemrograman, dan basis data yang heterogen untuk saling bertukar data secara terstandarisasi melalui protokol jaringan HTTP/HTTPS [15][16][17]. Implementasi REST API mampu menyederhanakan fungsionalitas dan tata kelola data antar-pengembang sistem informasi [18][19][20], menjadikannya fondasi utama dalam perancangan arsitektur sistem terdistribusi modern [21]. Dalam konteks metodologi ilmiah, perancangan dan validasi artefak gateway integrasi ini berpijak pada tahapan terstruktur [Design Science Research Methodology (DSRM)](/blog/metodologi-penelitian-terapan-dalam-bidang-sistem-informasi). Kajian empiris ini mengacu pada kontribusi implementasi dan pengujian arsitektur API terdistribusi pada tata kelola data e-government di lingkungan Dinas Pertanian Kabupaten Jombang yang telah dipublikasikan dan diuji secara peer-reviewed pada IEEE ICIMCIS dan IEEE ICIC [22][23].
 
 ```
 ARSITEKTUR INTEGRASI DATA DENGAN REST API:
@@ -130,7 +130,7 @@ ARSITEKTUR INTEGRASI DATA DENGAN REST API:
 ### Mekanisme Kerja Integrasi:
 1. **Otentikasi Terpusat (*Single Sign-On Architecture*)**: Penggunaan token berbasis JSON Web Token (JWT) mengeliminasi kebutuhan login ganda, mereduksi kelelahan kredensial bagi petugas.
 2. **Payload Terstruktur (JSON)**: Data komoditas dan naskah dinas dikirimkan secara *stateless* dalam format JSON yang ringan, memangkas *overhead* latensi jaringan di wilayah dengan konektivitas terbatas.
-3. **Endpoint Interoperabilitas**: Ketika data diinput pada sistem internal OPD, *webhook* atau endpoint API secara otomatis mendistribusikan data yang relevan ke sistem *E-Office* kabupaten, menghapus praktik entri data berulang secara permanen.
+3. **Endpoint Interoperabilitas**: Ketika data diinput pada sistem internal OPD, *webhook* atau endpoint API secara otomatis mendistribusikan data yang relevan ke sistem *E-Office* kabupaten, menghapus praktik entri data berulang secara permanen. Di lapisan aplikasi backend, endpoint RESTful semacam ini dapat dibangun secara efisien menggunakan pola arsitektur MVC dan Active Record terstruktur sebagaimana dicontohkan dalam [Tutorial CRUD Yii 2 Framework](/blog/tutorial-crud-yii-framework-panduan-praktisi).
 
 ---
 
