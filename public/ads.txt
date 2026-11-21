@@ -1,10 +1,25 @@
 # ads.txt file for agus1991.github.io
 # MAS-AGUS — Personal Website & Professional Knowledge Hub
 #
-# INSTRUCTIONS:
-# When your Google AdSense account is approved, replace the placeholder below
-# with your actual publisher ID in the format:
+# ==============================================================================
+# PANDUAN INTEGRASI ADS.TXT: GOOGLE ADSENSE & EZOIC MEDIATION
+# ==============================================================================
+#
+# 1. GOOGLE ADSENSE (DIRECT):
+# Ketika akun Google AdSense Anda disetujui, aktifkan baris berikut dengan
+# mengganti 'pub-XXXXXXXXXXXXXXXX' dengan ID penayang (Publisher ID) asli Anda:
+#
 # google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
 #
-# Currently kept commented / placeholder until AdSense approval is confirmed.
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# 2. EZOIC INC. & ADSENSE MEDIATION (MCM):
+# Ezoic adalah Google Certified Publishing Partner (GCPP).
+# Melalui fitur Ezoic Mediation App / Google Multiple Customer Management (MCM),
+# Google AdSense dan bursa iklan mitra Ezoic bersinergi dan bersaing secara real-time.
+#
+# Untuk penayangan iklan Ezoic, Ezoic menyediakan daftar entri partner ads.txt
+# yang dapat diintegrasikan melalui Ezoic Ads.txt Manager atau ditambahkan di sini:
+#
+# ezoic.com, 1000, DIRECT
+#
+# Saat integrasi aktif, salin entri lengkap yang disediakan pada dashboard Ezoic
+# (Monetization -> Ads.txt Manager) ke dalam berkas ini.

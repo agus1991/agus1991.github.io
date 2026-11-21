@@ -7,11 +7,13 @@ interface Props {
 }
 
 const { className = '' } = Astro.props;
-const slotId = siteData.adsense.slotSidebar;
+const slotId = siteData.adsense?.slotSidebar || '';
+const ezoicPlaceholderId = siteData.ezoic?.placeholderSidebar || '';
 ---
 
 <AdSlot
   slotId={slotId}
+  ezoicPlaceholderId={ezoicPlaceholderId}
   format="rectangle"
   responsive={false}
   className={`w-full max-w-[300px] mx-auto ${className}`}

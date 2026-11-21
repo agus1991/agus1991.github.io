@@ -9,14 +9,18 @@ interface Props {
 
 const { position = 'middle', className = '' } = Astro.props;
 
-let slotId = siteData.adsense.slotArticleTop;
+let slotId = siteData.adsense?.slotArticleTop || '';
+let ezoicPlaceholderId = siteData.ezoic?.placeholderArticleTop || '';
+
 if (position === 'bottom') {
-  slotId = siteData.adsense.slotArticleBottom;
+  slotId = siteData.adsense?.slotArticleBottom || '';
+  ezoicPlaceholderId = siteData.ezoic?.placeholderArticleBottom || '';
 }
 ---
 
 <AdSlot
   slotId={slotId}
+  ezoicPlaceholderId={ezoicPlaceholderId}
   format="auto"
   responsive={true}
   className={`my-8 max-w-2xl mx-auto ${className}`}

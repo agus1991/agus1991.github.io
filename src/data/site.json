@@ -18,5 +18,13 @@
     "slotArticleTop": "",
     "slotArticleBottom": "",
     "slotSidebar": ""
+  },
+  "ezoic": {
+    "enabled": false,
+    "siteVerification": "",
+    "publisherId": "",
+    "placeholderArticleTop": "",
+    "placeholderArticleBottom": "",
+    "placeholderSidebar": ""
   }
 }

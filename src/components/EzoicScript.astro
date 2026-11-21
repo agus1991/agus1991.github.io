@@ -1,0 +1,28 @@
+---
+import siteData from '../data/site.json';
+
+// Support both site.json and environment variables
+const isEnabled = import.meta.env.PUBLIC_EZOIC_ENABLED === 'true' || Boolean(siteData.ezoic?.enabled);
+const siteVerification = import.meta.env.PUBLIC_EZOIC_SITE_VERIFICATION || siteData.ezoic?.siteVerification;
+---
+
+{isEnabled && (
+  <>
+    {/* Ezoic Site Verification Meta Tag */}
+    {siteVerification && (
+      <meta name="ezoic-site-verification" content={siteVerification} />
+    )}
+
+    {/* Ezoic Privacy / Consent Management (CMP) Scripts (GDPR/CCPA Compliance) */}
+    <script is:inline data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+    <script is:inline data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+
+    {/* Core Ezoic Standalone Script & Initialization */}
+    <script is:inline async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+    <script is:inline>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+    </script>
+    <script is:inline async src="//ezoicanalytics.com/analytics.js"></script>
+  </>
+)}

@@ -3,6 +3,7 @@ import siteData from '../data/site.json';
 
 interface Props {
   slotId?: string;
+  ezoicPlaceholderId?: string | number;
   format?: 'auto' | 'fluid' | 'rectangle' | 'horizontal';
   responsive?: boolean;
   className?: string;
@@ -10,18 +11,41 @@ interface Props {
 
 const {
   slotId = '',
+  ezoicPlaceholderId = '',
   format = 'auto',
   responsive = true,
   className = ''
 } = Astro.props;
 
-const isEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true' || siteData.adsense.enabled;
-const adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT || siteData.adsense.client;
-const shouldRender = isEnabled && Boolean(adClient) && Boolean(slotId);
+// Ezoic Configuration
+const isEzoicEnabled = import.meta.env.PUBLIC_EZOIC_ENABLED === 'true' || Boolean(siteData.ezoic?.enabled);
+const hasEzoic = isEzoicEnabled && Boolean(ezoicPlaceholderId);
+
+// AdSense Configuration
+const isAdSenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true' || Boolean(siteData.adsense?.enabled);
+const adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT || siteData.adsense?.client;
+const hasAdSense = isAdSenseEnabled && Boolean(adClient) && Boolean(slotId);
 ---
 
-{shouldRender ? (
-  <div class={`ad-container my-8 text-center overflow-hidden min-h-[100px] border border-borderline/40 rounded-sm bg-surface-light dark:bg-surface-dark p-2 ${className}`}>
+{hasEzoic ? (
+  <div class={`ad-container ezoic-ad-slot my-8 text-center overflow-hidden min-h-[100px] border border-borderline/40 rounded-sm bg-surface-light dark:bg-surface-dark p-2 ${className}`}>
+    <span class="block text-[10px] tracking-wider uppercase text-ink-secondary/70 mb-1">Iklan</span>
+    <!-- Ezoic Ad Placeholder -->
+    <div id={`ezoic-pub-ad-placeholder-${ezoicPlaceholderId}`}></div>
+    <script is:inline define:vars={{ ezoicPlaceholderId }}>
+      if (typeof window !== 'undefined' && window.ezstandalone && window.ezstandalone.cmd) {
+        window.ezstandalone.cmd.push(function() {
+          if (typeof window.ezstandalone.define === 'function') {
+            window.ezstandalone.define(Number(ezoicPlaceholderId));
+            window.ezstandalone.enable();
+            window.ezstandalone.display();
+          }
+        });
+      }
+    </script>
+  </div>
+) : hasAdSense ? (
+  <div class={`ad-container adsense-slot my-8 text-center overflow-hidden min-h-[100px] border border-borderline/40 rounded-sm bg-surface-light dark:bg-surface-dark p-2 ${className}`}>
     <span class="block text-[10px] tracking-wider uppercase text-ink-secondary/70 mb-1">Iklan</span>
     <ins
       class="adsbygoogle"
