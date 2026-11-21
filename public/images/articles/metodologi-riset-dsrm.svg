@@ -2,29 +2,66 @@
   <defs>
     <linearGradient id="bgMR" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#F8F7F4" />
-      <stop offset="100%" stop-color="#E8E5DF" />
+      <stop offset="100%" stop-color="#EDE9E1" />
+    </linearGradient>
+    <linearGradient id="accentMR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#115E59" />
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bgMR)" />
   <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
   
-  <rect x="100" y="90" width="140" height="36" rx="18" fill="#F1EDE4" stroke="#A58B62" stroke-width="1.5" />
-  <text x="170" y="114" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A58B62" text-anchor="middle" letter-spacing="1">RESEARCH</text>
+  <!-- Category Badge -->
+  <rect x="80" y="85" width="280" height="34" rx="17" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.5" />
+  <text x="220" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0F766E" text-anchor="middle" letter-spacing="1">RESEARCH METHODOLOGY &amp; DSRM</text>
   
-  <text x="100" y="210" font-family="Lora, Georgia, serif" font-size="48" font-weight="700" fill="#252525">Metodologi Riset Terapan</text>
-  <text x="100" y="275" font-family="Lora, Georgia, serif" font-size="42" font-weight="600" fill="#777777">dalam Sistem Informasi</text>
-  <text x="100" y="345" font-family="Inter, sans-serif" font-size="22" fill="#777777">Panduan Praktis Kerangka Kerja Design Science Research (DSRM)</text>
+  <!-- Title & Subtitle (strictly bounded to x=80..680) -->
+  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Metodologi Riset Terapan</text>
+  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="26" font-weight="600" fill="#0F766E">Kerangka Kerja Design Science Research (DSRM)</text>
+  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Panduan Praktis Rekayasa Artefak Sistem Informasi,</text>
+  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Tahapan Evaluasi Empiris, dan Validasi Akademik Teruji</text>
   
-  <!-- Visual 6 steps graphic -->
-  <g transform="translate(750, 160)">
-    <rect x="0" y="0" width="280" height="42" rx="6" fill="#F8F7F4" stroke="#E8E5DF" />
-    <text x="140" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#252525" text-anchor="middle">1. Identifikasi Masalah</text>
-    <rect x="0" y="55" width="280" height="42" rx="6" fill="#F8F7F4" stroke="#E8E5DF" />
-    <text x="140" y="81" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#252525" text-anchor="middle">2. Desain Solusi &amp; Artefak</text>
-    <rect x="0" y="110" width="280" height="42" rx="6" fill="#F1EDE4" stroke="#A58B62" />
-    <text x="140" y="136" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#A58B62" text-anchor="middle">3. Evaluasi &amp; Validasi</text>
+  <!-- Illustration Badge Card (strictly bounded to x=770..1080) -->
+  <g transform="translate(770, 105)">
+    <rect width="310" height="320" rx="10" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1.5" />
+    
+    <!-- Step 1 -->
+    <rect x="25" y="30" width="260" height="50" rx="6" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2" />
+    <circle cx="50" cy="55" r="14" fill="#0F766E" />
+    <text x="50" y="60" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="75" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#134E4A">Identifikasi Masalah</text>
+    <text x="75" y="68" font-family="Inter, sans-serif" font-size="10" fill="#78716C">Problem Definition &amp; Motivation</text>
+    
+    <!-- Flow Arrow -->
+    <line x1="155" y1="80" x2="155" y2="95" stroke="#0F766E" stroke-width="2" stroke-dasharray="3,3" />
+    
+    <!-- Step 2 -->
+    <rect x="25" y="95" width="260" height="50" rx="6" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2" />
+    <circle cx="50" cy="120" r="14" fill="#14B8A6" />
+    <text x="50" y="125" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="75" y="115" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#134E4A">Desain Artefak Rekayasa</text>
+    <text x="75" y="133" font-family="Inter, sans-serif" font-size="10" fill="#78716C">Architecture, Model, Method &amp; Instantiation</text>
+    
+    <!-- Flow Arrow -->
+    <line x1="155" y1="145" x2="155" y2="160" stroke="#0F766E" stroke-width="2" stroke-dasharray="3,3" />
+    
+    <!-- Step 3 -->
+    <rect x="25" y="160" width="260" height="50" rx="6" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2" />
+    <circle cx="50" cy="185" r="14" fill="#0D9488" />
+    <text x="50" y="190" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="75" y="180" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#134E4A">Evaluasi &amp; Validasi</text>
+    <text x="75" y="198" font-family="Inter, sans-serif" font-size="10" fill="#78716C">Empirical Testing &amp; Metric Analysis</text>
+    
+    <!-- Step 4 Mini Bar -->
+    <rect x="25" y="225" width="260" height="38" rx="6" fill="#0F766E" />
+    <text x="155" y="249" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">DSRM ITERATIVE FEEDBACK LOOP</text>
+    
+    <text x="155" y="295" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#0F766E" text-anchor="middle">Peffer et al. (2007) Framework</text>
   </g>
   
-  <line x1="100" y1="460" x2="1100" y2="460" stroke="#E8E5DF" stroke-width="2" />
-  <text x="100" y="515" font-family="Inter, sans-serif" font-size="18" fill="#777777">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <!-- Bottom Bar -->
+  <line x1="80" y1="470" x2="1100" y2="470" stroke="#E8E5DF" stroke-width="2" />
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="16" fill="#78716C">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="520" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#0F766E" text-anchor="end">agus1991.github.io</text>
 </svg>

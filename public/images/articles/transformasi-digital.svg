@@ -2,31 +2,54 @@
   <defs>
     <linearGradient id="bgTD" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#F8F7F4" />
-      <stop offset="100%" stop-color="#EBE7DE" />
+      <stop offset="100%" stop-color="#EDE9E1" />
+    </linearGradient>
+    <linearGradient id="gradTD" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#3730A3" />
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bgTD)" />
   <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
   
-  <rect x="100" y="90" width="220" height="36" rx="18" fill="#F1EDE4" stroke="#A58B62" stroke-width="1.5" />
-  <text x="210" y="114" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A58B62" text-anchor="middle" letter-spacing="1">INFORMATION SYSTEMS</text>
+  <!-- Category Badge -->
+  <rect x="80" y="85" width="280" height="34" rx="17" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5" />
+  <text x="220" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#4F46E5" text-anchor="middle" letter-spacing="1">DIGITAL TRANSFORMATION &amp; SPBE</text>
   
-  <text x="100" y="210" font-family="Lora, Georgia, serif" font-size="52" font-weight="700" fill="#252525">Transformasi Digital</text>
-  <text x="100" y="275" font-family="Lora, Georgia, serif" font-size="44" font-weight="600" fill="#777777">dalam Sistem Informasi</text>
-  <text x="100" y="345" font-family="Inter, sans-serif" font-size="22" fill="#777777">Strategi Arsitektur, Kematangan Proses, &amp; Penyelarasan Nilai</text>
+  <!-- Title & Subtitle (strictly bounded to x=80..680) -->
+  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Transformasi Digital</text>
+  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="26" font-weight="600" fill="#4F46E5">Integrasi Layanan Publik dan Interoperabilitas SPBE</text>
+  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Restrukturisasi Proses Bisnis Menuju Efisiensi Nyata,</text>
+  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Penghapusan Silo Data, dan Arsitektur REST API Terpadu</text>
   
-  <!-- Visual graph schematic -->
-  <g transform="translate(780, 160)">
-    <circle cx="120" cy="80" r="50" fill="#F8F7F4" stroke="#A58B62" stroke-width="3" />
-    <circle cx="60" cy="220" r="40" fill="#F8F7F4" stroke="#E8E5DF" stroke-width="2" />
-    <circle cx="180" cy="220" r="40" fill="#F8F7F4" stroke="#E8E5DF" stroke-width="2" />
-    <line x1="100" y1="120" x2="70" y2="185" stroke="#A58B62" stroke-width="2" stroke-dasharray="4" />
-    <line x1="140" y1="120" x2="170" y2="185" stroke="#A58B62" stroke-width="2" stroke-dasharray="4" />
-    <text x="120" y="86" font-family="Lora, Georgia, serif" font-size="14" font-weight="700" fill="#252525" text-anchor="middle">CORE IS</text>
-    <text x="60" y="225" font-family="Inter, sans-serif" font-size="12" fill="#777777" text-anchor="middle">PROCESS</text>
-    <text x="180" y="225" font-family="Inter, sans-serif" font-size="12" fill="#777777" text-anchor="middle">PEOPLE</text>
+  <!-- Illustration Badge Card (strictly bounded to x=770..1080) -->
+  <g transform="translate(770, 105)">
+    <rect width="310" height="320" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5" />
+    
+    <!-- Header Box -->
+    <rect x="35" y="30" width="240" height="46" rx="8" fill="url(#gradTD)" />
+    <text x="155" y="52" font-family="Lora, Georgia, serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ekosistem SPBE Terpadu</text>
+    <text x="155" y="67" font-family="Inter, sans-serif" font-size="10" fill="#E0E7FF" text-anchor="middle">Single Source of Truth Architecture</text>
+    
+    <!-- 3 Pillars Grid -->
+    <rect x="25" y="95" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2" />
+    <text x="40" y="121" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#312E81">1. TATA KELOLA</text>
+    <text x="270" y="121" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="end">Regulasi &amp; Kebijakan</text>
+    
+    <rect x="25" y="145" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2" />
+    <text x="40" y="171" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#312E81">2. PROSES BISNIS</text>
+    <text x="270" y="171" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="end">Eliminasi Redundansi</text>
+    
+    <rect x="25" y="195" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2" />
+    <text x="40" y="221" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#312E81">3. TEKNOLOGI</text>
+    <text x="270" y="221" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="end">REST API &amp; Gateway</text>
+    
+    <rect x="25" y="250" width="260" height="36" rx="6" fill="#4F46E5" />
+    <text x="155" y="272" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">INTEROPERABILITAS DATA ANTAR-OPD</text>
   </g>
   
-  <line x1="100" y1="460" x2="1100" y2="460" stroke="#E8E5DF" stroke-width="2" />
-  <text x="100" y="515" font-family="Inter, sans-serif" font-size="18" fill="#777777">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <!-- Bottom Bar -->
+  <line x1="80" y1="470" x2="1100" y2="470" stroke="#E8E5DF" stroke-width="2" />
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="16" fill="#78716C">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="520" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#4F46E5" text-anchor="end">agus1991.github.io</text>
 </svg>

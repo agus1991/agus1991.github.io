@@ -60,8 +60,7 @@
 
   .prose p,
   .prose li,
-  .prose blockquote,
-  .prose figcaption {
+  .prose blockquote {
     text-align: justify;
   }
 
@@ -73,6 +72,43 @@
   .prose li > p {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
+  }
+
+  /* Rata tengah dan estetika gambar di dalam artikel */
+  .prose img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .prose figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .prose figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .prose figcaption {
+    text-align: center !important;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+  }
+
+  .prose p:has(> img),
+  .prose p:has(> a > img) {
+    text-align: center;
   }
 }
 
