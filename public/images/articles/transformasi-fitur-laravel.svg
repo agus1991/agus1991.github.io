@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgLaravel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7" />
+      <stop offset="100%" stop-color="#F3EFE6" />
+    </linearGradient>
+    <linearGradient id="laravelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D20" />
+      <stop offset="100%" stop-color="#C5221F" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgLaravel)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <!-- Category Badge -->
+  <rect x="80" y="85" width="280" height="34" rx="17" fill="#FFF1F2" stroke="#FF2D20" stroke-width="1.5" />
+  <text x="220" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#E11D48" text-anchor="middle" letter-spacing="1">SOFTWARE ENGINEERING &amp; ECOSYSTEM</text>
+  
+  <!-- Title & Subtitle (bounded to x=80..680) -->
+  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Transformasi Laravel</text>
+  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="26" font-weight="600" fill="#C5221F">Dari Alternatif Sederhana ke Raksasa Ekosistem Web</text>
+  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Lompatan Arsitektural dari Era v1 hingga Generasi Modern,</text>
+  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Revolusi Developer Experience (DX), dan Peran Komunitas PHP</text>
+  
+  <!-- Illustration Badge Card (x=770..1080) -->
+  <g transform="translate(770, 105)">
+    <rect width="310" height="320" rx="10" fill="#FFF8F8" stroke="#FECDD3" stroke-width="1.5" />
+    
+    <!-- Core Box -->
+    <rect x="35" y="35" width="240" height="42" rx="6" fill="url(#laravelGrad)" />
+    <text x="155" y="61" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">LARAVEL ECOSYSTEM</text>
+    
+    <!-- Flow Connector -->
+    <line x1="155" y1="77" x2="155" y2="105" stroke="#FF2D20" stroke-width="2" stroke-dasharray="3,3" />
+    
+    <!-- Layer 1: Architecture -->
+    <rect x="45" y="105" width="220" height="36" rx="6" fill="#FFFFFF" stroke="#E11D48" stroke-width="1.5" />
+    <text x="155" y="128" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#9F1239" text-anchor="middle">Eloquent ORM • Blade • Artisan</text>
+    
+    <!-- Flow Connector -->
+    <line x1="155" y1="141" x2="155" y2="165" stroke="#FF2D20" stroke-width="2" stroke-dasharray="3,3" />
+    
+    <!-- Layer 2: Modern Real-Time & DX -->
+    <rect x="45" y="165" width="220" height="36" rx="6" fill="#FFFFFF" stroke="#E11D48" stroke-width="1.5" />
+    <text x="155" y="188" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#9F1239" text-anchor="middle">Vite • Reverb • Pulse • Octane</text>
+    
+    <!-- Flow Connector -->
+    <line x1="155" y1="201" x2="155" y2="225" stroke="#FF2D20" stroke-width="2" stroke-dasharray="3,3" />
+    
+    <!-- Layer 3: Community & Fullstack -->
+    <rect x="45" y="225" width="220" height="36" rx="6" fill="#FFE4E6" stroke="#FF2D20" stroke-width="1.5" />
+    <text x="155" y="248" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#881337" text-anchor="middle">Livewire • Inertia • Filament PHP</text>
+    
+    <text x="155" y="290" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#9CA3AF" text-anchor="middle">PHP Modern &amp; Global Community</text>
+  </g>
+  
+  <!-- Bottom Bar -->
+  <line x1="80" y1="470" x2="1100" y2="470" stroke="#E8E5DF" stroke-width="2" />
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="16" fill="#78716C">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="520" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#E11D48" text-anchor="end">agus1991.github.io</text>
+</svg>
