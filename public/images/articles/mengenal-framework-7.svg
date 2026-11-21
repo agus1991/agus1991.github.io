@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgF7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7" />
+      <stop offset="100%" stop-color="#F5EFE6" />
+    </linearGradient>
+    <linearGradient id="f7BrandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EE350F" />
+      <stop offset="100%" stop-color="#C02607" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgF7)" />
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="#FFFFFF" stroke="#E8E5DF" stroke-width="2" />
+  
+  <!-- Category Badge -->
+  <rect x="80" y="85" width="280" height="34" rx="17" fill="#FEF2F2" stroke="#EE350F" stroke-width="1.5" />
+  <text x="220" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#DC2626" text-anchor="middle" letter-spacing="1">MOBILE &amp; WEB ENGINEERING</text>
+  
+  <!-- Title & Subtitle (bounded to x=80..680) -->
+  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Mengenal Framework7</text>
+  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="25" font-weight="600" fill="#C02607">Aplikasi Mobile Hibrida &amp; PWA Berbasis Standar Web</text>
+  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Eksplorasi Antarmuka Native iOS &amp; Android Material,</text>
+  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Arsitektur Dom7, Sinergi REST API, dan Solusi Empiris Lapangan</text>
+  
+  <!-- Illustration Badge Card (x=770..1080) -->
+  <g transform="translate(770, 105)">
+    <rect width="310" height="325" rx="10" fill="#FFFDFD" stroke="#FECACA" stroke-width="1.5" />
+    
+    <!-- Phone Frame Illustration -->
+    <rect x="75" y="25" width="160" height="235" rx="18" fill="#1C1917" />
+    <rect x="83" y="35" width="144" height="215" rx="12" fill="#FFFFFF" />
+    
+    <!-- Phone Screen Content -->
+    <rect x="83" y="35" width="144" height="30" fill="url(#f7BrandGrad)" />
+    <text x="155" y="55" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Framework7 App</text>
+    
+    <!-- App UI List Mockup -->
+    <rect x="92" y="75" width="126" height="22" rx="4" fill="#F3F4F6" />
+    <rect x="98" y="81" width="10" height="10" rx="2" fill="#EE350F" />
+    <rect x="115" y="83" width="70" height="6" rx="2" fill="#9CA3AF" />
+    
+    <rect x="92" y="103" width="126" height="22" rx="4" fill="#F3F4F6" />
+    <rect x="98" y="109" width="10" height="10" rx="2" fill="#0284C7" />
+    <rect x="115" y="111" width="85" height="6" rx="2" fill="#9CA3AF" />
+    
+    <rect x="92" y="131" width="126" height="22" rx="4" fill="#F3F4F6" />
+    <rect x="98" y="137" width="10" height="10" rx="2" fill="#16A34A" />
+    <rect x="115" y="139" width="60" height="6" rx="2" fill="#9CA3AF" />
+    
+    <!-- Bottom Tab Bar -->
+    <rect x="83" y="222" width="144" height="28" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1" />
+    <circle cx="110" cy="236" r="4" fill="#EE350F" />
+    <circle cx="155" cy="236" r="4" fill="#9CA3AF" />
+    <circle cx="200" cy="236" r="4" fill="#9CA3AF" />
+    
+    <!-- Tech Stack Pill Labels -->
+    <text x="155" y="285" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#B91C1C" text-anchor="middle">HTML5 • CSS3 • JavaScript</text>
+    <text x="155" y="305" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#78716C" text-anchor="middle">iOS Cupertino &amp; Material Design</text>
+  </g>
+  
+  <!-- Bottom Bar -->
+  <line x1="80" y1="470" x2="1100" y2="470" stroke="#E8E5DF" stroke-width="2" />
+  <text x="80" y="520" font-family="Inter, sans-serif" font-size="16" fill="#78716C">MAS-AGUS Knowledge Hub • Agus Sifaunajah</text>
+  <text x="1100" y="520" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#DC2626" text-anchor="end">agus1991.github.io</text>
+</svg>
