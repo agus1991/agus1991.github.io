@@ -16,43 +16,48 @@
   <rect x="80" y="85" width="280" height="34" rx="17" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5" />
   <text x="220" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0284C7" text-anchor="middle" letter-spacing="1">COMPUTER NETWORKS &amp; ROUTING</text>
   
-  <!-- Title & Subtitle (strictly bounded to x=80..680) -->
-  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Perkembangan MikroTik</text>
-  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="26" font-weight="600" fill="#0284C7">Dari Routing PC ke Ekosistem Jaringan (1996–2026)</text>
-  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Kajian Komprehensif Arsitektur RouterOS v3 hingga v7,</text>
-  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Inovasi RouterBOARD, Switching L3, dan Otomasi Jaringan</text>
+  <!-- Title (Compact & Elegant) -->
+  <text x="80" y="185" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Perkembangan MikroTik</text>
   
-  <!-- Illustration Badge Card (strictly bounded to x=770..1080) -->
-  <g transform="translate(770, 105)">
-    <rect width="310" height="320" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5" />
+  <!-- Subtitle (Two-line structured to guarantee no overlap with card at x=800) -->
+  <text x="80" y="238" font-family="Lora, Georgia, serif" font-size="24" font-weight="600" fill="#0284C7">Dari Solusi Routing Berbasis PC</text>
+  <text x="80" y="272" font-family="Lora, Georgia, serif" font-size="24" font-weight="600" fill="#0284C7">ke Ekosistem Jaringan (1996–2026)</text>
+  
+  <!-- Description (Bounded to max x=600) -->
+  <text x="80" y="325" font-family="Inter, sans-serif" font-size="16" fill="#57534E">Evolusi RouterOS Generasi v3 hingga v7, RouterBOARD,</text>
+  <text x="80" y="352" font-family="Inter, sans-serif" font-size="16" fill="#57534E">L3 Hardware Offload, dan Otomasi Jaringan Modern</text>
+  
+  <!-- Illustration Badge Card (Strictly placed at x=800..1100, safe margin >220px) -->
+  <g transform="translate(800, 105)">
+    <rect width="300" height="320" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5" />
     
     <!-- Central RouterOS Core Badge -->
-    <rect x="35" y="30" width="240" height="50" rx="8" fill="url(#gradMT)" />
-    <text x="155" y="55" font-family="Lora, Georgia, serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">RouterOS Ecosystem</text>
-    <text x="155" y="71" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#E0F2FE" text-anchor="middle">Version 3.x — 7.x Kernel Architecture</text>
+    <rect x="30" y="30" width="240" height="50" rx="8" fill="url(#gradMT)" />
+    <text x="150" y="55" font-family="Lora, Georgia, serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">RouterOS Ecosystem</text>
+    <text x="150" y="71" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#E0F2FE" text-anchor="middle">Version 3.x — 7.x Kernel</text>
     
     <!-- Connector Lines -->
-    <line x1="85" y1="80" x2="85" y2="120" stroke="#0284C7" stroke-width="2" stroke-dasharray="3,3" />
-    <line x1="225" y1="80" x2="225" y2="120" stroke="#0284C7" stroke-width="2" stroke-dasharray="3,3" />
+    <line x1="80" y1="80" x2="80" y2="120" stroke="#0284C7" stroke-width="2" stroke-dasharray="3,3" />
+    <line x1="220" y1="80" x2="220" y2="120" stroke="#0284C7" stroke-width="2" stroke-dasharray="3,3" />
     
     <!-- Left Box: RouterBOARD & CCR -->
-    <rect x="25" y="120" width="120" height="65" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
-    <text x="85" y="145" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0C4A6E" text-anchor="middle">RouterBOARD</text>
-    <text x="85" y="162" font-family="Inter, sans-serif" font-size="10" fill="#57534E" text-anchor="middle">CCR Series 100G</text>
-    <text x="85" y="176" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#0284C7" text-anchor="middle">Multi-Core Tile/ARM</text>
+    <rect x="25" y="120" width="115" height="65" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="82" y="145" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0C4A6E" text-anchor="middle">RouterBOARD</text>
+    <text x="82" y="162" font-family="Inter, sans-serif" font-size="10" fill="#57534E" text-anchor="middle">CCR 100G Series</text>
+    <text x="82" y="176" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#0284C7" text-anchor="middle">Tile/ARM Multi-Core</text>
     
     <!-- Right Box: CRS Switching -->
-    <rect x="165" y="120" width="120" height="65" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
-    <text x="225" y="145" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0C4A6E" text-anchor="middle">CRS Switching</text>
-    <text x="225" y="162" font-family="Inter, sans-serif" font-size="10" fill="#57534E" text-anchor="middle">L3 Hardware Offload</text>
-    <text x="225" y="176" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#0284C7" text-anchor="middle">Wire-Speed VLAN</text>
+    <rect x="160" y="120" width="115" height="65" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="217" y="145" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0C4A6E" text-anchor="middle">CRS Switching</text>
+    <text x="217" y="162" font-family="Inter, sans-serif" font-size="10" fill="#57534E" text-anchor="middle">L3 Hardware Offload</text>
+    <text x="217" y="176" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#0284C7" text-anchor="middle">Wire-Speed VLAN</text>
     
     <!-- Wireless & Automation Footer Bar -->
-    <rect x="25" y="205" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
-    <text x="155" y="225" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0369A1" text-anchor="middle">Wireless, 60GHz &amp; IoT Portofolio</text>
-    <text x="155" y="240" font-family="Inter, sans-serif" font-size="10" fill="#78716C" text-anchor="middle">REST API • WinBox • Scripting Engine</text>
+    <rect x="25" y="205" width="250" height="42" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="150" y="225" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0369A1" text-anchor="middle">Wireless, 60GHz &amp; IoT Portofolio</text>
+    <text x="150" y="240" font-family="Inter, sans-serif" font-size="10" fill="#78716C" text-anchor="middle">REST API • WinBox • Scripting</text>
     
-    <text x="155" y="295" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#0284C7" text-anchor="middle">mikrotik.com / help.mikrotik.com</text>
+    <text x="150" y="295" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#0284C7" text-anchor="middle">mikrotik.com / help.mikrotik.com</text>
   </g>
   
   <!-- Bottom Bar -->

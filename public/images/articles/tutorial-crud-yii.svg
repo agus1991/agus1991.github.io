@@ -12,32 +12,37 @@
   <rect x="80" y="85" width="260" height="34" rx="17" fill="#F4EFE6" stroke="#0284C7" stroke-width="1.5" />
   <text x="210" y="107" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0284C7" text-anchor="middle" letter-spacing="1">TUTORIAL &amp; SOFTWARE DEV</text>
   
-  <!-- Title & Subtitle (bounded to x=80..680) -->
-  <text x="80" y="190" font-family="Lora, Georgia, serif" font-size="42" font-weight="700" fill="#1C1917">Tutorial CRUD Yii 2</text>
-  <text x="80" y="245" font-family="Lora, Georgia, serif" font-size="28" font-weight="600" fill="#0369A1">Panduan Praktisi: Dari Skema Basis Data ke Gii</text>
-  <text x="80" y="305" font-family="Inter, sans-serif" font-size="17" fill="#57534E">Eksplorasi Arsitektur MVC, Active Record, Validasi Model,</text>
-  <text x="80" y="335" font-family="Inter, sans-serif" font-size="17" fill="#57534E">dan Best Practices Keamanan Bawaan Framework</text>
+  <!-- Title (Compact & Elegant) -->
+  <text x="80" y="185" font-family="Lora, Georgia, serif" font-size="40" font-weight="700" fill="#1C1917">Tutorial CRUD Yii 2</text>
   
-  <!-- Illustration Badge Card (x=770..1080) -->
-  <g transform="translate(770, 110)">
-    <rect width="310" height="310" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5" />
+  <!-- Subtitle (Two-line structured to guarantee no overlap with card at x=800) -->
+  <text x="80" y="238" font-family="Lora, Georgia, serif" font-size="24" font-weight="600" fill="#0369A1">Panduan Praktisi Arsitektur MVC:</text>
+  <text x="80" y="272" font-family="Lora, Georgia, serif" font-size="24" font-weight="600" fill="#0369A1">Dari Skema Data ke Generator Gii</text>
+  
+  <!-- Description (Bounded to max x=600) -->
+  <text x="80" y="325" font-family="Inter, sans-serif" font-size="16" fill="#57534E">Eksplorasi Active Record, Validasi Model Data,</text>
+  <text x="80" y="352" font-family="Inter, sans-serif" font-size="16" fill="#57534E">dan Pengerasan Keamanan Bawaan Framework</text>
+  
+  <!-- Illustration Badge Card (Strictly placed at x=800..1100, safe margin >200px) -->
+  <g transform="translate(800, 105)">
+    <rect width="300" height="320" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5" />
     
     <!-- MVC Flow Graphic -->
-    <rect x="35" y="40" width="100" height="45" rx="6" fill="#0284C7" />
-    <text x="85" y="68" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">CONTROLLER</text>
+    <rect x="30" y="40" width="100" height="45" rx="6" fill="#0284C7" />
+    <text x="80" y="68" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">CONTROLLER</text>
     
-    <path d="M135 62 L175 62 L175 115 L200 115" fill="none" stroke="#0284C7" stroke-width="2" />
+    <path d="M130 62 L170 62 L170 115 L195 115" fill="none" stroke="#0284C7" stroke-width="2" />
     
-    <rect x="200" y="90" width="85" height="45" rx="6" fill="#0369A1" />
-    <text x="242" y="118" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">MODEL</text>
+    <rect x="195" y="90" width="85" height="45" rx="6" fill="#0369A1" />
+    <text x="237" y="118" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">MODEL</text>
     
-    <path d="M85 85 L85 155 L175 155 L175 180" fill="none" stroke="#0284C7" stroke-width="2" />
+    <path d="M80 85 L80 155 L170 155 L170 180" fill="none" stroke="#0284C7" stroke-width="2" />
     
-    <rect x="135" y="180" width="85" height="45" rx="6" fill="#38BDF8" />
-    <text x="177" y="208" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0C4A6E" text-anchor="middle">VIEW</text>
+    <rect x="130" y="180" width="85" height="45" rx="6" fill="#38BDF8" />
+    <text x="172" y="208" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0C4A6E" text-anchor="middle">VIEW</text>
     
-    <text x="155" y="260" font-family="Lora, Georgia, serif" font-size="16" font-weight="700" fill="#0C4A6E" text-anchor="middle">Yii 2 Framework</text>
-    <text x="155" y="285" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0284C7" text-anchor="middle">High Performance PHP &amp; Gii Engine</text>
+    <text x="150" y="260" font-family="Lora, Georgia, serif" font-size="16" font-weight="700" fill="#0C4A6E" text-anchor="middle">Yii 2 Framework</text>
+    <text x="150" y="285" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0284C7" text-anchor="middle">High Performance PHP &amp; Gii</text>
   </g>
   
   <!-- Bottom Bar -->
