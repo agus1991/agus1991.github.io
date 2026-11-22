@@ -204,6 +204,7 @@ Laravel telah membuktikan kepada dunia industri bahwa sebuah teknologi open-sour
 4. **Portal Edukasi Laracasts**: Seri panduan arsitektur perangkat lunak, *Clean Code*, dan alur kerja pengembangan modern oleh Jeffrey Way tersedia di [Laracasts](https://laracasts.com).
 5. **Komunitas Pengembang Indonesia**: Informasi agenda kegiatan, diskusi teknis, dan forum pengembang lokal dapat dipantau melalui kanal komunitas resmi **PHP Indonesia** dan **Laravel Indonesia**.
 6. **Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Fondasi antarmuka klien enterprise dan arsitektur TypeScript: [Evolusi Framework Angular: Dari Pelopor Dua Arah AngularJS Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-angularjs).
    - Sinergi antarmuka frontend reaktif dan revolusi Vite: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
    - Kajian komparatif arsitektur backend berkinerja tinggi: [Membangun CRUD Tangguh dengan Yii 2 Framework: Catatan dan Panduan Praktisi Rekayasa Sistem](/blog/tutorial-crud-yii-framework-panduan-praktisi).
    - Komparasi disiplin konvensi arsitektur dan Data Mapper ORM: [Evolusi Framework CakePHP: Dari Pionir Konvensi Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-cakephp).

@@ -215,6 +215,7 @@ Bagi institusi pemerintahan, UMKM, pengembang mandiri, hingga akademisi di tanah
 2. **Kompilasi Mobile Modern dengan Capacitor**: Panduan mengemas aplikasi berbasis web menjadi paket APK Android dan IPA iOS tersedia di [Capacitor by Ionic Team](https://capacitorjs.com).
 3. **Repositori Sumber Terbuka Framework7**: Kode sumber, pelacakan rilis, dan kontribusi komunitas dikelola langsung oleh Vladimir Kharlampidi pada [GitHub Framework7](https://github.com/framework7io/framework7).
 4. **Jejaring Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Evolusi antarmuka klien enterprise dan metamorfosis arsitektur web: [Evolusi Framework Angular: Dari Pelopor Dua Arah AngularJS Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-angularjs).
    - Komparasi reaktivitas komponen antarmuka web modern: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
    - Integrasi arsitektur pertukaran data publik: [Transformasi Digital dalam Sistem Informasi: Integrasi Layanan Publik Menuju Efisiensi Tata Kelola Modern](/blog/transformasi-digital-dalam-sistem-informasi).
    - Fondasi backend REST API modern: [Transformasi Framework Laravel: Dari Alternatif Elegan Menjadi Raksasa Ekosistem Web Modern](/blog/transformasi-dan-perkembangan-fitur-laravel-framework).

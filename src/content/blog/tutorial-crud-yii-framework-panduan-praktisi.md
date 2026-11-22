@@ -293,3 +293,6 @@ Bagi pembaca yang ingin mendalami dokumentasi resmi dan spesifikasi teknis dari 
 - **Yii 2 Active Record & Query Builder Guide** — Panduan mendalam pemodelan data relasional, transaksi basis data, dan teknik pencegahan N+1 Query.
 - **Yii 2 Security Best Practices** — Dokumentasi resmi mengenai penanganan ancaman keamanan web standar, termasuk mitigasi CSRF, XSS, dan SQL Injection.
 - **Composer Dependency Manager for PHP** — Panduan resmi pengelolaan pustaka dan autoloading berbasis standar PSR-4.
+- **Kajian Relevan MAS-AGUS Knowledge Hub**:
+  - Arsitektur antarmuka klien enterprise dan pengetikan ketat TypeScript: [Evolusi Framework Angular: Dari Pelopor Dua Arah AngularJS Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-angularjs).
+  - Ekosistem antarmuka reaktif modern dan revolusi Vite: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
