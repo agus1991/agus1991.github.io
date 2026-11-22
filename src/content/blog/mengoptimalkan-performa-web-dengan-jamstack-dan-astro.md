@@ -121,7 +121,7 @@ ALUR KERJA STATIC SITE GENERATION (SSG) PADA ASTRO:
 ```
 
 ### Keunggulan Inti Astro: Island Architecture
-Tidak seperti framework SPA yang menghidrasi seluruh halaman, Astro memelopori konsep **Arsitektur Kepulauan (*Islands Architecture*)** [13]. Secara default, Astro mengompilasi halaman menjadi **0 KB JavaScript klien**. Jika terdapat komponen interaktif (seperti tombol pengalih tema gelap atau filter pencarian), hanya "pulau kecil" tersebut yang dihidrasi secara terisolasi tanpa memblokir thread utama:
+Tidak seperti framework SPA yang menghidrasi seluruh halaman, Astro memelopori konsep **Arsitektur Kepulauan (*Islands Architecture*)** [13]. Secara default, Astro mengompilasi halaman menjadi **0 KB JavaScript klien**. Jika terdapat komponen interaktif (seperti tombol pengalih tema gelap atau komponen reaktif berbasis [Vue.js](/blog/transformasi-dan-perkembangan-fitur-vuejs)), hanya "pulau kecil" tersebut yang dihidrasi secara terisolasi tanpa memblokir thread utama:
 
 ```astro
 ---

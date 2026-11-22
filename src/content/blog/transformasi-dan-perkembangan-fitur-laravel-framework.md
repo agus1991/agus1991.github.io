@@ -132,7 +132,7 @@ Lebih dari itu, ekosistem resmi Laravel menyediakan jawaban tuntas untuk setiap 
 1. **Otentikasi & Otorisasi**: Dari template ringan **Laravel Breeze** hingga gerbang API token mandiri **Laravel Sanctum** dan server OAuth2 lengkap **Laravel Passport**.
 2. **Pola Rendering Modern**: Alih-alih memaksa pengembang memilih antara monolitik kaku atau kerumitan arsitektur Single Page Application (SPA) berbasis REST API penuh, Laravel merangkul pendekatan hibrida:
    - **Laravel Livewire** (dipelopori oleh Caleb Porzio): Menghadirkan antarmuka dinamis reaktif sekelas React/Vue tanpa perlu meninggalkan ranah kode Blade PHP.
-   - **Inertia.js** (dipelopori oleh Jonathan Reinink): Menghubungkan *backend controller* Laravel langsung ke komponen Vue atau React tanpa harus repot menyusun endpoint REST API dan state management ganda.
+   - **Inertia.js** (dipelopori oleh Jonathan Reinink): Menghubungkan *backend controller* Laravel langsung ke komponen reaktif [Vue.js](/blog/transformasi-dan-perkembangan-fitur-vuejs) atau React tanpa harus repot menyusun endpoint REST API dan state management ganda.
 3. **Penyelarasan dengan Jamstack**: Namun demikian, untuk skenario situs informasi publik dengan lalu lintas pembaca masif tanpa ketergantungan logika relasional dinamis, pengembang tetap bijak membandingkan rendering monolitik ini dengan efisiensi [arsitektur Jamstack dan Island Architecture Astro](/blog/mengoptimalkan-performa-web-dengan-jamstack-dan-astro) yang menyajikan kompilasi HTML statis berlatensi nol di CDN edge.
 
 ---
@@ -204,6 +204,7 @@ Laravel telah membuktikan kepada dunia industri bahwa sebuah teknologi open-sour
 4. **Portal Edukasi Laracasts**: Seri panduan arsitektur perangkat lunak, *Clean Code*, dan alur kerja pengembangan modern oleh Jeffrey Way tersedia di [Laracasts](https://laracasts.com).
 5. **Komunitas Pengembang Indonesia**: Informasi agenda kegiatan, diskusi teknis, dan forum pengembang lokal dapat dipantau melalui kanal komunitas resmi **PHP Indonesia** dan **Laravel Indonesia**.
 6. **Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Sinergi antarmuka frontend reaktif dan revolusi Vite: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
    - Kajian komparatif arsitektur backend berkinerja tinggi: [Membangun CRUD Tangguh dengan Yii 2 Framework: Catatan dan Panduan Praktisi Rekayasa Sistem](/blog/tutorial-crud-yii-framework-panduan-praktisi).
    - Komparasi disiplin konvensi arsitektur dan Data Mapper ORM: [Evolusi Framework CakePHP: Dari Pionir Konvensi Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-cakephp).
    - Analisis perbandingan paradigma rendering web: [Mengoptimalkan Performa Web Modern: Dari Monolitik Menuju Arsitektur Jamstack dan Astro](/blog/mengoptimalkan-performa-web-dengan-jamstack-dan-astro).
