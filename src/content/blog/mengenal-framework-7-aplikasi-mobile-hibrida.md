@@ -66,7 +66,7 @@ Diciptakan pertama kali pada tahun 2014 oleh seorang perekayasa perangkat lunak 
 
 Yang membuat saya sangat menghormati arsitektur Framework7 adalah **komitmennya terhadap kebebasan pengembang (*framework agnostic*)**:
 1. Anda dapat menulis aplikasi murni menggunakan **Vanilla JavaScript** tanpa terikat pada *bundler* atau pustaka eksternal apa pun.
-2. Jika proyek Anda membutuhkan manajemen *state* reaktif berbasis komponen, Framework7 menyediakan pembungkus resmi kelas satu untuk [Vue.js (`framework7-vue`)](/blog/transformasi-dan-perkembangan-fitur-vuejs), **React (`framework7-react`)**, dan **Svelte (`framework7-svelte`)**.
+2. Jika proyek Anda membutuhkan manajemen *state* reaktif berbasis komponen, Framework7 menyediakan pembungkus resmi kelas satu untuk [Vue.js (`framework7-vue`)](/blog/transformasi-dan-perkembangan-fitur-vuejs), [React (`framework7-react`)](/blog/transformasi-dan-perkembangan-fitur-reactjs), dan **Svelte (`framework7-svelte`)**.
 
 ---
 
@@ -215,6 +215,7 @@ Bagi institusi pemerintahan, UMKM, pengembang mandiri, hingga akademisi di tanah
 2. **Kompilasi Mobile Modern dengan Capacitor**: Panduan mengemas aplikasi berbasis web menjadi paket APK Android dan IPA iOS tersedia di [Capacitor by Ionic Team](https://capacitorjs.com).
 3. **Repositori Sumber Terbuka Framework7**: Kode sumber, pelacakan rilis, dan kontribusi komunitas dikelola langsung oleh Vladimir Kharlampidi pada [GitHub Framework7](https://github.com/framework7io/framework7).
 4. **Jejaring Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Paradigma antarmuka berbasis komponen dan Server Components: [Evolusi Framework React: Dari Inovasi Virtual DOM Menuju Arsitektur Server Components](/blog/transformasi-dan-perkembangan-fitur-reactjs).
    - Evolusi antarmuka klien enterprise dan metamorfosis arsitektur web: [Evolusi Framework Angular: Dari Pelopor Dua Arah AngularJS Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-angularjs).
    - Komparasi reaktivitas komponen antarmuka web modern: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
    - Integrasi arsitektur pertukaran data publik: [Transformasi Digital dalam Sistem Informasi: Integrasi Layanan Publik Menuju Efisiensi Tata Kelola Modern](/blog/transformasi-digital-dalam-sistem-informasi).

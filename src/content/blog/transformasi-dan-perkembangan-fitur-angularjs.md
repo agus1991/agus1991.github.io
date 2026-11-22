@@ -72,7 +72,7 @@ Diluncurkan pada September 2016, **Angular 2+** menghadirkan lompatan arsitektur
 3. **Pemberdayaan Pemrograman Reaktif (RxJS)**: Komunikasi data, perutean, dan form diolah sebagai aliran data asinkron (*Observables*).
 4. **Evolusi Mesin Kompilasi Ivy (Angular 9)**: Menghasilkan kode kompilasi *Ahead-of-Time* (AOT) yang jauh lebih ramping, mempercepat waktu muat awal secara dramatis.
 
-**Harga Mahal Sebuah Reformasi:** Tidak adanya jalur migrasi langsung (*backward compatibility*) dari AngularJS 1.x ke Angular 2 memicu frustrasi massal di kalangan pengembang. Momen perpecahan inilah yang dimanfaatkan oleh teknologi lain: Evan You—mantan insinyur Google yang merancang prototipe berbasis AngularJS—mengekstrak kesederhanaan direktif Angular untuk melahirkan [Evolusi Framework Vue.js](/blog/transformasi-dan-perkembangan-fitur-vuejs), sementara sebagian pengembang lainnya bermigrasi ke ekosistem React.
+**Harga Mahal Sebuah Reformasi:** Tidak adanya jalur migrasi langsung (*backward compatibility*) dari AngularJS 1.x ke Angular 2 memicu frustrasi massal di kalangan pengembang. Momen perpecahan inilah yang dimanfaatkan oleh teknologi lain: Evan You—mantan insinyur Google yang merancang prototipe berbasis AngularJS—mengekstrak kesederhanaan direktif Angular untuk melahirkan [Evolusi Framework Vue.js](/blog/transformasi-dan-perkembangan-fitur-vuejs), sementara sebagian pengembang lainnya bermigrasi ke [ekosistem React yang fleksibel](/blog/transformasi-dan-perkembangan-fitur-reactjs).
 
 ### 3. Era Renaisans: Signals, Standalone, dan Kemenangan Modernitas (Angular 17 – 19+, 2023–Kini)
 Setelah bertahun-tahun dicap sebagai kerangka kerja korporat yang kaku dan penuh kode birokratis (*boilerplate*), tim Angular di bawah pimpinan Minko Gechev meluncurkan gelombang pembaruan terbesar dalam sejarahnya yang dikenal sebagai **Angular Renaissance**:
@@ -247,6 +247,7 @@ Angular telah menempuh perjalanan panjang dari sekadar eksperimen deklaratif yan
 3. **Spesifikasi Bahasa TypeScript**: Dokumentasi panduan pengetikan statis dan fitur dekorator kelas dari Microsoft dapat dipelajari di [TypeScript Official Documentation](https://www.typescriptlang.org/).
 4. **Komunitas Pengembang Indonesia**: Informasi kegiatan, diskusi arsitektur *Micro-Frontend*, dan forum pengembang lokal dapat dipantau melalui kanal komunitas **Angular Indonesia (AngularID)**.
 5. **Jejaring Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Komparasi filosofis arsitektur pustaka fungsional dan Server Components: [Evolusi Framework React: Dari Inovasi Virtual DOM Menuju Arsitektur Server Components](/blog/transformasi-dan-perkembangan-fitur-reactjs).
    - Sejarah pecahan deklaratif dan kelahiran reaktivitas progresif: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
    - Fondasi backend REST API dan integrasi fullstack modern: [Transformasi Framework Laravel: Dari Alternatif Elegan Menjadi Raksasa Ekosistem Web Modern](/blog/transformasi-dan-perkembangan-fitur-laravel-framework).
    - Arsitektur injeksi dependensi dan keandalan data enterprise: [Membangun CRUD Tangguh dengan Yii 2 Framework: Catatan dan Panduan Praktisi Rekayasa Sistem](/blog/tutorial-crud-yii-framework-panduan-praktisi).
