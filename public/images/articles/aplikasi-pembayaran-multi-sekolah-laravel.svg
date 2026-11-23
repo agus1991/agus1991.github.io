@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#04121F"/>
+    </linearGradient>
+
+    <!-- Emerald / Laravel Red Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <!-- Card Border Gradient -->
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Subtle Radial Glow -->
+    <radialGradient id="greenGlow" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#090D16" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#greenGlow)"/>
+
+  <!-- Left Column: Title & Text Content (Strictly bounded x=80..600) -->
+  <g id="text-content">
+    <!-- Category Badge -->
+    <rect x="80" y="85" width="220" height="32" rx="16" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="190" y="106" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6EE7B7" text-anchor="middle" letter-spacing="1.2">TUTORIAL BERSERI • BAGIAN 1</text>
+
+    <!-- Main Title (Strictly bounded) -->
+    <text x="80" y="175" font-family="'Georgia', serif" font-size="35" font-weight="700" fill="#F8FAFC" letter-spacing="-0.5">Aplikasi Pembayaran Multi-Sekolah</text>
+
+    <!-- Subtitle Line 1 (max 35 chars, <= 600px) -->
+    <text x="80" y="238" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400" fill="#94A3B8">Arsitektur Multi-Tenant Yayasan</text>
+
+    <!-- Subtitle Line 2 (max 35 chars, <= 600px) -->
+    <text x="80" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400" fill="#CBD5E1">Dan Desain Database MySQL Relasional</text>
+
+    <!-- Divider Line -->
+    <line x1="80" y1="315" x2="520" y2="315" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Metadata Section -->
+    <text x="80" y="352" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#E2E8F0">Agus Sifaunajah (MAS-AGUS)</text>
+    <text x="80" y="376" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400" fill="#64748B">Rekayasa Perangkat Lunak, Arsitektur Basis Data &amp; Tata Kelola Finansial</text>
+
+    <!-- Tags Row -->
+    <g transform="translate(80, 520)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="85" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text x="42" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#94A3B8" text-anchor="middle">Laravel</text>
+
+      <!-- Tag 2 -->
+      <rect x="95" y="0" width="80" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text x="135" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#94A3B8" text-anchor="middle">MySQL</text>
+
+      <!-- Tag 3 -->
+      <rect x="185" y="0" width="115" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text x="242" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#94A3B8" text-anchor="middle">Multi-Tenant</text>
+
+      <!-- Tag 4 -->
+      <rect x="310" y="0" width="125" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text x="372" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#94A3B8" text-anchor="middle">Sistem Kasir</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Visual Architecture Card (Placed at translate(800, 105)) -->
+  <g transform="translate(800, 105)">
+    <!-- Main Card Body -->
+    <rect width="300" height="420" rx="16" fill="url(#cardBg)" stroke="url(#cardBorder)" stroke-width="1.5"/>
+
+    <!-- Card Header / Title -->
+    <rect x="20" y="20" width="260" height="36" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="150" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" text-anchor="middle" letter-spacing="1">MULTI-TENANT ARCHITECTURE</text>
+
+    <!-- Top Entity: Yayasan Pusat -->
+    <g transform="translate(25, 75)">
+      <rect width="250" height="60" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+      <text x="125" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0" text-anchor="middle">YAYASAN PENGELOLA (PUSAT)</text>
+      <text x="125" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#D1FAE5" text-anchor="middle">Konsolidasi Kas &amp; Master Kebijakan</text>
+    </g>
+
+    <!-- Connector Lines -->
+    <path d="M 150 135 L 150 165" stroke="#10B981" stroke-width="2" stroke-dasharray="4"/>
+
+    <!-- Middle Level: Multi-School Unit Tenants -->
+    <g transform="translate(25, 165)">
+      <rect width="250" height="85" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="125" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" text-anchor="middle">UNIT SEKOLAH (TENANTS)</text>
+      
+      <!-- School Badges Grid -->
+      <g transform="translate(15, 34)">
+        <rect x="0" y="0" width="50" height="24" rx="4" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+        <text x="25" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#93C5FD" text-anchor="middle">KB-TK</text>
+
+        <rect x="56" y="0" width="50" height="24" rx="4" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+        <text x="81" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#86EFAC" text-anchor="middle">SD / MI</text>
+
+        <rect x="112" y="0" width="52" height="24" rx="4" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+        <text x="138" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#FDE047" text-anchor="middle">SMP/MTs</text>
+
+        <rect x="170" y="0" width="50" height="24" rx="4" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+        <text x="195" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#FCA5A5" text-anchor="middle">SMA/SMK</text>
+      </g>
+      <text x="125" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Tarif Mandiri &amp; Rekening Kasir Khusus</text>
+    </g>
+
+    <!-- Connector Lines -->
+    <path d="M 150 250 L 150 275" stroke="#10B981" stroke-width="2" stroke-dasharray="4"/>
+
+    <!-- Bottom Level: Database Engine -->
+    <g transform="translate(25, 275)">
+      <rect width="250" height="120" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="125" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" text-anchor="middle">MYSQL RELATIONAL ENGINE</text>
+      <line x1="20" y1="36" x2="230" y2="36" stroke="#334155" stroke-width="1"/>
+      
+      <text x="25" y="56" font-family="monospace" font-size="11" fill="#E2E8F0">school_id (Discriminator)</text>
+      <text x="25" y="74" font-family="monospace" font-size="11" fill="#94A3B8">students &bull; bills &bull; payments</text>
+      <text x="25" y="92" font-family="monospace" font-size="11" fill="#94A3B8">DECIMAL(12,2) &bull; Audit Trail</text>
+      
+      <rect x="25" y="100" width="200" height="1" fill="#10B981" fill-opacity="0.3"/>
+    </g>
+  </g>
+</svg>

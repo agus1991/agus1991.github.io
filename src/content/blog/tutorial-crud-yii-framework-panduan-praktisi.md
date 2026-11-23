@@ -294,5 +294,6 @@ Bagi pembaca yang ingin mendalami dokumentasi resmi dan spesifikasi teknis dari 
 - **Yii 2 Security Best Practices** — Dokumentasi resmi mengenai penanganan ancaman keamanan web standar, termasuk mitigasi CSRF, XSS, dan SQL Injection.
 - **Composer Dependency Manager for PHP** — Panduan resmi pengelolaan pustaka dan autoloading berbasis standar PSR-4.
 - **Kajian Relevan MAS-AGUS Knowledge Hub**:
+  - Implementasi basis data relasional multi-tenant dan sistem penagihan: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Analisis Kebutuhan dan Perancangan Basis Data MySQL (Bagian 1)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-database).
   - Arsitektur antarmuka klien enterprise dan pengetikan ketat TypeScript: [Evolusi Framework Angular: Dari Pelopor Dua Arah AngularJS Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-angularjs).
   - Ekosistem antarmuka reaktif modern dan revolusi Vite: [Evolusi Framework Vue.js: Dari Eksperimen Kreatif Menuju Standar Antarmuka Reaktif Modern](/blog/transformasi-dan-perkembangan-fitur-vuejs).
