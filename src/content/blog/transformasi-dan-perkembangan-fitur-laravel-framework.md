@@ -204,6 +204,7 @@ Laravel telah membuktikan kepada dunia industri bahwa sebuah teknologi open-sour
 4. **Portal Edukasi Laracasts**: Seri panduan arsitektur perangkat lunak, *Clean Code*, dan alur kerja pengembangan modern oleh Jeffrey Way tersedia di [Laracasts](https://laracasts.com).
 5. **Komunitas Pengembang Indonesia**: Informasi agenda kegiatan, diskusi teknis, dan forum pengembang lokal dapat dipantau melalui kanal komunitas resmi **PHP Indonesia** dan **Laravel Indonesia**.
 6. **Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Arsitektur multi-tenant Eloquent dan implementasi Global Scope: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Migrasi Skema, Model Eloquent, dan Multi-Tenant Global Scope (Bagian 2)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-eloquent-scope).
    - Implementasi arsitektur multi-tenant dan perancangan database relasional: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Analisis Kebutuhan dan Perancangan Basis Data MySQL (Bagian 1)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-database).
    - Sinergi arsitektur antarmuka fungsional dan Server Components: [Evolusi Framework React: Dari Inovasi Virtual DOM Menuju Arsitektur Server Components](/blog/transformasi-dan-perkembangan-fitur-reactjs).
    - Fondasi antarmuka klien enterprise dan arsitektur TypeScript: [Evolusi Framework Angular: Dari Pelopor Dua Arah AngularJS Menuju Arsitektur Enterprise Modern](/blog/transformasi-dan-perkembangan-fitur-angularjs).

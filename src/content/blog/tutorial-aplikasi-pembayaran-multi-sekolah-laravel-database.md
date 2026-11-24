@@ -411,7 +411,7 @@ Perancangan basis data yang rapi ini selaras dengan prinsip-prinsip rekayasa kom
 
 Perancangan basis data MySQL yang kita selesaikan pada Bagian 1 ini adalah batu fondasi utama. Pada penerbitan artikel berseri berikutnya, kita akan melangkah ke lapisan implementasi kode:
 
-* **Bagian 2**: Inisialisasi Proyek Laravel 11/12, Pembuatan Migration, Eloquent Model, dan Penerapan **Multi-Tenant Global Scope** (`SchoolScope`) untuk isolasi data otomatis.
+* **Bagian 2 (Tersedia)**: [Migrasi Skema, Model Eloquent, dan Multi-Tenant Global Scope](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-eloquent-scope) — Translasi DDL ke Migration, implementasi Trait `BelongsToSchool`, dan isolasi kueri otomatis.
 * **Bagian 3**: Pembangunan Mesin Pembuat Tagihan Otomatis (*Billing Generation Engine*), Penanganan Diskon/Beasiswa Siswa, dan Antarmuka Kasir Pelunasan Cicilan.
 * **Bagian 4**: Pembuatan Kuitansi Digital Cetak PDF Otomatis, Integrasi Notifikasi Pengingat WhatsApp Gateway, dan Dasbor Rekapitulasi Keuangan Terpadu Pengurus Yayasan.
 
@@ -425,6 +425,7 @@ Simpan dan eksekusi skrip SQL di atas pada lingkungan server lokal (Laragon/XAMP
 2. **Dokumentasi Resmi Laravel Database Migrations**: Spesifikasi pembangun skema dan deklarasi indeks pada Laravel tersedia di [Laravel Database Documentation](https://laravel.com/docs/migrations).
 3. **Standar Desain IEEE 754 dan Angka Desimal Presisi**: Kajian teknis mengenai bahaya kalkulasi representasi biner pada komputasi finansial dapat dipelajari melalui literatur rekayasa perangkat lunak ACM / IEEE.
 4. **Jejaring Kajian Relevan MAS-AGUS Knowledge Hub**:
+   - Kelanjutan tutorial berseri Bagian 2: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Migrasi Skema, Model Eloquent, dan Multi-Tenant Global Scope (Bagian 2)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-eloquent-scope).
    - Eksplorasi fitur Eloquent dan ekosistem modern: [Transformasi Framework Laravel: Dari Alternatif Elegan Menjadi Raksasa Ekosistem Web Modern](/blog/transformasi-dan-perkembangan-fitur-laravel-framework).
    - Pengorganisasian logika data enterprise dan pencegahan kueri N+1: [Membangun CRUD Tangguh dengan Yii 2 Framework: Catatan dan Panduan Praktisi Rekayasa Sistem](/blog/tutorial-crud-yii-framework-panduan-praktisi).
    - Strategi tata kelola data publik terintegrasi: [Transformasi Digital dalam Sistem Informasi: Integrasi Layanan Publik Menuju Efisiensi Tata Kelola Modern](/blog/transformasi-digital-dalam-sistem-informasi).
