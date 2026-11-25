@@ -651,9 +651,9 @@ Implementasi teknis pada Bagian 3 ini mencerminkan komitmen terhadap standar rek
 
 ## 9. Roadmap Seri Selanjutnya (Menuju Bagian 4)
 
-Dengan rampungnya mesin penagihan massal dan mesin transaksi pelunasan kasir pada Bagian 3 ini, aplikasi kita telah memiliki logika inti yang berfungsi penuh. Pada episode pemungkas (**Bagian 4**), kita akan melengkapi sistem ini dengan fitur penunjang operasional modern:
+Dengan rampungnya mesin penagihan massal dan mesin transaksi pelunasan kasir pada Bagian 3 ini, aplikasi kita telah memiliki logika inti yang berfungsi penuh. Pada episode pemungkas (**Bagian 4**), kita melengkapi sistem ini dengan fitur penunjang operasional modern:
 
-* **Bagian 4**: Pembangunan Modul Cetak Kuitansi Digital PDF Otomatis Berstandar Akuntansi, Integrasi Pengiriman Bukti Bayar & Pengingat Tagihan via WhatsApp Gateway API, serta Dasbor Visual Rekonsiliasi Kas Harian/Bulanan Terpadu untuk Pimpinan Yayasan.
+* **Bagian 4 (Tersedia)**: [Kuitansi PDF Dinamis, Integrasi WhatsApp Gateway, dan Dasbor Eksekutif Yayasan](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-pdf-wa-dashboard) — Pembangunan modul cetak kuitansi PDF resmi, notifikasi WhatsApp Gateway berbasis Queue Job, dan dasbor analitik keuangan yayasan real-time.
 
 Simpan kode di atas dan pastikan Anda telah menguji alur transaksinya di lingkungan lokal sebelum kita melangkah ke tahap penerbitan kuitansi dan integrasi WhatsApp Gateway!
 
@@ -663,6 +663,7 @@ Simpan kode di atas dan pastikan Anda telah menguji alur transaksinya di lingkun
 
 1. **Artikel Bagian 1**: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Analisis Kebutuhan dan Perancangan Basis Data MySQL (Bagian 1)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-database).
 2. **Artikel Bagian 2**: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Migrasi Skema, Model Eloquent, dan Multi-Tenant Global Scope (Bagian 2)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-eloquent-scope).
+3. **Artikel Bagian 4 (Final)**: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Kuitansi PDF Dinamis, Integrasi WhatsApp Gateway, dan Dasbor Eksekutif Yayasan (Bagian 4)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-pdf-wa-dashboard).
 3. **Dokumentasi Resmi Laravel Database Transactions**: Panduan arsitektur transaksi ACID, penguncian pesimistik, dan penanganan deadlock tersedia pada [Laravel Database Transactions](https://laravel.com/docs/database#database-transactions).
 4. **Dokumentasi Resmi Laravel Artisan Console**: Panduan pembuatan *Custom Command* dan penjadwalan tugas berkala pada [Laravel Artisan Documentation](https://laravel.com/docs/artisan).
 5. **Jejaring Kajian Relevan MAS-AGUS Knowledge Hub**:

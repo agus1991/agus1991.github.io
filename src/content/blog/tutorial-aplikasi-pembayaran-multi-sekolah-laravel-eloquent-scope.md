@@ -807,7 +807,7 @@ Arsitektur yang kita bangun pada Bagian 2 ini memberikan perlindungan berlapis t
 Setelah fondasi basis data (Bagian 1) dan infrastruktur isolasi Eloquent multi-tenant (Bagian 2) berhasil ditegakkan, pada artikel berseri berikutnya kita akan masuk ke inti alur transaksi kasir:
 
 * **Bagian 3 (Tersedia)**: [Billing Generation Engine, Tarif Beasiswa, dan Transaksi Kasir Pelunasan Cicilan](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-billing-transaksi) — Pembangunan BillingService, cascading rate resolver, dan alur transaksi kasir pelunasan bertahap berbasis ACID database transaction.
-* **Bagian 4**: Otomasi Cetak Kuitansi PDF Resmi, Notifikasi Pengingat Tagihan WhatsApp Gateway, dan Dasbor Rekapitulasi Keuangan Real-Time Yayasan.
+* **Bagian 4 (Tersedia)**: [Kuitansi PDF Dinamis, Integrasi WhatsApp Gateway, dan Dasbor Eksekutif Yayasan](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-pdf-wa-dashboard) — Otomasi kuitansi PDF resmi berstandar akuntansi, antrean non-blocking WhatsApp, dan dasbor konsolidasi keuangan yayasan.
 
 Tetap ikuti seri tutorial ini untuk membangun sistem informasi sekolah yang tangguh, aman, dan siap pakai di dunia industri!
 
@@ -817,6 +817,7 @@ Tetap ikuti seri tutorial ini untuk membangun sistem informasi sekolah yang tang
 
 1. **Artikel Bagian 1**: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Analisis Kebutuhan dan Perancangan Basis Data MySQL (Bagian 1)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-database).
 2. **Artikel Bagian 3**: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Billing Generation Engine, Tarif Beasiswa, dan Transaksi Kasir Pelunasan Cicilan (Bagian 3)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-billing-transaksi).
+3. **Artikel Bagian 4 (Final)**: [Membangun Aplikasi Pembayaran Multi-Sekolah Satu Yayasan dengan Laravel: Kuitansi PDF Dinamis, Integrasi WhatsApp Gateway, dan Dasbor Eksekutif Yayasan (Bagian 4)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-pdf-wa-dashboard).
 3. **Dokumentasi Resmi Laravel Eloquent Global Scopes**: Panduan arsitektur penyaringan model otomatis dan penulisan *custom scopes* tersedia pada [Laravel Official Documentation](https://laravel.com/docs/eloquent#global-scopes).
 4. **Dokumentasi Resmi Laravel Service Container**: Panduan pengelolaan *Singleton Service Binding* dan injeksi dependensi modern pada [Laravel Container Documentation](https://laravel.com/docs/container).
 5. **Jejaring Kajian Relevan MAS-AGUS Knowledge Hub**:
