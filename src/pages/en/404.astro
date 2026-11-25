@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import siteData from '../../data/site.json';
+---
+
+<BaseLayout
+  title={`Page Not Found (404) — ${siteData.name}`}
+  description="The page you are looking for does not exist or has been moved."
+  lang="en"
+>
+  <div class="max-w-2xl mx-auto px-4 py-24 sm:py-32 text-center space-y-6">
+    <span class="text-xs uppercase tracking-widest font-bold text-accent-light dark:text-accent-dark">
+      Error 404
+    </span>
+    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-ink-primary-light dark:text-ink-primary-dark">
+      Page Not Found
+    </h1>
+    <p class="text-base text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+      We apologize, but the document or resource you are attempting to access is unavailable. It may have been relocated or the link is outdated.
+    </p>
+    <div class="pt-6 flex flex-wrap justify-center gap-4">
+      <a
+        href="/en"
+        class="px-6 py-2.5 rounded-md bg-accent-light text-white font-medium hover:bg-accent-hover dark:bg-accent-dark dark:text-canvas-dark transition-all text-xs"
+      >
+        Return to Home
+      </a>
+      <a
+        href="/en/blog"
+        class="px-6 py-2.5 rounded-md border border-borderline-light dark:border-borderline-dark text-ink-primary-light dark:text-ink-primary-dark hover:border-accent-light dark:hover:border-accent-dark transition-all text-xs font-medium"
+      >
+        Explore Blog Articles
+      </a>
+    </div>
+  </div>
+</BaseLayout>

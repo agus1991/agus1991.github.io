@@ -1,10 +1,48 @@
 ---
-import navigation from '../data/navigation.json';
 import siteData from '../data/site.json';
 import profileData from '../data/profile.json';
 import socialData from '../data/social.json';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
 
 const currentYear = new Date().getFullYear();
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const isEn = currentLang === 'en';
+
+const homeHref = isEn ? '/en' : '/';
+const brandDesc = isEn ? t('footer.description') : siteData.description;
+
+const navItems = isEn
+  ? [
+      { name: t('nav.home'), href: '/en' },
+      { name: t('nav.about'), href: '/en/about' },
+      { name: t('nav.blog'), href: '/en/blog' },
+      { name: t('nav.research'), href: '/en/research' },
+      { name: t('nav.publications'), href: '/en/publications' },
+      { name: t('nav.projects'), href: '/en/projects' },
+      { name: t('nav.contact'), href: '/en/contact' }
+    ]
+  : [
+      { name: t('nav.home'), href: '/' },
+      { name: t('nav.about'), href: '/about' },
+      { name: t('nav.blog'), href: '/blog' },
+      { name: t('nav.research'), href: '/research' },
+      { name: t('nav.publications'), href: '/publications' },
+      { name: t('nav.projects'), href: '/projects' },
+      { name: t('nav.contact'), href: '/contact' }
+    ];
+
+const legalItems = isEn
+  ? [
+      { name: t('legal.privacy'), href: '/en/privacy-policy' },
+      { name: t('legal.disclaimer'), href: '/en/disclaimer' },
+      { name: t('legal.terms'), href: '/en/terms-and-conditions' }
+    ]
+  : [
+      { name: t('legal.privacy'), href: '/privacy-policy' },
+      { name: t('legal.disclaimer'), href: '/disclaimer' },
+      { name: t('legal.terms'), href: '/terms-and-conditions' }
+    ];
 ---
 
 <footer class="mt-auto border-t border-borderline-light dark:border-borderline-dark bg-canvas-light dark:bg-canvas-dark transition-colors">
@@ -12,14 +50,14 @@ const currentYear = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
       <!-- Col 1: Brand & Bio -->
       <div class="md:col-span-2 space-y-4">
-        <a href="/" class="inline-flex items-center space-x-2">
+        <a href={homeHref} class="inline-flex items-center space-x-2">
           <span class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
             MAS-AGUS
           </span>
           <span class="w-1.5 h-1.5 rounded-full bg-accent-light dark:bg-accent-dark"></span>
         </a>
         <p class="text-sm leading-relaxed text-ink-secondary-light dark:text-ink-secondary-dark max-w-md">
-          {siteData.description}
+          {brandDesc}
         </p>
         <div class="pt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium text-ink-secondary-light dark:text-ink-secondary-dark">
           <a href={socialData.github} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors">GitHub</a>
@@ -32,13 +70,13 @@ const currentYear = new Date().getFullYear();
         </div>
       </div>
 
-      <!-- Col 2: Navigasi Utama -->
+      <!-- Col 2: Navigation -->
       <div>
         <h4 class="font-serif text-sm font-semibold uppercase tracking-wider text-ink-primary-light dark:text-ink-primary-dark mb-4">
-          Navigasi
+          {t('footer.nav')}
         </h4>
         <ul class="space-y-2.5 text-sm">
-          {navigation.main.map((item) => (
+          {navItems.map((item) => (
             <li>
               <a
                 href={item.href}
@@ -51,13 +89,13 @@ const currentYear = new Date().getFullYear();
         </ul>
       </div>
 
-      <!-- Col 3: Halaman Hukum & Informasi -->
+      <!-- Col 3: Legal & Information -->
       <div>
         <h4 class="font-serif text-sm font-semibold uppercase tracking-wider text-ink-primary-light dark:text-ink-primary-dark mb-4">
-          Informasi & Kebijakan
+          {t('footer.legal')}
         </h4>
         <ul class="space-y-2.5 text-sm">
-          {navigation.legal.map((item) => (
+          {legalItems.map((item) => (
             <li>
               <a
                 href={item.href}
@@ -72,20 +110,20 @@ const currentYear = new Date().getFullYear();
               href="/sitemap-index.xml"
               class="text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
             >
-              Peta Situs (Sitemap)
+              {isEn ? 'Sitemap' : 'Peta Situs (Sitemap)'}
             </a>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
+    <!-- Bottom: Copyright & Legal Notice -->
     <div class="mt-12 pt-8 border-t border-borderline-light dark:border-borderline-dark flex flex-col sm:flex-row justify-between items-center text-xs text-ink-secondary-light dark:text-ink-secondary-dark space-y-4 sm:space-y-0">
       <p>
-        &copy; {currentYear} {profileData.brand} ({profileData.name}). Seluruh hak cipta dilindungi.
+        &copy; {currentYear} {profileData.brand} ({profileData.name}). {t('footer.rights')}
       </p>
       <p class="flex items-center space-x-1">
-        <span>Dibangun dengan arsitektur statis Astro &amp; GitHub Pages</span>
+        <span>{isEn ? 'Built with Static Site Generation (SSG) • Astro & GitHub Pages' : 'Dibangun dengan arsitektur statis Astro & GitHub Pages'}</span>
       </p>
     </div>
   </div>

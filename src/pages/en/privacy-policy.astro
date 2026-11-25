@@ -1,0 +1,91 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import siteData from '../../data/site.json';
+import profileData from '../../data/en/profile.json';
+import socialData from '../../data/social.json';
+
+const pageUrl = `${siteData.siteUrl}/en/privacy-policy`;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Privacy Policy', url: '/en/privacy-policy' }
+];
+---
+
+<PageLayout
+  title={`Privacy Policy — ${siteData.name}`}
+  description="Privacy policy of MAS-AGUS regarding information collection, cookies, third-party advertising partners, and Google AdSense."
+  headline="Privacy Policy"
+  subheadline="Transparency regarding data governance, visitor privacy, and modern tracking technologies on MAS-AGUS."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto leading-relaxed">
+    <p class="text-sm italic text-ink-secondary-light dark:text-ink-secondary-dark">
+      Last updated: November 25, 2026
+    </p>
+
+    <p>
+      At <strong>MAS-AGUS</strong> (accessible from <a href="https://agus1991.github.io/en">https://agus1991.github.io/en</a>), the privacy of our visitors is one of our primary commitments. This Privacy Policy document outlines the types of information that are collected and recorded by MAS-AGUS and how we utilize it.
+    </p>
+
+    <h2>1. Log Files</h2>
+    <p>
+      MAS-AGUS follows standard procedures for utilizing log files. These files log visitors when they access the website. The information collected by log files includes:
+    </p>
+    <ul>
+      <li>Internet Protocol (IP) addresses</li>
+      <li>Browser type and version</li>
+      <li>Internet Service Provider (ISP)</li>
+      <li>Date and time stamp</li>
+      <li>Referring / exit pages</li>
+      <li>Click counts for statistical traffic pattern analysis</li>
+    </ul>
+    <p>
+      These log records are not linked to any personally identifiable information (PII). The primary purpose is analyzing trends, administering the site, tracking user movement across pages, and gathering aggregated demographic insights.
+    </p>
+
+    <h2>2. Cookies and Web Beacons</h2>
+    <p>
+      Like most modern websites, MAS-AGUS utilizes 'cookies'. These cookies store information including visitor preferences (such as light/dark color theme preference) and visited pages. This data is leveraged to optimize user experience by customizing content according to visitor browser parameters.
+    </p>
+
+    <h2>3. Advertising Partners: Google AdSense and Certified Partners</h2>
+    <p>
+      This website may partner with trusted third-party advertising platforms, specifically <strong>Google AdSense</strong> and Google Certified Publishing Partners.
+    </p>
+    <p>
+      These platforms employ integrated mediation technologies to deliver contextually relevant advertisements while maintaining page performance and adhering to global privacy regulations (including GDPR and CCPA) through verified <em>Consent Management Platforms (CMP)</em>.
+    </p>
+    <p>
+      Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons in their respective advertisements and links that appear on MAS-AGUS. These technologies automatically receive your IP address when this occurs. They are used to measure the effectiveness of advertising campaigns and/or personalize advertising content that you see on websites that you visit.
+    </p>
+    <p>
+      <em>Note: MAS-AGUS has no access to or control over cookies that are used by third-party advertisers.</em>
+    </p>
+
+    <h2>4. Third-Party Privacy Policies</h2>
+    <p>
+      MAS-AGUS's Privacy Policy does not apply to other advertisers or websites. Thus, we advise you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
+    </p>
+    <p>
+      You can choose to disable cookies through your individual browser options. Detailed information about cookie management with specific web browsers can be found at the browsers' respective websites.
+    </p>
+
+    <h2>5. Children's Online Privacy Protection (COPPA)</h2>
+    <p>
+      Another part of our priority is adding protection for children while using the internet. MAS-AGUS does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+    </p>
+
+    <h2>6. Online Privacy Policy Only</h2>
+    <p>
+      This Privacy Policy applies solely to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in MAS-AGUS. This policy is not applicable to any information collected offline or via channels other than this website.
+    </p>
+
+    <h2>7. Consent</h2>
+    <p>
+      By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+    </p>
+  </div>
+</PageLayout>

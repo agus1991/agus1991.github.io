@@ -1,0 +1,86 @@
+{
+  "interests": [
+    {
+      "title": "Enterprise Architecture & Information Systems Ecosystems",
+      "description": "Investigating the alignment between business architecture and IT infrastructure, distributed systems interoperability, and unified data governance.",
+      "tags": ["Enterprise Architecture", "TOGAF", "System Interoperability", "Data Governance"]
+    },
+    {
+      "title": "Digital Transformation Readiness Models & Evaluation",
+      "description": "Developing digital maturity measurement instruments for higher education institutions and local government agencies.",
+      "tags": ["Digital Maturity", "Process Optimization", "Digital Strategy", "Evaluation Framework"]
+    },
+    {
+      "title": "Network Infrastructure & E-Government Interoperability",
+      "description": "Architecting REST API-based heterogeneous data integration gateways, mitigating data silos, and deploying distributed routing in regional government agencies.",
+      "tags": ["E-Government", "REST API", "Data Integration", "Computer Networks", "Distributed Systems"]
+    },
+    {
+      "title": "High-Performance Web Systems & Static Site Generation (SSG)",
+      "description": "Exploring computational efficiency, Core Web Vitals optimization, and the resilience of modern web architectures without conventional dynamic database dependencies.",
+      "tags": ["Jamstack", "SSG", "Astro", "Web Performance", "Cloud Edge"]
+    },
+    {
+      "title": "Scientific Publishing Management Systems",
+      "description": "Studying peer-review editorial workflows, academic metadata integrity, journal indexing standardization, and open repository management.",
+      "tags": ["OJS", "Scientific Publishing", "Metadata Standards", "Academic Indexing"]
+    }
+  ],
+  "ongoing": [
+    {
+      "title": "REST API Integration Architecture for Mitigating Data Silos and Credential Fatigue in Local Government Agencies",
+      "status": "Active & Dissemination (IEEE ICIMCIS / ICIC)",
+      "period": "2024 — 2026",
+      "description": "Developing and evaluating a distributed data exchange gateway using REST APIs and token-based authentication to eliminate duplicate data entry and credential fatigue across municipal agencies.",
+      "methodology": "Design Science Research Methodology (DSRM) & Integration Testing"
+    },
+    {
+      "title": "Quality Audit Management Information System and Analytics Dashboard for Higher Education Quality Assurance",
+      "status": "Active & Published (SAINTEKBU / JUARA)",
+      "period": "2025 — 2026",
+      "description": "Engineering an integrated academic quality audit management system featuring automated cycle notifications, user activity audit trails, and real-time analytical dashboard visualizations.",
+      "methodology": "Software Engineering Prototyping & User Acceptance Testing (UAT)"
+    },
+    {
+      "title": "Bare-Metal Server Virtualization with Proxmox VE and Distributed Network Performance Monitoring",
+      "status": "Active & Published (JUSAKI)",
+      "period": "2025 — 2026",
+      "description": "Deploying Proxmox VE bare-metal virtualization infrastructure integrated with Zabbix compute resource monitoring and automated incident notifications via WhatsApp Gateway.",
+      "methodology": "Empirical Benchmarking & Infrastructure Stress Testing"
+    }
+  ],
+  "methodologies": [
+    {
+      "name": "Design Science Research Methodology (DSRM)",
+      "description": "Constructing applied IT artifacts that deliver rigorous, practical solutions to identified industrial and academic problems."
+    },
+    {
+      "name": "Structural Equation Modeling (SEM-PLS)",
+      "description": "Multivariate analysis to evaluate structural hypothesis relationships in information technology adoption models (TAM, UTAUT)."
+    },
+    {
+      "name": "Empirical Benchmarking & Performance Profiling",
+      "description": "Quantitative performance profiling of computing and web systems using industry-standard metrics including TTFB, LCP, CLS, and INP."
+    }
+  ],
+  "roadmap": [
+    {
+      "phase": "Phase 1 (2025)",
+      "title": "Scientific Publishing Data Governance & Metadata Standardization",
+      "status": "Completed",
+      "summary": "Formulation of interoperable metadata guidelines and DOI integration for independent scholarly journal platforms."
+    },
+    {
+      "phase": "Phase 2 (2026)",
+      "title": "Validation of Digital Maturity Frameworks & Regional Government Integration",
+      "status": "Active",
+      "summary": "Developing digital maturity measurement instruments, deploying agency REST API gateways, and assessing instrument reliability across partner institutions."
+    },
+    {
+      "phase": "Phase 3 (2027)",
+      "title": "Jamstack Architecture Deployment for Large-Scale Academic Ecosystems",
+      "status": "Planned",
+      "summary": "Engineering a globally distributed, static-first academic content syndication and repository distribution module."
+    }
+  ]
+}

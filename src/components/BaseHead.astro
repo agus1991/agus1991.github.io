@@ -2,6 +2,7 @@
 import siteData from '../data/site.json';
 import AdSenseScript from './AdSenseScript.astro';
 import EzoicScript from './EzoicScript.astro';
+import { getLangFromUrl, getLocalizedPath, type SupportedLang } from '../i18n/ui';
 
 interface Props {
   title?: string;
@@ -11,6 +12,11 @@ interface Props {
   pubDate?: Date | string;
   updatedDate?: Date | string;
   canonicalUrl?: string;
+  lang?: SupportedLang;
+  alternateUrl?: {
+    id?: string;
+    en?: string;
+  };
 }
 
 const {
@@ -20,15 +26,25 @@ const {
   article = false,
   pubDate,
   updatedDate,
-  canonicalUrl
+  canonicalUrl,
+  lang,
+  alternateUrl
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+const currentLang = lang || getLangFromUrl(Astro.url);
 const resolvedCanonical = canonicalUrl || new URL(currentPath, siteData.siteUrl).toString();
 const resolvedImage = image.startsWith('http') ? image : new URL(image, siteData.siteUrl).toString();
 const formattedTitle = title === siteData.name || title.includes(siteData.name)
   ? title
   : `${title} — ${siteData.name}`;
+
+// Construct multilingual alternate URLs for Google SEO
+const idPath = alternateUrl?.id || getLocalizedPath(currentPath, 'id');
+const enPath = alternateUrl?.en || getLocalizedPath(currentPath, 'en');
+const idCanonical = new URL(idPath, siteData.siteUrl).toString();
+const enCanonical = new URL(enPath, siteData.siteUrl).toString();
+const ogLocale = currentLang === 'en' ? 'en_US' : 'id_ID';
 ---
 
 <!-- Global Metadata -->
@@ -38,8 +54,11 @@ const formattedTitle = title === siteData.name || title.includes(siteData.name)
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Canonical URL -->
+<!-- Canonical & Multilingual Alternate Hreflang URLs -->
 <link rel="canonical" href={resolvedCanonical} />
+<link rel="alternate" hreflang="id" href={idCanonical} />
+<link rel="alternate" hreflang="en" href={enCanonical} />
+<link rel="alternate" hreflang="x-default" href={idCanonical} />
 
 {siteData.googleSiteVerification && (
   <meta name="google-site-verification" content={siteData.googleSiteVerification} />
@@ -56,7 +75,7 @@ const formattedTitle = title === siteData.name || title.includes(siteData.name)
 <meta property="og:type" content={article ? 'article' : 'website'} />
 <meta property="og:url" content={resolvedCanonical} />
 <meta property="og:site_name" content={siteData.name} />
-<meta property="og:locale" content={siteData.locale} />
+<meta property="og:locale" content={ogLocale} />
 <meta property="og:title" content={formattedTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={resolvedImage} />

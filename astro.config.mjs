@@ -29,6 +29,14 @@ export default defineConfig({
   build: {
     format: 'directory'
   },
+  i18n: {
+    defaultLocale: 'id',
+    locales: ['id', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+      redirectToDefaultLocale: false
+    }
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false

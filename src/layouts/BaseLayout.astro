@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { generatePersonSchema, generateWebSiteSchema } from '../utils/seo';
+import { getLangFromUrl, type SupportedLang } from '../i18n/ui';
 import '../styles/global.css';
 
 interface Props {
@@ -15,6 +16,11 @@ interface Props {
   updatedDate?: Date | string;
   canonicalUrl?: string;
   schemas?: Array<Record<string, any>>;
+  lang?: SupportedLang;
+  alternateUrl?: {
+    id?: string;
+    en?: string;
+  };
 }
 
 const {
@@ -25,15 +31,19 @@ const {
   pubDate,
   updatedDate,
   canonicalUrl,
-  schemas = []
+  schemas = [],
+  lang,
+  alternateUrl
 } = Astro.props;
+
+const currentLang = lang || getLangFromUrl(Astro.url);
 
 // Default structured data: Person and WebSite
 const defaultSchemas = [generatePersonSchema(), generateWebSiteSchema(), ...schemas];
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang={currentLang}>
   <head>
     <BaseHead
       title={title}
@@ -43,6 +53,8 @@ const defaultSchemas = [generatePersonSchema(), generateWebSiteSchema(), ...sche
       pubDate={pubDate}
       updatedDate={updatedDate}
       canonicalUrl={canonicalUrl}
+      lang={currentLang}
+      alternateUrl={alternateUrl}
     />
     {defaultSchemas.map((schema) => (
       <JsonLd schema={schema} />
@@ -50,7 +62,7 @@ const defaultSchemas = [generatePersonSchema(), generateWebSiteSchema(), ...sche
     <slot name="head" />
   </head>
   <body class="bg-canvas-light dark:bg-canvas-dark text-ink-primary-light dark:text-ink-primary-dark transition-colors duration-200">
-    <Header />
+    <Header alternateUrl={alternateUrl} />
     <main id="main-content" class="flex-grow">
       <slot />
     </main>

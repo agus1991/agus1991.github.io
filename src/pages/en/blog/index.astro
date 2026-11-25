@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import FeaturedArticle from '../../../components/FeaturedArticle.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import navigation from '../../../data/navigation.json';
+import siteData from '../../../data/site.json';
+import { generateBlogSchema } from '../../../utils/seo';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft && data.lang === 'en');
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featuredPost = sortedPosts.find((p) => p.data.featured) || sortedPosts[0];
+const standardPosts = sortedPosts.filter((p) => p.slug !== featuredPost?.slug);
+
+const pageUrl = `${siteData.siteUrl}/en/blog`;
+const blogSchema = generateBlogSchema(pageUrl);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Blog', url: '/en/blog' }
+];
+
+// All distinct tags for English articles
+const allTags = Array.from(new Set(allPosts.flatMap((p) => p.data.tags || [])));
+---
+
+<BaseLayout
+  title={`Blog & Knowledge Hub — ${siteData.name}`}
+  description="In-depth technical perspectives on information systems, computer networks, modern software engineering, and applied computing research."
+  schemas={[blogSchema]}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <div class="mb-6">
+      <Breadcrumb items={breadcrumbs} />
+    </div>
+
+    <!-- Header Section -->
+    <header class="mb-10 pb-8 border-b border-borderline-light dark:border-borderline-dark">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+        Blog &amp; Technical Insights
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-ink-secondary-light dark:text-ink-secondary-dark max-w-3xl leading-relaxed">
+        In-depth technical perspectives, comparative architectures, and practical engineering guides on Information Systems, networking, and modern web paradigms.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-borderline-light/50 dark:border-borderline-dark/50">
+        <a
+          href="/en/blog"
+          class="category-filter-btn px-3 py-1 rounded text-xs font-semibold bg-accent-light text-white dark:bg-accent-dark dark:text-canvas-dark"
+          data-category="all"
+        >
+          All Categories
+        </a>
+        {navigation.categories.map((cat) => (
+          <button
+            type="button"
+            class="category-filter-btn px-3 py-1 rounded text-xs font-medium border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+            data-category={cat.slug}
+          >
+            {cat.name}
+          </button>
+        ))}
+      </div>
+    </header>
+
+    <!-- Search Bar and Tag Filter Controls -->
+    <div class="mb-10 p-4 sm:p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-4">
+      <div class="relative">
+        <input
+          type="text"
+          id="article-search"
+          placeholder="Search articles by title, keywords, or topics..."
+          class="w-full px-4 py-2.5 pl-10 text-sm rounded-md border border-borderline-light dark:border-borderline-dark bg-canvas-light dark:bg-canvas-dark text-ink-primary-light dark:text-ink-primary-dark focus:outline-none focus:border-accent-light dark:focus:border-accent-dark transition-colors"
+        />
+        <svg
+          class="w-4 h-4 absolute left-3.5 top-3.5 text-ink-secondary-light dark:text-ink-secondary-dark pointer-events-none"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+
+      {allTags.length > 0 && (
+        <div class="flex flex-wrap items-center gap-1.5 text-xs pt-2">
+          <span class="text-ink-secondary-light dark:text-ink-secondary-dark mr-1 font-medium">
+            Filter Tags:
+          </span>
+          {allTags.map((tag) => (
+            <button
+              type="button"
+              class="tag-filter-btn px-2.5 py-1 rounded bg-canvas-light dark:bg-canvas-dark border border-borderline-light dark:border-borderline-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+              data-tag={tag}
+            >
+              #{tag}
+            </button>
+          ))}
+          <button
+            type="button"
+            id="clear-filters-btn"
+            class="hidden text-accent-light dark:text-accent-dark hover:underline font-semibold ml-2"
+          >
+            Reset Filters
+          </button>
+        </div>
+      )}
+    </div>
+
+    {/* Fallback if no English articles yet */}
+    {sortedPosts.length === 0 ? (
+      <div class="p-12 text-center rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-4">
+        <p class="text-ink-secondary-light dark:text-ink-secondary-dark">
+          English articles are currently being published. In the meantime, you can explore the Indonesian technical articles collection.
+        </p>
+        <a
+          href="/blog"
+          class="inline-block px-5 py-2.5 rounded-md bg-accent-light text-white font-medium text-xs dark:bg-accent-dark dark:text-canvas-dark hover:opacity-90"
+        >
+          View Indonesian Blog &rarr;
+        </a>
+      </div>
+    ) : (
+      <>
+        <!-- Featured Post Section -->
+        {featuredPost && (
+          <section class="mb-14" id="featured-section">
+            <h2 class="text-xs uppercase tracking-wider font-semibold text-accent-light dark:text-accent-dark mb-4">
+              Featured Insight
+            </h2>
+            <FeaturedArticle
+              title={featuredPost.data.title}
+              description={featuredPost.data.description}
+              slug={featuredPost.slug}
+              pubDate={featuredPost.data.pubDate}
+              category={featuredPost.data.category}
+              tags={featuredPost.data.tags}
+              cover={featuredPost.data.cover}
+              coverAlt={featuredPost.data.coverAlt}
+              body={featuredPost.body}
+              lang="en"
+            />
+          </section>
+        )}
+
+        <!-- Standard Articles Grid -->
+        <section>
+          <div class="flex items-center justify-between pb-3 mb-6 border-b border-borderline-light dark:border-borderline-dark">
+            <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark" id="articles-heading">
+              All Publications ({sortedPosts.length})
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+            {sortedPosts.map((post) => (
+              <div
+                class="article-item"
+                data-title={post.data.title.toLowerCase()}
+                data-description={post.data.description.toLowerCase()}
+                data-category={post.data.category.toLowerCase().replace(/\s+/g, '-')}
+                data-tags={JSON.stringify(post.data.tags || [])}
+              >
+                <ArticleCard
+                  title={post.data.title}
+                  description={post.data.description}
+                  slug={post.slug}
+                  pubDate={post.data.pubDate}
+                  category={post.data.category}
+                  tags={post.data.tags}
+                  cover={post.data.cover}
+                  coverAlt={post.data.coverAlt}
+                  body={post.body}
+                  lang="en"
+                />
+              </div>
+            ))}
+          </div>
+
+          <!-- Empty State when filtering returns 0 -->
+          <div id="no-results" class="hidden text-center py-16 space-y-3">
+            <p class="font-serif text-lg font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+              No matching articles found.
+            </p>
+            <p class="text-sm text-ink-secondary-light dark:text-ink-secondary-dark">
+              Try adjusting your search query or reset filters.
+            </p>
+          </div>
+        </section>
+      </>
+    )}
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  const searchInput = document.getElementById('article-search');
+  const categoryBtns = document.querySelectorAll('.category-filter-btn');
+  const tagBtns = document.querySelectorAll('.tag-filter-btn');
+  const resetBtn = document.getElementById('clear-filters-btn');
+  const postItems = document.querySelectorAll('.article-item');
+  const noResults = document.getElementById('no-results');
+  const featuredSection = document.getElementById('featured-section');
+
+  let currentCategory = 'all';
+  let currentSearch = '';
+  let currentTag = '';
+
+  function filterPosts() {
+    let visibleCount = 0;
+
+    postItems.forEach((item) => {
+      const title = item.getAttribute('data-title') || '';
+      const desc = item.getAttribute('data-description') || '';
+      const cat = item.getAttribute('data-category') || '';
+      const tags = item.getAttribute('data-tags') || '';
+
+      const matchCategory = currentCategory === 'all' || cat.toLowerCase() === currentCategory.toLowerCase();
+      const matchSearch = !currentSearch || title.includes(currentSearch) || desc.includes(currentSearch) || tags.includes(currentSearch);
+      const matchTag = !currentTag || tags.includes(currentTag);
+
+      if (matchCategory && matchSearch && matchTag) {
+        item.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults?.classList.remove('hidden');
+    } else {
+      noResults?.classList.add('hidden');
+    }
+
+    if (featuredSection) {
+      if (currentCategory !== 'all' || currentSearch || currentTag) {
+        featuredSection.classList.add('hidden');
+      } else {
+        featuredSection.classList.remove('hidden');
+      }
+    }
+
+    categoryBtns.forEach((btn) => {
+      const cat = btn.getAttribute('data-category');
+      if (cat?.toLowerCase() === currentCategory.toLowerCase()) {
+        btn.classList.add('bg-accent-light', 'text-white', 'dark:bg-accent-dark', 'dark:text-canvas-dark');
+        btn.classList.remove('border', 'text-ink-secondary-light');
+      } else {
+        btn.classList.remove('bg-accent-light', 'text-white', 'dark:bg-accent-dark', 'dark:text-canvas-dark');
+        btn.classList.add('border', 'text-ink-secondary-light');
+      }
+    });
+
+    if (currentCategory !== 'all' || currentSearch || currentTag) {
+      resetBtn?.classList.remove('hidden');
+    } else {
+      resetBtn?.classList.add('hidden');
+    }
+  }
+
+  searchInput?.addEventListener('input', (e) => {
+    currentSearch = e.target.value.toLowerCase().trim();
+    filterPosts();
+  });
+
+  categoryBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentCategory = btn.getAttribute('data-category') || 'all';
+      currentTag = '';
+      filterPosts();
+    });
+  });
+
+  tagBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentTag = btn.getAttribute('data-tag') || '';
+      currentCategory = 'all';
+      filterPosts();
+    });
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    currentCategory = 'all';
+    currentSearch = '';
+    currentTag = '';
+    if (searchInput) searchInput.value = '';
+    filterPosts();
+  });
+
+  filterPosts();
+</script>

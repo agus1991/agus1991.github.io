@@ -1,0 +1,202 @@
+[
+  {
+    "id": "pub-2024-icimcis",
+    "title": "RESTful Web Service Architecture for Secure and Efficient Agricultural Data Integration in Jombang Regency",
+    "authors": ["Agus Sifaunajah", "Rifka Dwi Amalia", "Devina Ayu Lestari", "Muhyiddin Zainul Arifin", "Nur Khafidhoh", "Nurul Yaqin"],
+    "venue": "2024 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS), IEEE",
+    "year": 2024,
+    "type": "Conference",
+    "doi": "10.1109/ICIMCIS63365.2024.10842277",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Design and empirical evaluation of a RESTful Web Service architecture for secure, efficient agricultural data integration at the Jombang Regency Agriculture Office. This solution effectively eliminates sectoral data silos and resolves credential fatigue and redundant operational data entry across government agencies.",
+    "featured": true
+  },
+  {
+    "id": "pub-2022-icic",
+    "title": "Model Implementation of Application Programming Interface for E-Goverment Data Integration",
+    "authors": ["Agus Sifaunajah", "Tholib Hariono", "Moh Anshori Aris Widya", "Primaadi Airlangga", "Siti Sufaidah"],
+    "venue": "2022 Seventh International Conference on Informatics and Computing (ICIC), IEEE",
+    "year": 2022,
+    "type": "Conference",
+    "doi": "10.1109/ICIC56845.2022.10006935",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Implementation model of Application Programming Interfaces (APIs) for realizing heterogeneous data integration in electronic-based government systems (SPBE) at the regional municipal level, streamlining the management of distributed system services.",
+    "featured": true
+  },
+  {
+    "id": "pub-2026-ijtc",
+    "title": "From stories to visits: an integrated digital persuasion model of visit intention in Indonesian heritage tourism destinations",
+    "authors": ["Mar'atul Fahimah", "Agus Sifaunajah", "Siti Nur Qomariyah", "Wahyu Rafdinal"],
+    "venue": "International Journal of Tourism Cities (Taylor & Francis / Emerald)",
+    "year": 2026,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "An integrated digital persuasion model investigating the influence of User-Generated Content (UGC), electronic word-of-mouth (e-WOM), and digital narratives on tourist visit intentions across Indonesian cultural heritage sites.",
+    "featured": true
+  },
+  {
+    "id": "pub-2025-mic",
+    "title": "Contextual Determinants of Theoretical Effectiveness in E-Government Adoption: A Systematic Review Across Development Stages",
+    "authors": ["Agus Sifaunajah", "Muhyiddin Zainul Arifin", "Nurul Yaqin"],
+    "venue": "Multidiscipline International Conference, Vol. 3, No. 1",
+    "year": 2025,
+    "type": "Conference",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "A systematic literature review examining contextual determinants and theoretical effectiveness of e-government adoption models across various digital maturity stages, identifying socio-technical barriers in public sector digital transformation.",
+    "featured": true
+  },
+  {
+    "id": "pub-2025-jads",
+    "title": "Adaptive Estimation for the Distribution Model of Golden Apple Snail (Pomacea canaliculata (Lamarck)) Pests Using Kernel and Spline Smoothers with Goldenshluger-Lepski Method",
+    "authors": ["Zulfikar Zulfikar", "Mohamad Nasirudin", "Ambar Susanti", "Agus Sifaunajah"],
+    "venue": "Journal of Applied Data Sciences, Vol. 6, No. 2",
+    "year": 2025,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Adaptive estimation modeling for golden apple snail pest distributions on agricultural lands using kernel and spline smoothers with the Goldenshluger-Lepski method for spatial agricultural precision.",
+    "featured": false
+  },
+  {
+    "id": "pub-2026-sainteku-audit",
+    "title": "Design and Development of an Interactive Audit Analytics Dashboard for Higher Education Quality Assurance",
+    "authors": ["Nana Fauziyah", "Agus Sifaunajah"],
+    "venue": "SAINTEKBU, Vol. 18, No. 01, pp. 21-31",
+    "year": 2026,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Design and development of an interactive audit analytics dashboard for academic quality assurance to visualize accreditation compliance and data-driven performance metrics in real time.",
+    "featured": false
+  },
+  {
+    "id": "pub-2026-jusaki-proxmox",
+    "title": "Implementasi Virtualisasi Server Berbasis Proxmox VE: Monitoring Resource Zabbix dan Notifikasi Menggunakan WhatsApp Gateway",
+    "authors": ["Fajar Tri Setiawan", "Agus Sifaunajah"],
+    "venue": "JUSAKI: Jurnal Sains Komputer dan Informatika, Vol. 1, No. 01",
+    "year": 2026,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Deployment of Proxmox VE bare-metal virtualization infrastructure integrated with Zabbix resource telemetry and automated incident alerting via WhatsApp Gateway for high service availability.",
+    "featured": false
+  },
+  {
+    "id": "pub-2026-juara-notif",
+    "title": "Pengembangan Modul Notifikasi dan Pengingat Pada Sistem Informasi Manajemen Audit Mutu Perguruan Tinggi",
+    "authors": ["Ahmad Naufal Ramzi Rasyid", "Agus Sifaunajah"],
+    "venue": "JUARA: Jurnal Rekayasa Piranti Lunak, Vol. 1, No. 01, pp. 26-36",
+    "year": 2026,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Engineering automated cycle deadline reminders and notification modules for higher education audit management systems to mitigate reporting delays and improve auditor compliance.",
+    "featured": false
+  },
+  {
+    "id": "pub-2026-juara-audit",
+    "title": "Pengembangan Fitur Audit Trail untuk Pelacakan Aktivitas Pengguna pada Sistem Informasi Audit Mutu",
+    "authors": ["Yahya Nur Aditya", "Agus Sifaunajah"],
+    "venue": "JUARA: Jurnal Rekayasa Piranti Lunak, Vol. 1, No. 01, pp. 15-25",
+    "year": 2026,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Implementation of comprehensive audit trail logging mechanisms in quality assurance systems to record every data interaction, document lifecycle transition, and user authentication event.",
+    "featured": false
+  },
+  {
+    "id": "pub-2026-jmti-erp",
+    "title": "Integrasi Multi-Modul Berbasis Enterprise Resource Planning di UD. Karya Sejati Jombang",
+    "authors": ["Roikhan Sulton Nugroho", "Moh Anshori Aris Widya", "Agus Sifaunajah"],
+    "venue": "Jurnal Manajemen dan Teknologi Informasi, Vol. 6, No. 2, pp. 16-27",
+    "year": 2026,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Implementation of an integrated multi-module Enterprise Resource Planning (ERP) system synchronizing warehouse inventory, sales transactions, and financial statements for local manufacturing enterprises.",
+    "featured": false
+  },
+  {
+    "id": "pub-2021-ijait",
+    "title": "Application of Index for Optimization Query Data in Graduate Information Systems",
+    "authors": ["Agus Sifaunajah", "Rosa Tarbiyatul Khusna"],
+    "venue": "IJAIT (International Journal of Applied Information Technology), pp. 90-98",
+    "year": 2021,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Application of relational database indexing techniques to optimize query execution latency during large-scale alumni data retrieval in institutional information systems.",
+    "featured": false
+  },
+  {
+    "id": "pub-2022-newton-kmeans",
+    "title": "Implementation of The K-Mean Algorithm for Data Clustering in Alumni Data Information Systems",
+    "authors": ["Agus Sifaunajah", "Muhyiddin Zainul Arifin", "Habib Qoirul Tabiin"],
+    "venue": "NEWTON: Networking and Information Technology, Vol. 2, No. 2, pp. 89-98",
+    "year": 2022,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Utilization of K-Means clustering algorithms to group graduate tracer study data based on waiting periods and field linearity for academic accreditation reporting.",
+    "featured": false
+  },
+  {
+    "id": "pub-2020-epic-rijndael",
+    "title": "Implementasi Algoritma Rijndael pada Dokumen Elektronik untuk Keamanan Informasi",
+    "authors": ["Agus Sifaunajah"],
+    "venue": "Exact Papers in Compilation (EPiC), Vol. 2, No. 2, pp. 255-258",
+    "year": 2020,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Applying Rijndael symmetric cryptography (AES) to safeguard electronic documents against unauthorized data modification and interception over public transmission networks.",
+    "featured": false
+  },
+  {
+    "id": "pub-2018-opt-semangka",
+    "title": "Penerapan Certainty Factor pada Rancang Bangun Sistem Pakar Deteksi Organisme Pengganggu Tanaman (OPT) Semangka",
+    "authors": ["Agus Sifaunajah", "Tholib Hariono", "Moch Chumaid"],
+    "venue": "Journal of Computer Science and Visual Communication Design, Vol. 3, No. 1, pp. 53-63",
+    "year": 2018,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Developing an expert system utilizing Certainty Factor methods to assist farmers with early diagnostic assessment of watermelon pest and disease symptoms.",
+    "featured": false
+  },
+  {
+    "id": "pub-2017-jares-skp",
+    "title": "Design Information System of Employees Target with Neural Network Backpropagation",
+    "authors": ["Agus Sifaunajah", "Kusworo Adi"],
+    "venue": "JARES (Journal of Academic Research and Sciences), Vol. 2, No. 1, pp. 5-5",
+    "year": 2017,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Designing an Employee Work Target (SKP) evaluation system integrating artificial neural network (ANN) backpropagation classification models.",
+    "featured": false
+  },
+  {
+    "id": "pub-2015-tesis-undip",
+    "title": "Implementasi Jaringan Syaraf Tiruan Propagasi Balik dalam Sistem Informasi Sasaran Kerja Pegawai",
+    "authors": ["Agus Sifaunajah"],
+    "venue": "Master's Thesis in Information Systems, Diponegoro University (UNDIP)",
+    "year": 2015,
+    "type": "Thesis",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Postgraduate research investigating the application of computational intelligence and backpropagation ANN in automated employee performance appraisal systems.",
+    "featured": false
+  },
+  {
+    "id": "pub-2015-saintekbu-fuzzy",
+    "title": "Penggunaan Fuzzy Sugeno pada Rancang Bangun Sistem Pendukung Keputusan",
+    "authors": ["Agus Sifaunajah"],
+    "venue": "SAINTEKBU, Vol. 8, No. 1, pp. 33-41",
+    "year": 2015,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Application of Sugeno fuzzy logic to handle imprecise inference parameters in decision support system (DSS) engineering.",
+    "featured": false
+  },
+  {
+    "id": "pub-2015-surya-fingerprint",
+    "title": "Integrasi Teknologi Fingerprint dalam Sistem Penggajian",
+    "authors": ["Agus Sifaunajah"],
+    "venue": "Jurnal Surya Informatika, Vol. 1, No. 1, pp. 61-67",
+    "year": 2015,
+    "type": "Journal",
+    "url": "https://scholar.google.com/citations?user=UWPyJJAAAAAJ&hl=id",
+    "abstract": "Integrating biometric fingerprint hardware with employee compensation databases to eliminate proxy attendance and ensure reconciliation accuracy.",
+    "featured": false
+  }
+]

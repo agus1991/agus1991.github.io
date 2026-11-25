@@ -1,0 +1,58 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import siteData from '../../data/site.json';
+import profileData from '../../data/en/profile.json';
+
+const pageUrl = `${siteData.siteUrl}/en/disclaimer`;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Disclaimer', url: '/en/disclaimer' }
+];
+---
+
+<PageLayout
+  title={`Disclaimer — ${siteData.name}`}
+  description="Official disclaimer regarding informational, technical, and academic research content on MAS-AGUS."
+  headline="Disclaimer"
+  subheadline="Scope of responsibility, limitations of liability, and usage context of published materials on MAS-AGUS."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto leading-relaxed">
+    <p class="text-sm italic text-ink-secondary-light dark:text-ink-secondary-dark">
+      Last updated: November 25, 2026
+    </p>
+
+    <p>
+      If you require any more information or have any questions about our site's disclaimer, please feel free to reach out to us via our <a href="/en/contact">Contact</a> page.
+    </p>
+
+    <h2>1. General and Academic Information Disclaimer</h2>
+    <p>
+      All the information on this website — <a href="https://agus1991.github.io/en">https://agus1991.github.io/en</a> — is published in good faith and for general educational, technology literacy, and academic research dissemination purposes only.
+    </p>
+    <p>
+      <strong>MAS-AGUS</strong> and its author do not make any warranties about the completeness, reliability, and absolute accuracy of this information. Any action you take upon the information you find on this website is strictly at your own risk. MAS-AGUS will not be liable for any losses and/or damages in connection with the use of our website.
+    </p>
+
+    <h2>2. Not Professional Legal or Auditing Advice</h2>
+    <p>
+      The technical essays, enterprise architecture reviews, and digital transformation analyses presented here reflect academic perspectives and engineering experience. They do not constitute formal legal counsel, institutional compliance certification, or binding IT audit reports.
+    </p>
+
+    <h2>3. External Hyperlinks</h2>
+    <p>
+      From our website, you can visit other websites by following hyperlinks to external resources. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these external domains.
+    </p>
+    <p>
+      These links to other websites do not imply a blanket recommendation for all content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have lapsed or become outdated.
+    </p>
+
+    <h2>4. Consent</h2>
+    <p>
+      By using our website, you hereby consent to our disclaimer and agree to its terms.
+    </p>
+  </div>
+</PageLayout>

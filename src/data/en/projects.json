@@ -1,0 +1,48 @@
+[
+  {
+    "id": "proj-mas-agus",
+    "title": "MAS-AGUS Knowledge Hub Platform",
+    "description": "High-performance personal knowledge hub engineered with Static Site Generation (SSG) architecture, integrating centralized Markdown/MDX content workflows and automated CI/CD pipelines.",
+    "objectives": [
+      "Deliver an independent digital publishing space free from dynamic database runtime dependencies.",
+      "Optimize Core Web Vitals with 0ms server compute overhead on edge CDN delivery.",
+      "Establish an AdSense-compliant monetization architecture with fast, accessible user experience."
+    ],
+    "techStack": ["Astro", "TypeScript", "Tailwind CSS", "MDX", "GitHub Actions", "GitHub Pages"],
+    "image": "/images/projects/project-knowledge-hub.svg",
+    "url": "https://agus1991.github.io/en",
+    "github": "https://github.com/agus1991/agus1991.github.io",
+    "status": "Production",
+    "featured": true
+  },
+  {
+    "id": "proj-askapubliser-portal",
+    "title": "AskaPubliser Academic Ecosystem",
+    "description": "Independent scientific publishing infrastructure connecting editorial workflows, journal indexing standardization, and open-access research metadata distribution.",
+    "objectives": [
+      "Enhance accessibility and citation rates of open-access academic publications.",
+      "Automate manuscript metadata indexing across scholarly search engines.",
+      "Standardize double-blind peer-review workflows with rigorous publication ethics compliance."
+    ],
+    "techStack": ["OJS 3", "PHP", "MySQL", "OAI-PMH", "Nginx", "Linux Server"],
+    "image": "/images/projects/project-askapubliser.svg",
+    "url": "https://askapubliser.biz.id",
+    "status": "Active / Maintained",
+    "featured": true
+  },
+  {
+    "id": "proj-digital-audit-toolkit",
+    "title": "Digital Transformation Assessment Kit",
+    "description": "Interactive web-based assessment toolkit measuring organizational digital maturity across key technical and governance capabilities.",
+    "objectives": [
+      "Generate comprehensive maturity scores across organizational digital dimensions.",
+      "Provide actionable technology and workflow improvement roadmaps.",
+      "Render interactive radar chart visualizations of multi-dimensional institutional capabilities."
+    ],
+    "techStack": ["TypeScript", "Vue / Astro", "Tailwind CSS", "Chart.js"],
+    "image": "/images/projects/project-audit-kit.svg",
+    "url": "https://agus1991.github.io/en/projects",
+    "status": "In Development",
+    "featured": true
+  }
+]

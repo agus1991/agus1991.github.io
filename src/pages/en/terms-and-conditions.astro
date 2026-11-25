@@ -1,0 +1,63 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import siteData from '../../data/site.json';
+import profileData from '../../data/en/profile.json';
+
+const pageUrl = `${siteData.siteUrl}/en/terms-and-conditions`;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Terms & Conditions', url: '/en/terms-and-conditions' }
+];
+---
+
+<PageLayout
+  title={`Terms & Conditions — ${siteData.name}`}
+  description="Terms and conditions governing the usage, intellectual property, academic citations, and governance of MAS-AGUS."
+  headline="Terms &amp; Conditions"
+  subheadline="Guidelines on intellectual property rights, citation ethics, and usage parameters on MAS-AGUS."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto leading-relaxed">
+    <p class="text-sm italic text-ink-secondary-light dark:text-ink-secondary-dark">
+      Last updated: November 25, 2026
+    </p>
+
+    <p>
+      Welcome to <strong>MAS-AGUS</strong>. These terms and conditions outline the rules and regulations for the use of MAS-AGUS's Website, located at <a href="https://agus1991.github.io/en">https://agus1991.github.io/en</a>.
+    </p>
+
+    <h2>1. Intellectual Property Rights</h2>
+    <p>
+      Unless otherwise stated, Agus Sifaunajah (MAS-AGUS) owns the intellectual property rights for all material on MAS-AGUS. All intellectual property rights are reserved. You may access this from MAS-AGUS for your own personal and educational use subject to restrictions set in these terms and conditions.
+    </p>
+    <p>You must not:</p>
+    <ul>
+      <li>Republish complete articles from MAS-AGUS without explicit written consent and proper attribution.</li>
+      <li>Sell, rent, or sub-license material from MAS-AGUS for unilateral commercial exploitation.</li>
+      <li>Reproduce, duplicate, or mirror content without maintaining active backlink references to original source URLs.</li>
+    </ul>
+
+    <h2>2. Academic Citation Policy</h2>
+    <p>
+      Citing ideas, empirical benchmarks, or methodological frameworks from MAS-AGUS for academic research, theses, or scholarly publications is encouraged, provided proper citation format (APA, IEEE, or Harvard) is observed, crediting <em>Agus Sifaunajah</em> alongside the permanent canonical URL.
+    </p>
+
+    <h2>3. Source Code Snippets</h2>
+    <p>
+      Code snippets and architectural implementation examples provided in technical articles are licensed under the MIT License unless stated otherwise within specific repositories.
+    </p>
+
+    <h2>4. Limitation of Liability</h2>
+    <p>
+      In no event shall MAS-AGUS, nor its author, be held liable for anything arising out of or in any way connected with your use of this website whether such liability is under contract, tort, or otherwise.
+    </p>
+
+    <h2>5. Revisions of Terms</h2>
+    <p>
+      MAS-AGUS is permitted to revise these terms at any time as it sees fit, and by using this website you are expected to review these terms on a regular basis.
+    </p>
+  </div>
+</PageLayout>

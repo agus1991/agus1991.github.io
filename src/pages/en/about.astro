@@ -1,0 +1,218 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import profileData from '../../data/en/profile.json';
+import socialData from '../../data/social.json';
+import siteData from '../../data/site.json';
+import { generateProfilePageSchema } from '../../utils/seo';
+
+const pageUrl = `${siteData.siteUrl}/en/about`;
+const profileSchema = generateProfilePageSchema(pageUrl);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'About Me', url: '/en/about' }
+];
+---
+
+<PageLayout
+  title={`About ${profileData.name} (${profileData.brand})`}
+  description={`Professional biography, academic background, and research focus of Agus Sifaunajah in Information Systems and Applied Computing.`}
+  headline={`About ${profileData.name}`}
+  subheadline={profileData.headline}
+  breadcrumbs={breadcrumbs}
+  schemas={[profileSchema]}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- Main Content Column -->
+    <div class="lg:col-span-8 space-y-12">
+      <!-- Biography -->
+      <section class="space-y-4">
+        <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          Professional Biography
+        </h2>
+        <div class="space-y-4 text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed text-base">
+          {profileData.fullBio.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
+      <!-- Areas of Expertise -->
+      <section class="space-y-6">
+        <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          Core Expertise &amp; Competencies
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {profileData.expertise.map((item) => (
+            <div class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-2">
+              <h3 class="font-serif text-base font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+                {item.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="space-y-6">
+        <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          Professional Certifications
+        </h2>
+        <div class="space-y-4">
+          {profileData.certifications.map((cert) => (
+            <div class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center space-x-2">
+                  <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-accent-muted text-accent-light dark:text-accent-dark">
+                    {cert.code}
+                  </span>
+                  <h3 class="font-serif text-base font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+                    {cert.name}
+                  </h3>
+                </div>
+                <span class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark font-medium">
+                  {cert.issuer}
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+                {cert.description}
+              </p>
+              <div class="pt-2 border-t border-borderline-light/50 dark:border-borderline-dark/50 flex items-center justify-between text-xs">
+                <span class="text-amber-600 dark:text-amber-400 font-medium">
+                  {cert.statusBadge}
+                </span>
+                <span class="text-ink-secondary-light dark:text-ink-secondary-dark italic text-[11px]">
+                  {cert.note}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Academic Background -->
+      <section class="space-y-6">
+        <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          Academic Background
+        </h2>
+        <div class="space-y-4">
+          {profileData.academicBackground.map((edu) => (
+            <div class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-serif text-base font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+                  {edu.degree}
+                </h3>
+                <span class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+                  {edu.period}
+                </span>
+              </div>
+              <p class="text-sm font-medium text-accent-light dark:text-accent-dark">
+                {edu.institution}
+              </p>
+              <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+                {edu.focus}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="space-y-6">
+        <h2 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          Professional &amp; Academic Experience
+        </h2>
+        <div class="space-y-4">
+          {profileData.experience.map((exp) => (
+            <div class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-serif text-base font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+                  {exp.role}
+                </h3>
+                <span class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+                  {exp.period}
+                </span>
+              </div>
+              <p class="text-sm font-medium text-accent-light dark:text-accent-dark">
+                {exp.institution}
+              </p>
+              <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+                {exp.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <!-- Sidebar Column -->
+    <div class="lg:col-span-4 space-y-8">
+      <!-- Profile Card -->
+      <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark text-center space-y-4">
+        <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-accent-light dark:border-accent-dark p-0.5 bg-canvas-light dark:bg-canvas-dark">
+          <img
+            src={profileData.avatar}
+            alt={profileData.name}
+            class="w-full h-full object-cover rounded-full"
+            loading="eager"
+          />
+        </div>
+        <div>
+          <h3 class="font-serif text-xl font-bold text-ink-primary-light dark:text-ink-primary-dark">
+            {profileData.name}
+          </h3>
+          <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark mt-1">
+            {profileData.headline}
+          </p>
+        </div>
+
+        <div class="pt-4 border-t border-borderline-light dark:border-borderline-dark text-left space-y-2.5 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Location:</span>
+            <span>{profileData.location}</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Primary Focus:</span>
+            <span>Information Systems</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Publishing Portal:</span>
+            <a href={socialData.mainDomain} target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline">
+              AskaPubliser
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Profiles Links -->
+      <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3">
+        <h4 class="font-serif text-sm font-semibold uppercase tracking-wider text-ink-primary-light dark:text-ink-primary-dark mb-2">
+          Academic Indexes
+        </h4>
+        <div class="space-y-2 text-xs">
+          <a href={socialData.googleScholar} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-canvas-light dark:bg-canvas-dark border border-borderline-light dark:border-borderline-dark hover:border-accent-light dark:hover:border-accent-dark transition-colors">
+            <span class="font-medium">Google Scholar</span>
+            <span class="text-accent-light dark:text-accent-dark">&rarr;</span>
+          </a>
+          <a href={socialData.scopus} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-canvas-light dark:bg-canvas-dark border border-borderline-light dark:border-borderline-dark hover:border-accent-light dark:hover:border-accent-dark transition-colors">
+            <span class="font-medium">Scopus Author Profile</span>
+            <span class="text-accent-light dark:text-accent-dark">&rarr;</span>
+          </a>
+          <a href={socialData.sinta} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-canvas-light dark:bg-canvas-dark border border-borderline-light dark:border-borderline-dark hover:border-accent-light dark:hover:border-accent-dark transition-colors">
+            <span class="font-medium">SINTA Kemdiktisaintek</span>
+            <span class="text-accent-light dark:text-accent-dark">&rarr;</span>
+          </a>
+          <a href={socialData.orcid} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-canvas-light dark:bg-canvas-dark border border-borderline-light dark:border-borderline-dark hover:border-accent-light dark:hover:border-accent-dark transition-colors">
+            <span class="font-medium">ORCID Registry</span>
+            <span class="text-accent-light dark:text-accent-dark">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>

@@ -8,7 +8,7 @@ import siteData from '../../data/site.json';
 import { generateBlogSchema } from '../../utils/seo';
 import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const allPosts = await getCollection('blog', ({ data }) => !data.draft && (data.lang ?? 'id') === 'id');
 const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const featuredPost = sortedPosts.find((p) => p.data.featured) || sortedPosts[0];

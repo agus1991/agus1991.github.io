@@ -11,6 +11,7 @@ import { calculateReadingTime } from '../utils/readingTime';
 import { generateBlogPostingSchema } from '../utils/seo';
 import profileData from '../data/profile.json';
 import siteData from '../data/site.json';
+import { getLangFromUrl, useTranslations, type SupportedLang } from '../i18n/ui';
 
 interface Heading {
   depth: number;
@@ -45,6 +46,8 @@ interface Props {
   prevPost?: ArticleNav | null;
   nextPost?: ArticleNav | null;
   relatedPosts?: RelatedPost[];
+  lang?: SupportedLang;
+  translationSlug?: string;
 }
 
 const {
@@ -61,20 +64,45 @@ const {
   rawContent = '',
   prevPost = null,
   nextPost = null,
-  relatedPosts = []
+  relatedPosts = [],
+  lang,
+  translationSlug
 } = Astro.props;
 
-const canonicalUrl = `${siteData.siteUrl}/blog/${slug}`;
+const currentLang = lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const isEn = currentLang === 'en';
+
+const articlePrefix = isEn ? '/en/blog' : '/blog';
+const canonicalUrl = `${siteData.siteUrl}${articlePrefix}/${slug}`;
 const readingTime = calculateReadingTime(rawContent || description);
 const formattedPubDate = formatDate(pubDate);
 const formattedUpDate = updatedDate ? formatDate(updatedDate) : null;
 
-const breadcrumbs = [
-  { name: 'Beranda', url: '/' },
-  { name: 'Blog', url: '/blog' },
-  { name: category, url: `/blog?category=${encodeURIComponent(category)}` },
-  { name: title, url: `/blog/${slug}` }
-];
+// Multilingual alternate linking for Google SEO
+const alternateUrl = isEn
+  ? {
+      id: translationSlug ? `/blog/${translationSlug}` : '/blog',
+      en: `/en/blog/${slug}`
+    }
+  : {
+      id: `/blog/${slug}`,
+      en: translationSlug ? `/en/blog/${translationSlug}` : '/en/blog'
+    };
+
+const breadcrumbs = isEn
+  ? [
+      { name: t('nav.home'), url: '/en' },
+      { name: t('nav.blog'), url: '/en/blog' },
+      { name: category, url: `/en/blog?category=${encodeURIComponent(category)}` },
+      { name: title, url: `/en/blog/${slug}` }
+    ]
+  : [
+      { name: t('nav.home'), url: '/' },
+      { name: t('nav.blog'), url: '/blog' },
+      { name: category, url: `/blog?category=${encodeURIComponent(category)}` },
+      { name: title, url: `/blog/${slug}` }
+    ];
 
 const blogPostingSchema = generateBlogPostingSchema({
   title,
@@ -97,6 +125,8 @@ const blogPostingSchema = generateBlogPostingSchema({
   updatedDate={updatedDate}
   canonicalUrl={canonicalUrl}
   schemas={[blogPostingSchema]}
+  lang={currentLang}
+  alternateUrl={alternateUrl}
 >
   <ReadingProgress />
 
@@ -110,7 +140,7 @@ const blogPostingSchema = generateBlogPostingSchema({
     <header class="mb-10 text-center sm:text-left">
       <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs text-ink-secondary-light dark:text-ink-secondary-dark mb-4">
         <a
-          href={`/blog?category=${encodeURIComponent(category)}`}
+          href={`${articlePrefix}?category=${encodeURIComponent(category)}`}
           class="font-semibold text-accent-light dark:text-accent-dark uppercase tracking-wider text-[11px] px-2.5 py-0.5 rounded-full bg-accent-muted"
         >
           {category}
@@ -120,7 +150,7 @@ const blogPostingSchema = generateBlogPostingSchema({
         {formattedUpDate && formattedUpDate !== formattedPubDate && (
           <>
             <span>•</span>
-            <span class="italic text-[11px]">(Diperbarui: {formattedUpDate})</span>
+            <span class="italic text-[11px]">({isEn ? 'Updated' : 'Diperbarui'}: {formattedUpDate})</span>
           </>
         )}
         <span>•</span>
@@ -135,6 +165,22 @@ const blogPostingSchema = generateBlogPostingSchema({
         {description}
       </p>
 
+      {/* Language Switch Callout Badge if translation available */}
+      {translationSlug && (
+        <div class="mt-4 p-3 rounded-md border border-accent-light/30 dark:border-accent-dark/30 bg-accent-muted/40 flex items-center justify-between text-xs">
+          <span class="text-ink-secondary-light dark:text-ink-secondary-dark">
+            {isEn ? 'Artikel ini juga tersedia dalam Bahasa Indonesia.' : 'This article is also available in English.'}
+          </span>
+          <a
+            href={isEn ? `/blog/${translationSlug}` : `/en/blog/${translationSlug}`}
+            class="font-semibold text-accent-light dark:text-accent-dark hover:underline flex items-center space-x-1"
+          >
+            <span>{isEn ? 'Baca dalam Bahasa Indonesia' : 'Read in English'}</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      )}
+
       <!-- Author Bar -->
       <div class="mt-8 pt-6 border-t border-borderline-light dark:border-borderline-dark flex items-center justify-between">
         <div class="flex items-center space-x-3">
@@ -144,7 +190,7 @@ const blogPostingSchema = generateBlogPostingSchema({
             class="w-11 h-11 rounded-full border border-borderline-light dark:border-borderline-dark object-cover"
           />
           <div>
-            <a href="/about" class="text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">
+            <a href={isEn ? '/en/about' : '/about'} class="text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">
               {profileData.name}
             </a>
             <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
@@ -153,8 +199,8 @@ const blogPostingSchema = generateBlogPostingSchema({
           </div>
         </div>
 
-        <a href="/about" class="text-xs text-accent-light dark:text-accent-dark hover:underline font-medium hidden sm:inline-block">
-          Profil Penulis &rarr;
+        <a href={isEn ? '/en/about' : '/about'} class="text-xs text-accent-light dark:text-accent-dark hover:underline font-medium hidden sm:inline-block">
+          {isEn ? 'Author Profile →' : 'Profil Penulis →'}
         </a>
       </div>
     </header>
@@ -197,12 +243,12 @@ const blogPostingSchema = generateBlogPostingSchema({
     {tags.length > 0 && (
       <div class="my-8 pt-6 border-t border-borderline-light dark:border-borderline-dark">
         <h4 class="text-xs font-semibold uppercase tracking-wider text-ink-secondary-light dark:text-ink-secondary-dark mb-3">
-          Topik Terkait:
+          {isEn ? 'Related Topics:' : 'Topik Terkait:'}
         </h4>
         <div class="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <a
-              href={`/blog?tag=${encodeURIComponent(tag)}`}
+              href={`${articlePrefix}?tag=${encodeURIComponent(tag)}`}
               class="text-xs px-3 py-1 rounded bg-surface-light dark:bg-surface-dark border border-borderline-light dark:border-borderline-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
             >
               #{tag}
@@ -219,11 +265,11 @@ const blogPostingSchema = generateBlogPostingSchema({
     <nav class="my-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
       {prevPost ? (
         <a
-          href={`/blog/${prevPost.slug}`}
+          href={`${articlePrefix}/${prevPost.slug}`}
           class="p-4 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark transition-all group"
         >
           <span class="block text-xs uppercase tracking-wider text-ink-secondary-light dark:text-ink-secondary-dark mb-1">
-            &larr; Artikel Sebelumnya
+            &larr; {isEn ? 'Previous Article' : 'Artikel Sebelumnya'}
           </span>
           <span class="font-serif text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark line-clamp-2">
             {prevPost.title}
@@ -233,11 +279,11 @@ const blogPostingSchema = generateBlogPostingSchema({
 
       {nextPost ? (
         <a
-          href={`/blog/${nextPost.slug}`}
+          href={`${articlePrefix}/${nextPost.slug}`}
           class="p-4 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark transition-all text-right group"
         >
           <span class="block text-xs uppercase tracking-wider text-ink-secondary-light dark:text-ink-secondary-dark mb-1">
-            Artikel Selanjutnya &rarr;
+            {isEn ? 'Next Article' : 'Artikel Selanjutnya'} &rarr;
           </span>
           <span class="font-serif text-sm font-semibold text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark line-clamp-2">
             {nextPost.title}
@@ -250,12 +296,12 @@ const blogPostingSchema = generateBlogPostingSchema({
     {relatedPosts.length > 0 && (
       <section class="mt-14 pt-10 border-t border-borderline-light dark:border-borderline-dark">
         <h3 class="font-serif text-2xl font-bold text-ink-primary-light dark:text-ink-primary-dark mb-6">
-          Artikel Pilihan Terkait
+          {isEn ? 'Related Recommended Articles' : 'Artikel Pilihan Terkait'}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {relatedPosts.map((post) => (
             <a
-              href={`/blog/${post.slug}`}
+              href={`${articlePrefix}/${post.slug}`}
               class="p-5 rounded-md border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark hover:border-accent-light dark:hover:border-accent-dark transition-all group"
             >
               <span class="text-[11px] font-semibold text-accent-light dark:text-accent-dark uppercase tracking-wider block mb-1">

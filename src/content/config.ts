@@ -16,7 +16,9 @@ const blogCollection = defineCollection({
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
     canonicalUrl: z.string().optional(),
-    focusKeyword: z.string().optional()
+    focusKeyword: z.string().optional(),
+    lang: z.enum(['id', 'en']).default('id'),
+    translationSlug: z.string().optional()
   })
 });
 

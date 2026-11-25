@@ -1,6 +1,7 @@
 ---
 import { formatDate } from '../utils/formatDate';
 import { calculateReadingTime } from '../utils/readingTime';
+import type { SupportedLang } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -12,6 +13,7 @@ interface Props {
   cover?: string;
   coverAlt?: string;
   body?: string;
+  lang?: SupportedLang;
 }
 
 const {
@@ -23,12 +25,15 @@ const {
   tags = [],
   cover,
   coverAlt = title,
-  body = ''
+  body = '',
+  lang = 'id'
 } = Astro.props;
 
+const isEn = lang === 'en';
 const readingTime = calculateReadingTime(body || description);
 const formattedDate = formatDate(pubDate);
-const href = `/blog/${slug}`;
+const href = isEn ? `/en/blog/${slug}` : `/blog/${slug}`;
+const categoryHref = isEn ? `/en/blog?category=${encodeURIComponent(category)}` : `/blog?category=${encodeURIComponent(category)}`;
 ---
 
 <article class="group relative bg-surface-light dark:bg-surface-dark border border-borderline-light dark:border-borderline-dark rounded-lg overflow-hidden transition-all hover:border-accent-light dark:hover:border-accent-dark">
@@ -52,10 +57,10 @@ const href = `/blog/${slug}`;
     <div class={`${cover ? 'lg:col-span-5' : 'lg:col-span-12'} flex flex-col justify-center space-y-4`}>
       <div class="flex items-center space-x-3 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
         <span class="px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider text-[10px] bg-accent-muted text-accent-light dark:text-accent-dark">
-          Pilihan Utama
+          {isEn ? 'Featured Article' : 'Pilihan Utama'}
         </span>
         <a
-          href={`/blog?category=${encodeURIComponent(category)}`}
+          href={categoryHref}
           class="font-semibold text-accent-light dark:text-accent-dark hover:underline uppercase tracking-wider text-[11px]"
         >
           {category}
@@ -83,7 +88,7 @@ const href = `/blog/${slug}`;
           href={href}
           class="inline-flex items-center space-x-2 text-sm font-semibold text-accent-light dark:text-accent-dark hover:text-accent-hover transition-colors"
         >
-          <span>Baca Pembahasan Lengkap</span>
+          <span>{isEn ? 'Read Full Article' : 'Baca Pembahasan Lengkap'}</span>
           <span>&rarr;</span>
         </a>
       </div>

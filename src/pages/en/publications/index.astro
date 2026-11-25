@@ -1,0 +1,220 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import publicationsData from '../../../data/en/publications.json';
+import siteData from '../../../data/site.json';
+import socialData from '../../../data/social.json';
+
+const pageUrl = `${siteData.siteUrl}/en/publications`;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Publications', url: '/en/publications' }
+];
+
+const years = Array.from(new Set(publicationsData.map((p) => p.year))).sort((a, b) => b - a);
+const types = Array.from(new Set(publicationsData.map((p) => p.type)));
+---
+
+<PageLayout
+  title={`Publications & Scientific Papers — ${siteData.name}`}
+  description="Peer-reviewed scientific articles, conference proceedings, and academic publications authored by Agus Sifaunajah."
+  headline="Scientific Publications &amp; Research Papers"
+  subheadline="A collection of indexed journal articles and conference proceedings documenting empirical and methodological contributions in Information Systems and Computing."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="space-y-10">
+    <!-- Filter and Academic Profile Links -->
+    <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div class="space-y-3">
+        <span class="text-xs uppercase tracking-wider font-semibold text-ink-secondary-light dark:text-ink-secondary-dark block">
+          Filter Publications:
+        </span>
+        <div class="flex flex-wrap gap-2">
+          <button
+            type="button"
+            class="pub-type-btn px-3 py-1 text-xs font-semibold rounded bg-accent-light text-white dark:bg-accent-dark dark:text-canvas-dark"
+            data-type="all"
+          >
+            All Types
+          </button>
+          {types.map((type) => (
+            <button
+              type="button"
+              class="pub-type-btn px-3 py-1 text-xs font-medium rounded border border-borderline-light dark:border-borderline-dark bg-canvas-light dark:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+              data-type={type}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+
+        <div class="flex flex-wrap gap-2 pt-1">
+          <button
+            type="button"
+            class="pub-year-btn px-3 py-1 text-xs font-semibold rounded bg-ink-primary-light text-white dark:bg-ink-primary-dark dark:text-canvas-dark"
+            data-year="all"
+          >
+            All Years
+          </button>
+          {years.map((year) => (
+            <button
+              type="button"
+              class="pub-year-btn px-3 py-1 text-xs font-medium rounded border border-borderline-light dark:border-borderline-dark bg-canvas-light dark:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+              data-year={year.toString()}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-borderline-light dark:border-borderline-dark md:pl-6 space-y-2 text-xs">
+        <span class="text-ink-secondary-light dark:text-ink-secondary-dark block font-medium">
+          Official Indexes:
+        </span>
+        <div class="flex flex-wrap md:flex-col gap-2">
+          <a href={socialData.googleScholar} target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline font-medium">
+            Google Scholar Profile &rarr;
+          </a>
+          <a href={socialData.scopus} target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline font-medium">
+            Scopus Author Index &rarr;
+          </a>
+          <a href={socialData.sinta} target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline font-medium">
+            SINTA Kemdiktisaintek &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publications List -->
+    <div class="space-y-4" id="publications-list">
+      {publicationsData.map((pub) => (
+        <article
+          class="publication-item p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3 transition-colors"
+          data-type={pub.type}
+          data-year={pub.year.toString()}
+        >
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-0.5 rounded-full font-semibold text-[11px] bg-accent-muted text-accent-light dark:text-accent-dark">
+                {pub.type}
+              </span>
+              {pub.featured && (
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                  Featured
+                </span>
+              )}
+            </div>
+            <span class="text-ink-secondary-light dark:text-ink-secondary-dark font-mono">
+              {pub.year}
+            </span>
+          </div>
+
+          <h2 class="font-serif text-lg font-bold text-ink-primary-light dark:text-ink-primary-dark leading-snug">
+            <a href={pub.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors">
+              {pub.title}
+            </a>
+          </h2>
+
+          <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+            {pub.abstract}
+          </p>
+
+          <div class="pt-3 border-t border-borderline-light/50 dark:border-borderline-dark/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+            <span>{pub.authors.join(', ')}</span>
+            <div class="flex items-center space-x-3">
+              <span class="italic">{pub.venue}</span>
+              {pub.doi && (
+                <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-accent-light dark:text-accent-dark hover:underline">
+                  DOI
+                </a>
+              )}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Empty state -->
+    <div id="no-pub-results" class="hidden text-center py-16 space-y-3">
+      <p class="font-serif text-lg font-semibold text-ink-primary-light dark:text-ink-primary-dark">
+        No publications found matching the selected filters.
+      </p>
+      <p class="text-sm text-ink-secondary-light dark:text-ink-secondary-dark">
+        Try resetting the type or year filters.
+      </p>
+    </div>
+  </div>
+</PageLayout>
+
+<script is:inline>
+  const typeBtns = document.querySelectorAll('.pub-type-btn');
+  const yearBtns = document.querySelectorAll('.pub-year-btn');
+  const pubItems = document.querySelectorAll('.publication-item');
+  const noPubResults = document.getElementById('no-pub-results');
+
+  let activeType = 'all';
+  let activeYear = 'all';
+
+  function filterPubs() {
+    let count = 0;
+    pubItems.forEach((item) => {
+      const itemType = item.getAttribute('data-type');
+      const itemYear = item.getAttribute('data-year');
+
+      const matchType = activeType === 'all' || itemType === activeType;
+      const matchYear = activeYear === 'all' || itemYear === activeYear;
+
+      if (matchType && matchYear) {
+        item.classList.remove('hidden');
+        count++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    if (count === 0) {
+      noPubResults?.classList.remove('hidden');
+    } else {
+      noPubResults?.classList.add('hidden');
+    }
+
+    typeBtns.forEach((btn) => {
+      const t = btn.getAttribute('data-type');
+      if (t === activeType) {
+        btn.classList.add('bg-accent-light', 'text-white', 'dark:bg-accent-dark', 'dark:text-canvas-dark');
+        btn.classList.remove('border', 'text-ink-secondary-light');
+      } else {
+        btn.classList.remove('bg-accent-light', 'text-white', 'dark:bg-accent-dark', 'dark:text-canvas-dark');
+        btn.classList.add('border', 'text-ink-secondary-light');
+      }
+    });
+
+    yearBtns.forEach((btn) => {
+      const y = btn.getAttribute('data-year');
+      if (y === activeYear) {
+        btn.classList.add('bg-ink-primary-light', 'text-white', 'dark:bg-ink-primary-dark', 'dark:text-canvas-dark');
+        btn.classList.remove('border', 'text-ink-secondary-light');
+      } else {
+        btn.classList.remove('bg-ink-primary-light', 'text-white', 'dark:bg-ink-primary-dark', 'dark:text-canvas-dark');
+        btn.classList.add('border', 'text-ink-secondary-light');
+      }
+    });
+  }
+
+  typeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeType = btn.getAttribute('data-type') || 'all';
+      filterPubs();
+    });
+  });
+
+  yearBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeYear = btn.getAttribute('data-year') || 'all';
+      filterPubs();
+    });
+  });
+</script>

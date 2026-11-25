@@ -17,6 +17,8 @@ coverAlt: "Diagram transformasi fitur dan ekosistem Laravel dari era awal hingga
 seoTitle: "Transformasi Framework Laravel: Evolusi Fitur dan Ekosistem Modern — MAS-AGUS"
 seoDescription: "Ulasan komprehensif evolusi Laravel: lompatan fitur dari v1 hingga v11+, ekosistem modern, komparasi arsitektural, dan dinamika komunitas PHP."
 focusKeyword: "Transformasi Framework Laravel"
+lang: "id"
+translationSlug: "evolution-of-laravel-framework-from-elegant-mvc-to-modern-web-ecosystem"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Analisis Teknologi (Model 2)**  

@@ -1,13 +1,47 @@
 ---
-import navigation from '../data/navigation.json';
 import siteData from '../data/site.json';
 import ThemeToggle from './ThemeToggle.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
 
+interface Props {
+  alternateUrl?: {
+    id?: string;
+    en?: string;
+  };
+}
+
+const { alternateUrl } = Astro.props;
 const currentPath = Astro.url.pathname;
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
+const isEn = currentLang === 'en';
+const homeHref = isEn ? '/en' : '/';
+
+const navItems = isEn
+  ? [
+      { name: t('nav.home'), href: '/en' },
+      { name: t('nav.about'), href: '/en/about' },
+      { name: t('nav.blog'), href: '/en/blog' },
+      { name: t('nav.research'), href: '/en/research' },
+      { name: t('nav.publications'), href: '/en/publications' },
+      { name: t('nav.projects'), href: '/en/projects' },
+      { name: t('nav.contact'), href: '/en/contact' }
+    ]
+  : [
+      { name: t('nav.home'), href: '/' },
+      { name: t('nav.about'), href: '/about' },
+      { name: t('nav.blog'), href: '/blog' },
+      { name: t('nav.research'), href: '/research' },
+      { name: t('nav.publications'), href: '/publications' },
+      { name: t('nav.projects'), href: '/projects' },
+      { name: t('nav.contact'), href: '/contact' }
+    ];
 
 function isActive(href: string) {
-  if (href === '/') {
-    return currentPath === '/' || currentPath === '';
+  if (href === '/' || href === '/en') {
+    return currentPath === href || currentPath === `${href}/`;
   }
   return currentPath.startsWith(href);
 }
@@ -17,7 +51,7 @@ function isActive(href: string) {
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Brand Logo -->
-      <a href="/" class="group flex items-center space-x-2.5">
+      <a href={homeHref} class="group flex items-center space-x-2.5">
         <span class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
           MAS-AGUS
         </span>
@@ -26,7 +60,7 @@ function isActive(href: string) {
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
-        {navigation.main.map((item) => {
+        {navItems.map((item) => {
           const active = isActive(item.href);
           return (
             <a
@@ -43,8 +77,9 @@ function isActive(href: string) {
         })}
       </nav>
 
-      <!-- Right Controls: Theme Toggle & Mobile Menu Button -->
-      <div class="flex items-center space-x-2">
+      <!-- Right Controls: Language Switcher, Theme Toggle & Mobile Menu Button -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <LanguageSwitcher alternateUrl={alternateUrl} />
         <ThemeToggle />
 
         <!-- Mobile Menu Toggle Button -->
@@ -52,7 +87,7 @@ function isActive(href: string) {
           id="mobile-menu-btn"
           type="button"
           class="md:hidden p-2 rounded-md text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark focus:outline-none"
-          aria-label="Buka menu navigasi"
+          aria-label={t('ui.switchLanguage')}
           aria-expanded="false"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -64,8 +99,15 @@ function isActive(href: string) {
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-b border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark px-4 pt-3 pb-5 space-y-1">
-    {navigation.main.map((item) => {
+  <div id="mobile-menu" class="hidden md:hidden border-b border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark px-4 pt-3 pb-5 space-y-2">
+    <div class="flex items-center justify-between pb-2 mb-2 border-b border-borderline-light dark:border-borderline-dark">
+      <span class="text-xs font-semibold text-ink-secondary-light dark:text-ink-secondary-dark uppercase tracking-wider">
+        {t('ui.switchLanguage')}
+      </span>
+      <LanguageSwitcher alternateUrl={alternateUrl} />
+    </div>
+
+    {navItems.map((item) => {
       const active = isActive(item.href);
       return (
         <a

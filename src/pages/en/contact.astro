@@ -1,0 +1,133 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import profileData from '../../data/en/profile.json';
+import socialData from '../../data/social.json';
+import siteData from '../../data/site.json';
+
+const pageUrl = `${siteData.siteUrl}/en/contact`;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Contact', url: '/en/contact' }
+];
+
+const contactChannels = [
+  {
+    name: 'Academic & Professional Email',
+    value: socialData.email,
+    href: `mailto:${socialData.email}`,
+    desc: 'Official channel for research correspondence, seminar invitations, and technical consultations.'
+  },
+  {
+    name: 'SINTA Kemdiktisaintek',
+    value: `Author ID: ${socialData.sintaId}`,
+    href: socialData.sinta,
+    desc: 'National scientific accreditation index, verified research track record, and citations.'
+  },
+  {
+    name: 'Scopus Author Profile',
+    value: `Author ID: ${socialData.scopusAuthorId}`,
+    href: socialData.scopus,
+    desc: 'Global citation and abstract database for peer-reviewed international scientific works.'
+  },
+  {
+    name: 'Google Scholar Profile',
+    value: 'Agus Sifaunajah (Citations & Metrics)',
+    href: socialData.googleScholar,
+    desc: 'Indexed scholarly manuscripts, citation counts, and h-index bibliometric overview.'
+  },
+  {
+    name: 'ORCID Identifier',
+    value: socialData.orcidId,
+    href: socialData.orcid,
+    desc: 'Persistent international digital identifier ensuring researcher attribution and data integrity.'
+  },
+  {
+    name: 'GitHub Repository',
+    value: '@agus1991',
+    href: socialData.github,
+    desc: 'Open-source software, computing experiments, and technical contributions.'
+  },
+  {
+    name: 'LinkedIn Professional Network',
+    value: 'linkedin.com/in/agus-sifaunajah',
+    href: socialData.linkedin,
+    desc: 'Professional career network, industry engagements, and institutional partnerships.'
+  },
+  {
+    name: 'AskaPubliser Main Portal',
+    value: socialData.mainDomain,
+    href: socialData.mainDomain,
+    desc: 'Independent academic publishing platform and scholarly open journal systems management.'
+  }
+];
+---
+
+<PageLayout
+  title={`Contact & Academic Networking — ${siteData.name}`}
+  description="Official communication channels, scholarly indexes, and technical collaboration contact for Agus Sifaunajah."
+  headline="Contact &amp; Networking"
+  subheadline="Official channels for academic correspondence, research collaboration, guest lectures, and systems engineering consultations."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- Main Contact Cards -->
+    <div class="lg:col-span-8 space-y-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {contactChannels.map((channel) => (
+          <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-accent-light dark:text-accent-dark block mb-1">
+                {channel.name}
+              </span>
+              <a
+                href={channel.href}
+                target={channel.href.startsWith('mailto:') ? '_self' : '_blank'}
+                rel="noopener noreferrer"
+                class="font-serif text-base font-bold text-ink-primary-light dark:text-ink-primary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors break-words"
+              >
+                {channel.value}
+              </a>
+              <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed mt-2">
+                {channel.desc}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-borderline-light/50 dark:border-borderline-dark/50">
+              <a
+                href={channel.href}
+                target={channel.href.startsWith('mailto:') ? '_self' : '_blank'}
+                rel="noopener noreferrer"
+                class="text-xs font-medium text-accent-light dark:text-accent-dark hover:underline flex items-center space-x-1"
+              >
+                <span>{channel.href.startsWith('mailto:') ? 'Send Email' : 'Visit Profile'}</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Contact Info Card -->
+    <div class="lg:col-span-4 space-y-6">
+      <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-4">
+        <h3 class="font-serif text-lg font-bold text-ink-primary-light dark:text-ink-primary-dark">
+          Academic Inquiries
+        </h3>
+        <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+          For joint research projects, guest lectures, curriculum reviews, or speaking engagements, feel free to reach out directly via official academic email.
+        </p>
+        <div class="pt-4 border-t border-borderline-light dark:border-borderline-dark text-xs space-y-2">
+          <p class="text-ink-secondary-light dark:text-ink-secondary-dark">
+            <strong class="text-ink-primary-light dark:text-ink-primary-dark">Response Time:</strong> Typically within 1-2 business days.
+          </p>
+          <p class="text-ink-secondary-light dark:text-ink-secondary-dark">
+            <strong class="text-ink-primary-light dark:text-ink-primary-dark">Location:</strong> Jombang, East Java, Indonesia (UTC+7).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>

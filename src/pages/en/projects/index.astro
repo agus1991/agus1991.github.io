@@ -1,0 +1,110 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import projectsData from '../../../data/en/projects.json';
+import siteData from '../../../data/site.json';
+
+const pageUrl = `${siteData.siteUrl}/en/projects`;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/en' },
+  { name: 'Projects', url: '/en/projects' }
+];
+---
+
+<PageLayout
+  title={`Projects & Systems Engineering — ${siteData.name}`}
+  description="Applied information systems, modern web architectures, and digital platforms engineered by Agus Sifaunajah."
+  headline="Projects &amp; Digital Engineering"
+  subheadline="Practical software engineering solutions, scholarly publication automation workflows, and high-performance web systems."
+  breadcrumbs={breadcrumbs}
+  canonicalUrl={pageUrl}
+  lang="en"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {projectsData.map((project) => (
+      <article class="flex flex-col justify-between rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark overflow-hidden transition-all hover:border-accent-light dark:hover:border-accent-dark group">
+        <div>
+          <!-- Project Image -->
+          <div class="aspect-[16/10] overflow-hidden bg-canvas-light dark:bg-canvas-dark border-b border-borderline-light dark:border-borderline-dark">
+            <img
+              src={project.image}
+              alt={`Screenshot of project ${project.title}`}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="p-6">
+            <!-- Status Badge -->
+            <div class="flex items-center justify-between mb-3 text-xs">
+              <span class="px-2.5 py-0.5 rounded-full font-semibold text-[11px] bg-accent-muted text-accent-light dark:text-accent-dark">
+                {project.status}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-serif text-xl font-bold text-ink-primary-light dark:text-ink-primary-dark mb-3 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
+              <a href={project.url} target={project.url.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
+                {project.title}
+              </a>
+            </h2>
+
+            <!-- Description -->
+            <p class="text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed mb-4">
+              {project.description}
+            </p>
+
+            <!-- Objectives List -->
+            <div class="space-y-1.5 mb-5 pt-3 border-t border-borderline-light/50 dark:border-borderline-dark/50">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-primary-light dark:text-ink-primary-dark block mb-2">
+                Key Objectives &amp; Value:
+              </span>
+              {project.objectives.map((obj) => (
+                <div class="flex items-start space-x-2 text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+                  <span class="text-accent-light dark:text-accent-dark mt-0.5">•</span>
+                  <span>{obj}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack & Links Footer -->
+        <div class="p-6 pt-0">
+          <div class="pt-4 border-t border-borderline-light/50 dark:border-borderline-dark/50 space-y-4">
+            <div class="flex flex-wrap gap-1.5">
+              {project.techStack.map((tech) => (
+                <span class="text-[10px] px-2 py-0.5 rounded bg-canvas-light dark:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark border border-borderline-light dark:border-borderline-dark">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-semibold pt-1">
+              <a
+                href={project.url}
+                target={project.url.startsWith('http') ? '_blank' : '_self'}
+                rel="noopener noreferrer"
+                class="text-accent-light dark:text-accent-dark hover:underline flex items-center space-x-1"
+              >
+                <span>Live Portal</span>
+                <span>&rarr;</span>
+              </a>
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-ink-secondary-light dark:text-ink-secondary-dark hover:text-ink-primary-light dark:hover:text-ink-primary-dark transition-colors"
+                >
+                  GitHub Source
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</PageLayout>

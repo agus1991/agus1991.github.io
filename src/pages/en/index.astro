@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FeaturedArticle from '../../components/FeaturedArticle.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import profileData from '../../data/en/profile.json';
+import socialData from '../../data/social.json';
+import siteData from '../../data/site.json';
+import researchData from '../../data/en/research.json';
+import publicationsData from '../../data/en/publications.json';
+import projectsData from '../../data/en/projects.json';
+import { getCollection } from 'astro:content';
+
+// Fetch non-draft English blog posts, fallback to any if none yet
+const enPosts = await getCollection('blog', ({ data }) => !data.draft && data.lang === 'en');
+const sortedPosts = enPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featuredPost = sortedPosts.find((p) => p.data.featured) || sortedPosts[0];
+const recentPosts = sortedPosts.filter((p) => p.slug !== featuredPost?.slug).slice(0, 4);
+
+const selectedPublications = publicationsData.filter((p) => p.featured).slice(0, 3);
+const selectedProjects = projectsData.filter((p) => p.featured).slice(0, 3);
+---
+
+<BaseLayout
+  title={`${profileData.brand} — ${profileData.hero.headline}`}
+  description="Professional knowledge hub, scientific research, information systems architecture, digital transformation, and modern software engineering innovation by Agus Sifaunajah."
+  lang="en"
+>
+  <!-- Hero Section -->
+  <section class="border-b border-borderline-light dark:border-borderline-dark py-16 sm:py-24 bg-surface-light dark:bg-surface-dark transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-8 space-y-6">
+          <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest font-semibold text-accent-light dark:text-accent-dark bg-accent-muted px-3 py-1 rounded-full">
+            <span>{profileData.brand}</span>
+            <span>•</span>
+            <span>Personal Knowledge Hub</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark leading-[1.15]">
+            {profileData.hero.headline}
+          </h1>
+
+          <p class="text-lg sm:text-xl text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed max-w-2xl font-normal">
+            {profileData.hero.subheadline}
+          </p>
+
+          <div class="pt-4 flex flex-wrap gap-4 items-center">
+            <a
+              href={profileData.hero.ctaLink}
+              class="px-6 py-3 rounded-md bg-accent-light text-white font-medium hover:bg-accent-hover dark:bg-accent-dark dark:text-canvas-dark dark:hover:bg-accent-light transition-all text-sm shadow-sm"
+            >
+              {profileData.hero.ctaText} &rarr;
+            </a>
+            <a
+              href={profileData.hero.secondaryCtaLink}
+              class="px-6 py-3 rounded-md border border-borderline-light dark:border-borderline-dark text-ink-primary-light dark:text-ink-primary-dark hover:border-accent-light dark:hover:border-accent-dark transition-all text-sm font-medium"
+            >
+              {profileData.hero.secondaryCtaText}
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Author Card -->
+        <div class="lg:col-span-4 flex justify-center lg:justify-end">
+          <div class="w-full max-w-xs p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-canvas-light dark:bg-canvas-dark text-center space-y-4">
+            <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-accent-light dark:border-accent-dark p-0.5 bg-surface-light dark:bg-surface-dark">
+              <img
+                src={profileData.avatar}
+                alt={profileData.name}
+                class="w-full h-full object-cover rounded-full"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h2 class="font-serif text-lg font-bold text-ink-primary-light dark:text-ink-primary-dark">
+                {profileData.name}
+              </h2>
+              <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark mt-1">
+                {profileData.headline}
+              </p>
+            </div>
+            <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed line-clamp-3">
+              {profileData.shortBio}
+            </p>
+            <div class="pt-2 border-t border-borderline-light dark:border-borderline-dark flex justify-center space-x-3 text-xs text-ink-secondary-light dark:text-ink-secondary-dark font-medium">
+              <a href={socialData.github} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark">GitHub</a>
+              <span>•</span>
+              <a href={socialData.googleScholar} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark">Scholar</a>
+              <span>•</span>
+              <a href={socialData.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Body Content Grid -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-20">
+    <!-- Featured Article Section (if articles exist) -->
+    {featuredPost && (
+      <section class="space-y-6">
+        <div class="flex items-center justify-between pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          <div>
+            <h2 class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+              Featured Insight
+            </h2>
+            <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-0.5">
+              Highlighting key research breakthroughs and engineering perspectives
+            </p>
+          </div>
+          <a href="/en/blog" class="text-xs sm:text-sm font-semibold text-accent-light dark:text-accent-dark hover:underline">
+            All Articles &rarr;
+          </a>
+        </div>
+
+        <FeaturedArticle
+          title={featuredPost.data.title}
+          description={featuredPost.data.description}
+          slug={featuredPost.slug}
+          pubDate={featuredPost.data.pubDate}
+          category={featuredPost.data.category}
+          tags={featuredPost.data.tags}
+          cover={featuredPost.data.cover}
+          coverAlt={featuredPost.data.coverAlt}
+          body={featuredPost.body}
+          lang="en"
+        />
+      </section>
+    )}
+
+    <!-- Recent Articles Grid -->
+    {recentPosts.length > 0 && (
+      <section class="space-y-6">
+        <div class="flex items-center justify-between pb-3 border-b border-borderline-light dark:border-borderline-dark">
+          <div>
+            <h2 class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+              Recent Articles &amp; Analysis
+            </h2>
+            <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-0.5">
+              Software engineering, networking, and applied computing publications
+            </p>
+          </div>
+          <a href="/en/blog" class="text-xs sm:text-sm font-semibold text-accent-light dark:text-accent-dark hover:underline">
+            View All ({sortedPosts.length}) &rarr;
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {recentPosts.map((post) => (
+            <ArticleCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug}
+              pubDate={post.data.pubDate}
+              category={post.data.category}
+              tags={post.data.tags}
+              cover={post.data.cover}
+              coverAlt={post.data.coverAlt}
+              body={post.body}
+              lang="en"
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Selected Research Section -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between pb-3 border-b border-borderline-light dark:border-borderline-dark">
+        <div>
+          <h2 class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+            Applied Research Focus
+          </h2>
+          <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-0.5">
+            Key research interests and ongoing empirical investigations
+          </p>
+        </div>
+        <a href="/en/research" class="text-xs sm:text-sm font-semibold text-accent-light dark:text-accent-dark hover:underline">
+          Research Roadmap &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {researchData.interests.slice(0, 3).map((item) => (
+          <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="font-serif text-lg font-semibold text-ink-primary-light dark:text-ink-primary-dark leading-snug">
+                {item.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-borderline-light/50 dark:border-borderline-dark/50 flex flex-wrap gap-1">
+              {item.tags.slice(0, 2).map((tag) => (
+                <span class="text-[10px] px-2 py-0.5 rounded bg-canvas-light dark:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark border border-borderline-light dark:border-borderline-dark">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Selected Publications Section -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between pb-3 border-b border-borderline-light dark:border-borderline-dark">
+        <div>
+          <h2 class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+            Peer-Reviewed Publications
+          </h2>
+          <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-0.5">
+            Selected indexed conference proceedings and journal articles
+          </p>
+        </div>
+        <a href="/en/publications" class="text-xs sm:text-sm font-semibold text-accent-light dark:text-accent-dark hover:underline">
+          All Publications &rarr;
+        </a>
+      </div>
+
+      <div class="space-y-4">
+        {selectedPublications.map((pub) => (
+          <div class="p-6 rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+              <span class="px-2.5 py-0.5 rounded-full font-semibold bg-accent-muted text-accent-light dark:text-accent-dark text-[11px]">
+                {pub.venue.includes('IEEE') ? 'IEEE Conference' : pub.type}
+              </span>
+              <span class="text-ink-secondary-light dark:text-ink-secondary-dark">
+                {pub.year}
+              </span>
+            </div>
+            <h3 class="font-serif text-lg font-semibold text-ink-primary-light dark:text-ink-primary-dark leading-snug">
+              <a href={pub.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors">
+                {pub.title}
+              </a>
+            </h3>
+            <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed line-clamp-2">
+              {pub.abstract}
+            </p>
+            <div class="pt-2 flex items-center justify-between text-xs text-ink-secondary-light dark:text-ink-secondary-dark">
+              <span>{pub.authors.join(', ')}</span>
+              {pub.doi && (
+                <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-accent-light dark:text-accent-dark hover:underline">
+                  DOI &rarr;
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between pb-3 border-b border-borderline-light dark:border-borderline-dark">
+        <div>
+          <h2 class="font-serif text-2xl font-bold tracking-tight text-ink-primary-light dark:text-ink-primary-dark">
+            Featured Engineering Projects
+          </h2>
+          <p class="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-0.5">
+            Production-grade systems, digital platforms, and open-source software
+          </p>
+        </div>
+        <a href="/en/projects" class="text-xs sm:text-sm font-semibold text-accent-light dark:text-accent-dark hover:underline">
+          All Projects &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {selectedProjects.map((proj) => (
+          <div class="rounded-lg border border-borderline-light dark:border-borderline-dark bg-surface-light dark:bg-surface-dark overflow-hidden flex flex-col justify-between group hover:border-accent-light dark:hover:border-accent-dark transition-all">
+            <div class="aspect-[16/10] overflow-hidden bg-canvas-light dark:bg-canvas-dark border-b border-borderline-light dark:border-borderline-dark">
+              <img
+                src={proj.image}
+                alt={proj.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider font-semibold text-accent-light dark:text-accent-dark block mb-1">
+                  {proj.status}
+                </span>
+                <h3 class="font-serif text-base font-bold text-ink-primary-light dark:text-ink-primary-dark">
+                  <a href={proj.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark">
+                    {proj.title}
+                  </a>
+                </h3>
+                <p class="text-xs text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed mt-2 line-clamp-3">
+                  {proj.description}
+                </p>
+              </div>
+              <div class="pt-3 border-t border-borderline-light/50 dark:border-borderline-dark/50 flex flex-wrap gap-1">
+                {proj.techStack.slice(0, 3).map((tech) => (
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-canvas-light dark:bg-canvas-dark text-ink-secondary-light dark:text-ink-secondary-dark border border-borderline-light dark:border-borderline-dark">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

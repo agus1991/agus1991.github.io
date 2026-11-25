@@ -18,6 +18,8 @@ coverAlt: "Diagram arsitektur komparasi Static Site Generation Jamstack versus S
 seoTitle: "Optimasi Performa Web dengan Jamstack dan Astro — MAS-AGUS"
 seoDescription: "Pelajari strategi optimasi web modern, mitigasi beban hidrasi JavaScript, Core Web Vitals, dan implementasi Island Architecture Astro berbasis bukti empiris."
 focusKeyword: "Performa Web Astro Jamstack"
+lang: "id"
+translationSlug: "optimizing-modern-web-performance-with-jamstack-and-astro"
 ---
 
 > **Informasi Kajian Ilmiah:**  

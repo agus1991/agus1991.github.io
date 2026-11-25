@@ -11,8 +11,8 @@ import publicationsData from '../data/publications.json';
 import projectsData from '../data/projects.json';
 import { getCollection } from 'astro:content';
 
-// Fetch non-draft blog posts
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+// Fetch non-draft blog posts (Indonesian)
+const allPosts = await getCollection('blog', ({ data }) => !data.draft && (data.lang ?? 'id') === 'id');
 const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const featuredPost = sortedPosts.find((p) => p.data.featured) || sortedPosts[0];

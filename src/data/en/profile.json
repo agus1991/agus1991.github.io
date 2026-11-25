@@ -1,0 +1,106 @@
+{
+  "brand": "MAS-AGUS",
+  "name": "Agus Sifaunajah",
+  "headline": "Academic, Researcher & Information Systems Practitioner",
+  "hero": {
+    "headline": "Ideas, Research & Technology.",
+    "subheadline": "Exploring Information Systems, Digital Transformation, Applied Research, and Software Engineering Innovation.",
+    "ctaText": "Explore Articles",
+    "ctaLink": "/en/blog",
+    "secondaryCtaText": "About Me",
+    "secondaryCtaLink": "/en/about"
+  },
+  "avatar": "/images/profile/agus-sifaunajah.svg",
+  "location": "Indonesia",
+  "shortBio": "An academic, researcher, and information systems practitioner specializing in IT integration, computer network infrastructure, enterprise systems architecture, business process transformation, and modern software engineering.",
+  "fullBio": [
+    "Agus Sifaunajah (widely recognized as MAS-AGUS) is an academic, researcher, and professional in Information Systems, Computing Technology, and Network Infrastructure. Combining academic rigor with practical software and network engineering, he is dedicated to advancing digital literacy and applied technological research.",
+    "Through MAS-AGUS Knowledge Hub, he shares in-depth technical insights covering enterprise systems architecture, computer network infrastructure, digital transformation strategies for public institutions and SMEs, and applied research methodologies in computing.",
+    "Alongside lecturing and academic research, he holds technical competencies in computer networking (particularly MikroTik RouterOS engineering and dynamic routing), modern Jamstack/static web architectures, scientific digital publishing, and practical computing solutions for enterprise challenges."
+  ],
+  "expertise": [
+    {
+      "title": "Computer Networks & Infrastructure",
+      "description": "Network topology design, dynamic and static routing, bandwidth management & QoS, IPv6 protocol deployment, network security hardening, and MikroTik RouterOS engineering."
+    },
+    {
+      "title": "Information Systems & Enterprise Architecture",
+      "description": "Integrated information systems architecture design, business requirements engineering, and enterprise system workflow modeling."
+    },
+    {
+      "title": "Digital Transformation & Governance",
+      "description": "Legacy system migration strategies to digital ecosystems, IT governance frameworks, and organizational digital readiness assessment."
+    },
+    {
+      "title": "Modern Software Engineering",
+      "description": "High-performance Jamstack/SSG web development, TypeScript, RESTful API architecture, multi-tenant database modeling, and CI/CD automation."
+    },
+    {
+      "title": "Research Methodology & Scientific Publishing",
+      "description": "Applied computing research (DSRM, SEM-PLS), academic paper writing, and scholarly Open Journal Systems (OJS) editorial governance."
+    }
+  ],
+  "certifications": [
+    {
+      "code": "MTCNA",
+      "name": "MikroTik Certified Network Associate",
+      "issuer": "MikroTik",
+      "status": "Renewal in Progress",
+      "statusBadge": "Renewal in Progress",
+      "note": "Previously certified and currently undergoing recertification",
+      "description": "Computer networking fundamentals, MikroTik RouterOS architecture, bandwidth management (Simple Queues & Queue Tree), firewall filter & NAT, wireless, VPN tunnels, and network troubleshooting."
+    },
+    {
+      "code": "MTCRE",
+      "name": "MikroTik Certified Routing Engineer",
+      "issuer": "MikroTik",
+      "status": "Renewal in Progress",
+      "statusBadge": "Renewal in Progress",
+      "note": "Previously certified and currently undergoing recertification",
+      "description": "Advanced static routing, dynamic routing protocols (OSPF), point-to-point tunneling (IPIP, EoIP, GRE), VLAN implementation, and multi-gateway routing architecture."
+    },
+    {
+      "code": "MTCIPv6",
+      "name": "MikroTik Certified IPv6 Engineer",
+      "issuer": "MikroTik",
+      "status": "Renewal in Progress",
+      "statusBadge": "Renewal in Progress",
+      "note": "Previously certified and currently undergoing recertification",
+      "description": "IPv6 protocol packet architecture, IPv6 addressing and subnetting, automatic address configuration (SLAAC & DHCPv6), IPv6 security mechanisms, and transition tunneling."
+    }
+  ],
+  "academicBackground": [
+    {
+      "degree": "Master of Computer Science (M.Kom) / Information Systems",
+      "institution": "Diponegoro University (UNDIP)",
+      "period": "Postgraduate (Graduated 2015)",
+      "focus": "Thesis Research: Implementation of Backpropagation Artificial Neural Network in Employee Work Target Information Systems."
+    },
+    {
+      "degree": "Bachelor of Computer Science (S.Kom) / Informatics",
+      "institution": "Informatics / Information Systems Program",
+      "period": "Undergraduate",
+      "focus": "Specialized in Software Engineering, Relational Database Systems, and Computer Network Infrastructure."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Lecturer & Academic in Information Systems",
+      "institution": "Higher Education Institution",
+      "period": "2018 — Present",
+      "description": "Teaching courses in Information Systems, Software Engineering, Computer Networks, and Database Systems. Mentoring undergraduate student research and publishing papers in indexed journals."
+    },
+    {
+      "role": "Lead Architect & Systems Engineer",
+      "institution": "Independent Initiatives & Digital Consulting",
+      "period": "2016 — Present",
+      "description": "Architecting modern web solutions, scholarly digital publishing workflows, and distributed information system infrastructure."
+    },
+    {
+      "role": "Researcher & Scientific Journal Editor",
+      "institution": "AskaPubliser Academic Publishing",
+      "period": "2020 — Present",
+      "description": "Managing editorial peer-review workflows using Open Journal Systems (OJS) and ensuring academic citation compliance and metadata governance."
+    }
+  ]
+}

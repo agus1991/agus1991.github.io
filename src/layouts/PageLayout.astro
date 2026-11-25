@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import type { BreadcrumbItem } from '../utils/seo';
+import type { SupportedLang } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -11,6 +12,11 @@ interface Props {
   breadcrumbs?: BreadcrumbItem[];
   schemas?: Array<Record<string, any>>;
   canonicalUrl?: string;
+  lang?: SupportedLang;
+  alternateUrl?: {
+    id?: string;
+    en?: string;
+  };
 }
 
 const {
@@ -20,7 +26,9 @@ const {
   subheadline,
   breadcrumbs = [],
   schemas = [],
-  canonicalUrl
+  canonicalUrl,
+  lang,
+  alternateUrl
 } = Astro.props;
 ---
 
@@ -29,6 +37,8 @@ const {
   description={description}
   schemas={schemas}
   canonicalUrl={canonicalUrl}
+  lang={lang}
+  alternateUrl={alternateUrl}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     {breadcrumbs.length > 0 && (
