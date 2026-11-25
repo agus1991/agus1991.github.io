@@ -18,6 +18,8 @@ coverAlt: "Infografis perbandingan kesenjangan indeks SPBE antara pemerintah pus
 seoTitle: "Kesenjangan TIK Pusat dan Daerah: Dilema Sistem Silo & SPBE — MAS-AGUS"
 seoDescription: "Analisis kritis kesenjangan penerapan ICT di instansi pemerintah pusat dan daerah, fenomena aplikasi silo di OPD, serta arsitektur solusi integrasi terpadu."
 focusKeyword: "Kesenjangan Penerapan ICT Pemerintah Pusat Daerah SPBE"
+lang: "id"
+translationSlug: "ict-implementation-divide-between-central-and-local-governments"
 ---
 
 > **Informasi Kajian Ilmiah:**  

@@ -17,6 +17,8 @@ coverAlt: "Diagram arsitektur evolusi RouterOS MikroTik dari PC router menuju ek
 seoTitle: "Perkembangan MikroTik (1996–2026): Solusi Routing hingga Ekosistem Jaringan — MAS-AGUS"
 seoDescription: "Pelajari sejarah dan evolusi teknologi MikroTik, sistem operasi RouterOS v3–v7, portofolio RouterBOARD, switching, dan strategi implementasi jaringan terpadu."
 focusKeyword: "Perkembangan MikroTik RouterOS"
+lang: "id"
+translationSlug: "evolution-of-mikrotik-1996-2026-routing-and-network-infrastructure"
 ---
 
 > **Informasi Kajian Ilmiah:**  

@@ -20,6 +20,7 @@ seoTitle: "Tutorial Laravel Multi-Sekolah Bagian 4: Kuitansi PDF, WhatsApp Gatew
 seoDescription: "Pelajari implementasi kuitansi PDF dinamis, antrean asynchronous WhatsApp Gateway, dan dasbor rekapitulasi keuangan multi-sekolah terpadu pengurus yayasan di Laravel."
 focusKeyword: "Aplikasi Pembayaran Laravel Multi Sekolah Bagian 4"
 lang: "id"
+translationSlug: "multi-school-payment-system-laravel-pdf-whatsapp-dashboard-part-4"
 ---
 
 > **Informasi Tutorial Berseri (Episode Pemungkas - Bagian 4):**  

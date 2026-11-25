@@ -18,6 +18,8 @@ coverAlt: "Diagram siklus enam tahapan Design Science Research Methodology dalam
 seoTitle: "Metodologi Riset Terapan Sistem Informasi (DSRM) — MAS-AGUS"
 seoDescription: "Panduan komprehensif metodologi riset terapan bidang sistem informasi menggunakan pendekatan Design Science Research Methodology (DSRM) dan evaluasi empiris."
 focusKeyword: "Metodologi Penelitian Sistem Informasi DSRM"
+lang: "id"
+translationSlug: "applied-research-methodologies-in-information-systems"
 ---
 
 > **Informasi Kajian Ilmiah:**  

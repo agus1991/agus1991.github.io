@@ -18,6 +18,8 @@ coverAlt: "Diagram arsitektur transformasi digital dan integrasi sistem informas
 seoTitle: "Transformasi Digital SPBE: Integrasi REST API & Sistem Silo — MAS-AGUS"
 seoDescription: "Kajian mendalam tata kelola SPBE, mengatasi sistem silo, credential fatigue, dan duplikasi entri data melalui arsitektur REST API terdistribusi pada instansi pemerintah."
 focusKeyword: "Transformasi Digital SPBE REST API"
+lang: "id"
+translationSlug: "digital-transformation-in-information-systems-public-service-integration"
 ---
 
 > **Informasi Kajian Ilmiah:**  

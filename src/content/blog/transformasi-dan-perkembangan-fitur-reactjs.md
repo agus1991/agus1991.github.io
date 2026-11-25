@@ -18,6 +18,8 @@ coverAlt: "Diagram arsitektur evolusi dan transformasi fitur React dari era awal
 seoTitle: "Evolusi Framework React: Dari Virtual DOM ke Server Components — MAS-AGUS"
 seoDescription: "Ulasan mendalam evolusi React.js: komparasi Class vs Hooks, Concurrent Mode, React Server Components (RSC), adopsi startup Indonesia, dan sinergi ekosistem."
 focusKeyword: "Evolusi Framework React"
+lang: "id"
+translationSlug: "evolution-of-react-from-virtual-dom-to-server-components"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Analisis Arsitektur (Model 2)**  

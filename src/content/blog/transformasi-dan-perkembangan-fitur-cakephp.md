@@ -17,6 +17,8 @@ coverAlt: "Diagram transformasi fitur dan arsitektur CakePHP dari era awal hingg
 seoTitle: "Evolusi Framework CakePHP: Transformasi Fitur dan Arsitektur Modern — MAS-AGUS"
 seoDescription: "Ulasan mendalam evolusi CakePHP: Convention over Configuration, Data Mapper ORM v3-v5, generator Bake, dan dinamika komunitas pengembang PHP."
 focusKeyword: "Evolusi Framework CakePHP"
+lang: "id"
+translationSlug: "evolution-of-cakephp-framework-from-convention-to-modern-enterprise"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Analisis Arsitektur (Model 2)**  

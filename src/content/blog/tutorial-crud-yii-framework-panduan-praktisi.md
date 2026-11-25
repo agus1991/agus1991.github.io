@@ -17,6 +17,8 @@ coverAlt: "Diagram arsitektur MVC dan alur kerja pembuatan CRUD pada Yii 2 Frame
 seoTitle: "Tutorial CRUD Yii 2 Framework: Panduan Praktisi Arsitektur MVC"
 seoDescription: "Panduan lengkap dan esai praktisi membangun CRUD di Yii 2 Framework: konfigurasi basis data, generator Gii, Active Record, dan optimasi performa."
 focusKeyword: "Tutorial CRUD Yii Framework PHP MVC"
+lang: "id"
+translationSlug: "building-robust-crud-with-yii-2-framework-practitioner-guide"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Panduan Praktisi (Model 2)**  

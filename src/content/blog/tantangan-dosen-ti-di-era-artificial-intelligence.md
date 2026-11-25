@@ -17,6 +17,8 @@ coverAlt: "Ilustrasi tantangan pendidikan teknologi informasi di era kecerdasan 
 seoTitle: "Tantangan Dosen TI di Era AI: Refleksi Kritis Pendidikan Komputasi"
 seoDescription: "Opini dosen sistem informasi mengenai tantangan mengajar di era Generative AI: membedah krisis tugas koding, evaluasi kelas, dan transformasi logika komputasi."
 focusKeyword: "Tantangan Dosen Teknologi Informasi Artificial Intelligence"
+lang: "id"
+translationSlug: "challenges-for-it-educators-in-the-age-of-artificial-intelligence"
 ---
 
 > **Kolom Opini & Esai Kepakaran Praktisi**  

@@ -18,6 +18,8 @@ coverAlt: "Arsitektur Multi-Tenant Global Scope dan Pemodelan Eloquent Laravel u
 seoTitle: "Aplikasi Pembayaran Multi-Sekolah Laravel: Migrasi & Global Scope (Bagian 2) — MAS-AGUS"
 seoDescription: "Tutorial berseri Laravel Bagian 2: translasi DDL ke Migration, pembuatan Trait BelongsToSchool, manajemen konteks tenant, dan isolasi kueri otomatis."
 focusKeyword: "Aplikasi Pembayaran Multi-Sekolah Laravel"
+lang: "id"
+translationSlug: "multi-school-payment-system-laravel-eloquent-multi-tenant-part-2"
 ---
 
 > **Dokumentasi Rekayasa Perangkat Lunak & Tutorial Berseri (Model 1)**  

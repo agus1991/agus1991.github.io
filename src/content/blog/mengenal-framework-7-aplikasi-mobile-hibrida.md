@@ -18,6 +18,8 @@ coverAlt: "Diagram arsitektur dan komponen antarmuka aplikasi mobile hibrida Fra
 seoTitle: "Mengenal Framework7: Panduan Praktisi Aplikasi Mobile Hibrida & PWA — MAS-AGUS"
 seoDescription: "Pelajari Framework7 untuk membangun aplikasi mobile hibrida dan PWA berkinerja tinggi: arsitektur Dom7, tema iOS/Material, dan integrasi backend REST API."
 focusKeyword: "Mengenal Framework7 Aplikasi Mobile Hibrida"
+lang: "id"
+translationSlug: "introduction-to-framework7-building-hybrid-mobile-apps-and-pwa"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Panduan Praktisi (Model 2)**  

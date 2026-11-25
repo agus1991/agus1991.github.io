@@ -17,6 +17,8 @@ coverAlt: "Diagram arsitektur evolusi dan transformasi fitur Vue.js dari era awa
 seoTitle: "Evolusi Framework Vue.js: Transformasi Fitur dan Ekosistem Modern — MAS-AGUS"
 seoDescription: "Ulasan komprehensif evolusi Vue.js: perbandingan Options vs Composition API, revolusi Vite & Pinia, integrasi Laravel/Inertia, dan dinamika komunitas."
 focusKeyword: "Evolusi Framework Vue.js"
+lang: "id"
+translationSlug: "evolution-of-vuejs-from-reactive-experiment-to-modern-frontend-standard"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Analisis Arsitektur (Model 2)**  

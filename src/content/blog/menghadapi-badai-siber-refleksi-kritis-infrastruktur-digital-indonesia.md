@@ -17,6 +17,8 @@ coverAlt: "Ilustrasi perisai pertahanan siber Zero Trust dan arsitektur keamanan
 seoTitle: "Menghadapi Badai Siber Indonesia: Opini Praktisi Infrastruktur"
 seoDescription: "Opini kritis arsitek sistem mengenai kerentanan siber di Indonesia: meninjau ransomware, kebiasaan bypass keamanan di daerah, dan solusi Zero Trust."
 focusKeyword: "Serangan Siber Infrastruktur Indonesia"
+lang: "id"
+translationSlug: "facing-the-cyber-storm-critical-reflections-on-digital-infrastructure"
 ---
 
 > **Kolom Opini & Esai Kepakaran Praktisi**  

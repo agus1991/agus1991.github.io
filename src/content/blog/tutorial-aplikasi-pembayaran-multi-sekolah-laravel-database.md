@@ -18,6 +18,8 @@ coverAlt: "Arsitektur multi-tenant basis data relasional MySQL untuk aplikasi pe
 seoTitle: "Aplikasi Pembayaran Multi-Sekolah Laravel: Desain Database MySQL (Bagian 1) — MAS-AGUS"
 seoDescription: "Tutorial berseri rekayasa sistem Laravel: analisis proses bisnis SPP yayasan, arsitektur multi-tenant, dan perancangan DDL basis data MySQL relasional."
 focusKeyword: "Aplikasi Pembayaran Multi-Sekolah Laravel"
+lang: "id"
+translationSlug: "multi-school-payment-system-laravel-database-architecture-part-1"
 ---
 
 > **Dokumentasi Rekayasa Perangkat Lunak & Tutorial Berseri (Model 1)**  

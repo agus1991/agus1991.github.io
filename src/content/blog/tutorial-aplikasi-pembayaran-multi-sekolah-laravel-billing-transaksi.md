@@ -19,6 +19,8 @@ coverAlt: "Arsitektur Billing Engine dan Transaksi Kasir Pembayaran Multi-Sekola
 seoTitle: "Aplikasi Pembayaran Multi-Sekolah Laravel: Billing & Transaksi Kasir (Bagian 3) — MAS-AGUS"
 seoDescription: "Tutorial berseri Laravel Bagian 3: implementasi BillingService, cascading rate beasiswa, pessimistic locking kasir, dan alokasi cicilan multi-tagihan."
 focusKeyword: "Aplikasi Pembayaran Multi-Sekolah Laravel"
+lang: "id"
+translationSlug: "multi-school-payment-system-laravel-billing-engine-acid-payments-part-3"
 ---
 
 > **Dokumentasi Rekayasa Perangkat Lunak & Tutorial Berseri (Model 1)**  

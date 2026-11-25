@@ -18,6 +18,8 @@ coverAlt: "Diagram arsitektur evolusi dan transformasi fitur Angular dari era An
 seoTitle: "Evolusi Framework Angular: Dari AngularJS ke Arsitektur Enterprise Modern — MAS-AGUS"
 seoDescription: "Ulasan mendalam evolusi Angular: perbandingan $scope vs Signals, perombakan TypeScript, integrasi enterprise perbankan, dan dinamika komunitas."
 focusKeyword: "Evolusi Framework Angular"
+lang: "id"
+translationSlug: "evolution-of-angular-framework-from-angularjs-to-modern-enterprise"
 ---
 
 > **Kolom Opini, Esai Kepakaran & Analisis Arsitektur (Model 2)**  
