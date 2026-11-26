@@ -811,6 +811,7 @@ Selamat! Melalui 4 bagian artikel berseri yang komprehensif ini, Anda telah meng
 * **[Bagian 2 (Eloquent Global Scope Multi-Tenant)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-eloquent-scope)**: Isolasi kueri otomatis via Trait `BelongsToSchool`, Singleton `TenantManager`, dan Middleware HTTP.
 * **[Bagian 3 (Billing Engine & Transaksi Kasir ACID)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-billing-transaksi)**: Mesin tagihan rutin, cascading rate resolver beasiswa, alur cicilan bertahap, dan penguncian pesimistik `lockForUpdate()`.
 * **Bagian 4 (Kuitansi PDF, WhatsApp Gateway, & Dasbor Eksekutif)**: Pelaporan dokumen resmi PDF, notifikasi instan non-blocking, serta analisis realisasi target kas konsolidasi yayasan.
+* **[Bagian 5 (RESTful API & Laravel Sanctum)](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-rest-api)**: Lapisan API *stateless* berstandar produksi dengan Bearer Token, API Resources, dan integrasi aplikasi mobile/eksternal.
 
 Implementasikan arsitektur ini di institusi pendidikan, yayasan sosial, atau ekosistem bisnis multi-cabang Anda untuk mewujudkan tata kelola keuangan yang transparan, modern, dan akuntabel!
 

@@ -504,5 +504,6 @@ Across this 4-part masterclass, we established an enterprise blueprint:
 * **[Part 2 (Eloquent Global Scope Multi-Tenancy)](/en/blog/multi-school-payment-system-laravel-eloquent-multi-tenant-part-2)**: Automated query isolation via `BelongsToSchool`, Singleton `TenantManager`, and HTTP middleware.
 * **[Part 3 (Billing Engine & ACID Cashier Transactions)](/en/blog/multi-school-payment-system-laravel-billing-engine-acid-payments-part-3)**: Automated invoices, cascading scholarship resolvers, partial installments, and `lockForUpdate()` pessimistic locking.
 * **Part 4 (PDF Receipts, WhatsApp Gateway, & Executive Dashboards)**: Verifiable PDF receipts, non-blocking asynchronous WhatsApp queues, and consolidated foundation telemetry.
+* **[Part 5 (Stateless RESTful API & Laravel Sanctum)](/en/blog/multi-school-payment-system-laravel-restful-api-sanctum-part-5)**: Production-hardened stateless API endpoints with Bearer Tokens, API Resources, and mobile/external client integration.
 
 Deploy this architecture across your educational networks to achieve modern, transparent, and audit-proof financial governance!

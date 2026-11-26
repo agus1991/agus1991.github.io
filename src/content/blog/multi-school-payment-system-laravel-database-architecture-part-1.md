@@ -416,6 +416,7 @@ The MySQL relational foundation completed here in Part 1 sets the stage for impl
 * **Part 2 (Available)**: [Schema Migrations, Eloquent Modeling, and Multi-Tenant Global Scopes](/en/blog/multi-school-payment-system-laravel-eloquent-multi-tenant-part-2) — Translating DDL to Migrations, engineering the `BelongsToSchool` Trait, and automating query isolation.
 * **Part 3 (Available)**: [Billing Generation Engine, Scholarship Rates, and ACID Cashier Transactions](/en/blog/multi-school-payment-system-laravel-billing-engine-acid-payments-part-3) — Developing `BillingService`, cascading rate resolvers, and installment cashier workflows.
 * **Part 4 (Available)**: [Dynamic PDF Receipts, WhatsApp Gateway Integration, and Executive Dashboards](/en/blog/multi-school-payment-system-laravel-pdf-whatsapp-dashboard-part-4) — Official accounting-grade PDF generation, asynchronous WhatsApp queues, and consolidated foundation telemetry.
+* **Part 5 (Available)**: [Stateless RESTful API Architecture, Laravel Sanctum, and Distributed Client Integration](/en/blog/multi-school-payment-system-laravel-restful-api-sanctum-part-5) — Exposing multi-school billing and settlement workflows via Bearer Tokens, API Resources, and Rate Limiting.
 
 Execute the SQL script above in your local development environment to prepare for Part 2!
 

@@ -416,6 +416,7 @@ Perancangan basis data MySQL yang kita selesaikan pada Bagian 1 ini adalah batu 
 * **Bagian 2 (Tersedia)**: [Migrasi Skema, Model Eloquent, dan Multi-Tenant Global Scope](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-eloquent-scope) — Translasi DDL ke Migration, implementasi Trait `BelongsToSchool`, dan isolasi kueri otomatis.
 * **Bagian 3 (Tersedia)**: [Billing Generation Engine, Tarif Beasiswa, dan Transaksi Kasir Pelunasan Cicilan](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-billing-transaksi) — Pembangunan BillingService, cascading rate resolver, dan alur kasir pelunasan bertahap berbasis transaksi ACID.
 * **Bagian 4 (Tersedia)**: [Kuitansi PDF Dinamis, Integrasi WhatsApp Gateway, dan Dasbor Eksekutif Yayasan](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-pdf-wa-dashboard) — Otomasi kuitansi PDF resmi berstandar akuntansi, antrean non-blocking WhatsApp, dan dasbor konsolidasi keuangan yayasan.
+* **Bagian 5 (Tersedia)**: [Arsitektur RESTful API, Laravel Sanctum, dan Integrasi Klien Terdistribusi](/blog/tutorial-aplikasi-pembayaran-multi-sekolah-laravel-rest-api) — Ekspose layanan pembayaran secara *stateless* melalui Bearer Token, API Resources, dan Rate Limiting.
 
 Simpan dan eksekusi skrip SQL di atas pada lingkungan server lokal (Laragon/XAMPP/MySQL) Anda sebagai persiapan mengikuti episode berikutnya!
 
